@@ -1,0 +1,40 @@
+h1 {
+    color:dodgerblue;
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1rem;
+    color: yellowgreen;
+    letter-spacing: 1px;
+
+}
+body{
+    background-color: rgb(58, 58, 57);
+}
+h2 {
+    color: aquamarine;
+}
+
+main div{
+    color: white;
+}
+h1 {
+    color:rgb(2, 128, 255);
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1rem;
+    color: yellowgreen;
+}
+body{
+    background-color: rgb(58, 58, 57);
+}
+h2 {
+    color: aquamarine;
+}
+
+main div{
+    color: white;
+}
