@@ -1,1 +1,4 @@
-"Dokumentáció"
+
+# Documentation
+
+## Project short documentation
