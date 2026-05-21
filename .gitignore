@@ -1,1 +1,16 @@
+// Itt általában egy sablont szoktunk használni, amit a pl a GitHUB legenerál
+
+
+//most csak példaként manuálisan elkészítettük a fájlt némi magyarázattal
+
+//fájlok, amiket nem akarunk a Git-be megjeleníteni, pl. mert érzékeny adatokat, vagy információkat tartalmaznak:
 account.js
+
+//fájlok, amik feloldatlan konfliktusok során keletkeznek:
+*.orig
+
+//egy könyvtár, amiben akár 100-200MB javascript és kép is szerepelhet.
+node_modul
+
+.DS_Store
+
