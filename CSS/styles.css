@@ -20,7 +20,7 @@ main div{
     color: white;
 }
 h1 {
-    color:rgb(2, 128, 255);
+    color:red;
     font-size: 2rem;
 }
 
@@ -46,3 +46,4 @@ main div{
 .fomenu{
     background-color: black;
 }
+
