@@ -1,0 +1,249 @@
+PORTFÓLIÓ OLDAL – MÓDOSÍTÁSI TERV
+
+Cél
+====
+A jelenlegi gyakorló oldal fokozatos átalakítása egy modern, junior webfejlesztői portfólióvá.
+
+Fontos szabály:
+---------------
+Minden lépés után:
+- mentsd el a fájlokat
+- ellenőrizd a böngészőben
+- csak ezután lépj tovább
+
+
+==================================================
+1. LÉPÉS – A jelenlegi HTML átnézése
+==================================================
+
+Cél:
+- Értsd meg a dokumentum felépítését.
+
+Feladat:
+□ Header
+□ Navigation
+□ Main
+□ Footer
+
+Kérdések:
+- Mi tartozik a headerbe?
+- Miért külön elem a main?
+- Miért jó a footer?
+
+
+==================================================
+2. LÉPÉS – Hero szekció létrehozása
+==================================================
+
+Cél:
+A látogató azonnal tudja:
+- Ki vagy?
+- Mivel foglalkozol?
+- Mit csináljon?
+
+Tartalom:
+□ Név
+□ Rövid bemutatkozás
+□ 2 gomb
+    - Projects
+    - Contact
+
+Tanulási cél:
+- section használata
+- gombok
+- hierarchia
+
+
+==================================================
+3. LÉPÉS – About szekció
+==================================================
+
+Cél:
+Mutasd be magad.
+
+Tartalom:
+□ Ki vagy?
+□ Mit tanulsz?
+□ Mit szeretnél fejleszteni?
+
+Tanulási cél:
+- bekezdések
+- címsorok
+
+
+==================================================
+4. LÉPÉS – Skills szekció
+==================================================
+
+Javasolt technológiák:
+
+□ HTML
+□ CSS
+□ JavaScript
+□ Python
+□ Git
+
+Tanulási cél:
+- listák
+- ikonok
+- flexbox
+
+
+==================================================
+5. LÉPÉS – Projects szekció
+==================================================
+
+Kezdetnek készíts legalább 3 projektkártyát.
+
+Minden kártyán legyen:
+
+□ cím
+□ rövid leírás
+□ technológiák
+□ GitHub gomb
+□ Live Demo gomb
+
+Tanulási cél:
+- card layout
+- flexbox
+- újrahasznosítható szerkezet
+
+
+==================================================
+6. LÉPÉS – Learning Timeline
+==================================================
+
+Mutasd be a fejlődésed.
+
+Példa:
+
+Python
+↓
+Git
+↓
+HTML
+↓
+CSS
+↓
+JavaScript
+
+Tanulási cél:
+- idővonal
+- vertikális elrendezés
+
+
+==================================================
+7. LÉPÉS – Contact rész
+==================================================
+
+A jelenlegi űrlap továbbfejlesztése.
+
+Lehetséges elemek:
+
+□ Email
+□ GitHub
+□ LinkedIn
+□ Rövid üzenet
+
+Tanulási cél:
+- form elemek
+- label
+- accessibility
+
+
+==================================================
+8. LÉPÉS – Footer
+==================================================
+
+Frissítsd a láblécet.
+
+Tartalom:
+
+□ aktuális év
+□ neved
+□ GitHub
+□ LinkedIn
+
+Tanulási cél:
+- footer kialakítása
+
+
+==================================================
+9. LÉPÉS – CSS felépítése
+==================================================
+
+Rendezd a CSS-t.
+
+Javasolt sorrend:
+
+1. Reset
+2. Body
+3. Typography
+4. Header
+5. Navigation
+6. Hero
+7. About
+8. Skills
+9. Projects
+10. Contact
+11. Footer
+
+
+==================================================
+10. LÉPÉS – Responsive design
+==================================================
+
+Ellenőrizd:
+
+□ mobil
+□ tablet
+□ laptop
+□ nagy monitor
+
+Tanulási cél:
+- media query
+- flex-wrap
+- responsive layout
+
+
+==================================================
+11. LÉPÉS – Finomítás
+==================================================
+
+Adj hozzá:
+
+□ hover effektek
+□ átmenetek
+□ gomb animációk
+□ egységes színek
+□ megfelelő térközök
+
+
+==================================================
+12. LÉPÉS – Ellenőrző lista
+==================================================
+
+□ Minden link működik?
+□ Nincs hibás HTML?
+□ Reszponzív?
+□ Jól olvasható?
+□ Minden kép rendelkezik alt attribútummal?
+□ A kód rendezett?
+□ Van megfelelő whitespace?
+□ Minden section logikus?
+
+
+==================================================
+HALADÓ FELADATOK
+==================================================
+
+□ Dark mode
+□ Hamburger menü
+□ Scroll animáció
+□ Projekt szűrő
+□ Blog
+□ Letölthető CV
+□ Saját domain
+□ SEO alapok
+□ Open Graph meta tagek
+□ Favicon
