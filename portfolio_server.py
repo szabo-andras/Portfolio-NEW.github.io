@@ -6,7 +6,6 @@ from html import escape
 import json
 import os
 import re
-import unicodedata
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -15,20 +14,20 @@ MAX_UPLOAD_SIZE = 10 * 1024 * 1024
 ALLOWED_IMAGE_EXTENSIONS = {".gif", ".jpeg", ".jpg", ".png", ".webp"}
 
 
-def slugify(value):
-    normalized = unicodedata.normalize("NFKD", value)
-    ascii_value = normalized.encode("ascii", "ignore").decode("ascii").lower()
-    slug = re.sub(r"[^a-z0-9]+", "-", ascii_value).strip("-")
-    return slug or "uj-projekt"
+def project_folder_name(value):
+    """A projekt címéből mappa- és fájlnévhez használható nevet készít."""
+    name = re.sub(r"\s+", "_", value.strip())
+    name = re.sub(r'[<>:"/\\|?*\x00-\x1f]', "", name).strip("._")
+    return name or "uj_projekt"
 
 
 def unique_project_folder(project_name):
-    base_name = slugify(project_name)
+    base_name = project_folder_name(project_name)
     folder_name = base_name
     suffix = 2
 
     while os.path.exists(os.path.join(PROJECTS_ROOT, folder_name)):
-        folder_name = f"{base_name}-{suffix}"
+        folder_name = f"{base_name}_{suffix}"
         suffix += 1
 
     return folder_name
@@ -193,7 +192,8 @@ class ProjectHandler(SimpleHTTPRequestHandler):
             image_path = f"assets/{safe_filename}"
 
         page = create_project_page(project_name, description, status, technologies, image_path)
-        with open(os.path.join(folder_path, "index.html"), "w", encoding="utf-8") as page_file:
+        index_filename = f"{folder_name}_index.html"
+        with open(os.path.join(folder_path, index_filename), "w", encoding="utf-8") as page_file:
             page_file.write(page)
 
         self.send_response(303)
