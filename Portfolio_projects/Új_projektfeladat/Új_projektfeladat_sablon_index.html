@@ -1,0 +1,59 @@
+<!-- EBBŐL A FÁJBÓL KÉSZÍTS MÁSOLATOT, HA ÚJ PROJEKTET KÉSZÍTESZ!!! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <title>Új Projektfeladat SABLON</title>
+</head>
+<body>
+    <header id="header">
+        <nav id="navbar"></nav>
+    </header>
+    <h1 id="project_title">Írd ide az új projektfeladat CÍMÉT</h1>
+
+<!-- Projekt képe -->
+    <img id="project_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuWm4B7nRP8Rz7YmU6PEpYGQjwDeZ9eENW29OLSKMGaX5O-Qd4Onz3ylA&s=10" alt="project image">
+
+<!-- Projekt állapot -->
+    <div id="project_status_section">Állítsd be a PROJEKTFELADAT ÁLLAPOT-át!
+        
+        <label for="project_status">Project Status:</label>
+        <input type="range" id="project_status" min="0" max="100" value="50">
+
+        <span id="value">50%</span>
+
+        <script>
+        const slider = document.getElementById("project_status");
+        const value = document.getElementById("value");
+
+        slider.addEventListener("input", () => {
+        value.textContent = slider.value + "%";
+        });
+        </script>
+        
+    </div>
+
+<!-- Felhasznált technológiák -->
+    <section id="project_tech_section">
+        <h3>Felhasznált technológiák:</h2>
+        <section id="project_tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+        </section>
+    </section>
+
+<!-- Projekt leírása -->
+    <section id="project_description_section">
+        <h3>Projekt leírása:</h3>
+        <p>ide kerül a projekt leírása</p>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="/JS/components.js"></script>
+</body>
+</html>
