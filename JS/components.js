@@ -1,8 +1,11 @@
 function loadComponent(id, file) {
+    const container = document.getElementById(id);
+    if (!container) return;
+
     fetch(file)
         .then(response => response.text())
         .then(data => {
-            document.getElementById(id).innerHTML = data;
+            container.innerHTML = data;
 
             if (id === "navbar") {
                 setActiveLink();
@@ -11,10 +14,10 @@ function loadComponent(id, file) {
 }
 
 
-loadComponent("navbar", "/components/navbar.html");
-loadComponent("footer", "/components/footer.html");
-loadComponent("contact_form", "/components/contact_form.html");
-loadComponent("project-upload-form", "/components/project_upload_form.html");
+loadComponent("navbar", "/Components/navbar.html");
+loadComponent("footer", "/Components/footer.html");
+loadComponent("contact_form", "/Components/contact_form.html");
+loadComponent("project-upload-form", "/Components/project_upload_form.html");
 
 function setActiveLink() {
     let currentPage = window.location.pathname.split("/").pop();
