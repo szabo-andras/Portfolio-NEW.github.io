@@ -77,11 +77,11 @@ Tanulási cél:
 
 Javasolt technológiák:
 
-□ HTML
-□ CSS
-□ JavaScript
-□ Python
-□ Git
+Kész □ HTML
+Kész □ CSS
+Kész □ JavaScript
+Kész □ Python
+Kész □ Git
 
 Tanulási cél:
 - listák
@@ -93,13 +93,13 @@ Tanulási cél:
 5. LÉPÉS – Projects szekció
 ==================================================
 
-Kezdetnek készíts legalább 3 projektkártyát.
+Kész Kezdetnek készíts legalább 3 projektkártyát.
 
 Minden kártyán legyen:
 
-□ cím
+Kész □ cím
 □ rövid leírás
-□ technológiák
+Kész □ technológiák
 □ GitHub gomb
 □ Live Demo gomb
 
@@ -165,7 +165,7 @@ Kész □ neved
 □ LinkedIn
 
 Tanulási cél:
-- footer kialakítása
+Kész - footer kialakítása
 
 
 ==================================================
