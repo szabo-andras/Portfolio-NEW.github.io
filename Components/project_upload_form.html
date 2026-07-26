@@ -1,0 +1,33 @@
+<form id="project-upload-form" action="/submit_project" method="post" title="Project">
+    <div id="form-header">
+        <h3>Alap információk:</h3>
+        <div class="form-actions">
+            <input type="submit" value="Upload">
+        </div>
+    </div>
+    <div class="form-group">
+            <label class="projekt_label" for="project-name">Project Name:</label>
+            <input id="project-name" type="text">        
+    </div>
+
+    <div class="form-group form-full">
+        <label class="projekt_label" for="screenshot_img">Project image:</label>
+        <input type="file" id="screenshot_img" name="screenshot" accept="image/*">
+    </div>
+    
+    <div class="form-group form-full">
+        <label class="projekt_label" for="message">Project description:</label>
+        <textarea id="project_description" name="message" placeholder="Project description..."></textarea>
+        
+    </div>
+    <h3>Felhasznált technológiák:</h3>
+    <div class="form-group form-full">
+        <label class="tech_pill_label" for="HTML">HTML</Label>
+        <input type="checkbox" id="HTML_tech_pill">
+        <label class="tech_pill_label" for="CSS_tech_pill">CSS</Label>
+        <input type="checkbox" id="CSS_tech_pill">    
+        <label class="tech_pill_label" for="JS_tech_pill">JavaScript</label>
+        <input type="checkbox" id="JS_tech_pill">
+    </div>
+    
+</form>
