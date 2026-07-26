@@ -224,7 +224,7 @@ form {
   background:var(--surface-contact-form);
 }
 
-#project-upload-form {
+#project-upload-form > form {
   background:var(--surface-project-upload-form);
   min-width: 50%;
 }
