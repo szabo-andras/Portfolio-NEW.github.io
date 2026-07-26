@@ -191,7 +191,7 @@ class ProjectHandler(SimpleHTTPRequestHandler):
                 image_file.write(image_data)
             image_path = f"assets/{safe_filename}"
 
-        page = create_project_page(project_name, description, status, technologies, image_path)
+        page = create_project_page(folder_name, description, status, technologies, image_path)
         index_filename = f"{folder_name}_index.html"
         with open(os.path.join(folder_path, index_filename), "w", encoding="utf-8") as page_file:
             page_file.write(page)
