@@ -1,4 +1,4 @@
-<form id="project-upload-form" action="/submit_project" method="post" title="Project">
+<form action="/submit_project" method="post" enctype="multipart/form-data" title="Project">
     <div id="form-header">
         <h3>Alap információk:</h3>
         <div class="form-actions">
@@ -7,7 +7,7 @@
     </div>
     <div class="form-group">
             <label class="projekt_label" for="project-name">Project Name:</label>
-            <input id="project-name" type="text">        
+            <input id="project-name" name="project_name" type="text" required>
     </div>
 
     <div class="form-group form-full">
@@ -17,17 +17,25 @@
     
     <div class="form-group form-full">
         <label class="projekt_label" for="message">Project description:</label>
-        <textarea id="project_description" name="message" placeholder="Project description..."></textarea>
-        
+        <textarea id="project_description" name="description" placeholder="Project description..." required></textarea>
+
+    </div>
+    <div class="form-group">
+        <label class="projekt_label" for="project-status">Project status:</label>
+        <select id="project-status" name="status">
+            <option>Planned</option>
+            <option>In progress</option>
+            <option>Done</option>
+        </select>
     </div>
     <h3>Felhasznált technológiák:</h3>
     <div class="form-group form-full">
-        <label class="tech_pill_label" for="HTML">HTML</Label>
-        <input type="checkbox" id="HTML_tech_pill">
+        <label class="tech_pill_label" for="HTML_tech_pill">HTML</Label>
+        <input type="checkbox" id="HTML_tech_pill" name="technology" value="HTML">
         <label class="tech_pill_label" for="CSS_tech_pill">CSS</Label>
-        <input type="checkbox" id="CSS_tech_pill">    
+        <input type="checkbox" id="CSS_tech_pill" name="technology" value="CSS">
         <label class="tech_pill_label" for="JS_tech_pill">JavaScript</label>
-        <input type="checkbox" id="JS_tech_pill">
+        <input type="checkbox" id="JS_tech_pill" name="technology" value="JavaScript">
     </div>
     
 </form>
