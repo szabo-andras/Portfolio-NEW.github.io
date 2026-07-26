@@ -1,8 +1,10 @@
+"""Helyi portfóliószerver automatikus projektlista API-val."""
+
 import json
 import os
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
 PROJECTS_ROOT = os.path.join(ROOT_DIR, "Portfolio_projects")
 
 

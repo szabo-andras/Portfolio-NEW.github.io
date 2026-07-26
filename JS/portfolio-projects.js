@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let projectEntries = [];
 
   try {
-    const response = await fetch("Portfolio_projects/projects.json");
+    const response = await fetch("/api/projects");
     if (!response.ok) throw new Error(`Hiba: ${response.status}`);
 
     projectEntries = await response.json();
