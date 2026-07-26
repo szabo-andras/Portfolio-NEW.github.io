@@ -8,30 +8,24 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="studies.html">Studies</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="navbar"></div>
     </header>
     <main>
-        <h1>Welcome to Our Website</h1>
-        <!-- Add the contact form here -->
-        <form action="/submit_contact" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea><br><br>
-            <input type="submit" value="Submit">
-        </form>
+        
+        <div class="tartalom">
+            <div class="tartalom_szoveg">
+                <h1>András Szabó</h1>
+                <h2>Junior Web Developer | Frontend Developer</h2>
+                <p>I am a web developer from Hungary. I'm the current student of the web development course at the ProgramozásKarrier
+            </div>
+            <img class="tartalom_kep" id="CV_image" src="IMG/Andras_Szabo-CV_pic_no_bckgr.png" alt="András Szabó - photo for CV">
+        </div>
+        
+        
+    
     </main>
-    <footer>
-        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-    </footer>
+    <footer id="footer"></footer>
+    
+    <script src="js/components.js"></script>
 </body>
 </html>
