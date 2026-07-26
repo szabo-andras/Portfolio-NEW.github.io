@@ -159,8 +159,8 @@ Frissítsd a láblécet.
 
 Tartalom:
 
-□ aktuális év
-□ neved
+Kész □ aktuális év
+Kész □ neved
 □ GitHub
 □ LinkedIn
 
