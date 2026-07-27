@@ -137,7 +137,10 @@ class ProjectHandler(SimpleHTTPRequestHandler):
             return
 
         if parsed_path == "/":
-            parsed_path = "/portfolio.html"
+            self.send_response(303)
+            self.send_header("Location", "/portfolio.html")
+            self.end_headers()
+            return
 
         self.path = parsed_path
         return super().do_GET()
