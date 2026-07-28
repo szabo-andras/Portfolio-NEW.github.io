@@ -193,28 +193,112 @@ header nav a:hover {
     
 }
 
-/* Hero text */
-    p {
-    font-size: 1rem;
-    color: var(--text-primary);
-    letter-spacing: 0.4px;
-    margin: 0 0 1rem;
+/* Home hero */
+.home-main {
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 4vw, 4rem);
 }
 
-    .tartalom{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex: 1 1 auto;
-    /*padding:0.2rem;*/
-    margin:0;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  width: min(100%, 1100px);
+  min-height: 68vh;
 }
 
-    .tartalom_szoveg {
-    max-width:50%;
-    
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-eyebrow {
+  margin-bottom: 1rem;
+  color: var(--accent-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.hero-title {
+  max-width: 13ch;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  color: var(--text-primary);
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 1.02;
+  text-transform: none;
+}
+
+.hero-title:hover {
+  background: none;
+  text-shadow: 3px 2px 3px rgba(11, 11, 11, 0.92);
+}
+
+.hero-text {
+  max-width: 54ch;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero .button {
+  min-width: 10rem;
+  max-width: none;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+}
+
+.button-secondary {
+  display: inline-block;
+  border: 1px solid var(--color-primary-300);
+  border-radius: 16px;
+  color: var(--text-primary);
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  border-color: var(--accent-secondary);
+  background-color: rgba(71, 180, 168, 0.2);
+}
+
+.hero-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-skills li {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgba(180, 225, 219, 0.55);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+.hero-visual {
+  display: grid;
+  place-items: center;
+}
+
+.hero-portrait {
+  display: block;
+  width: min(100%, 360px);
+  border-radius: 48% 52% 44% 56% / 54% 42% 58% 46%;
+  background: linear-gradient(145deg, rgba(71, 180, 168, 0.45), rgba(15, 97, 90, 0.45));
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(238, 248, 247, 0.3);
 }
 /* Skills */
 
@@ -234,6 +318,13 @@ form {
   color: var(--text-primary);
   position: relative;
   overflow: hidden;
+}
+
+label {
+  /* A user-select:none megszünteti a label-ek szövegének kijelölésének a lehetőségét */
+  user-select: none;
+  /* A cursor:pointer eredményezi, hogy a label-en az egér nyílból rámutató kéz lesz */
+  cursor:pointer;
 }
 
 /* Contact page */
@@ -615,6 +706,35 @@ form input[type="submit"]:active {
   }
 
 @media (max-width: 768px) {
+    .home-main {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .hero-portrait {
+        width: min(72vw, 280px);
+    }
+
+    .hero-title,
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions,
+    .hero-skills {
+        justify-content: center;
+    }
+
     .form-group{
         flex-direction: column;
     }

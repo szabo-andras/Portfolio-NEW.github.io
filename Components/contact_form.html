@@ -1,25 +1,74 @@
-<form id="contact-form" action="/submit_contact" method="post" title="Contact">
+<form id="contact-form" action="https://formspree.io/f/mpqvkgpn" method="post">
     <h2 class="form-group">Text me</h2>
-    <div class="form-group">
-        
+    <section class="form-group">
             <label for="first-name">First Name:</label>
-            <input id="first-name" type="text" placeholder="First name">
+            <input id="first-name" type="text" placeholder="First name" name="first-name">
         
             <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" placeholder="Surname">
+            <input type="text" id="surname" placeholder="Surname" name="surname">
         
-    </div>
-    <div class="form-group form-full">
+    </section>
+    <section class="form-group form-full">
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="your@example.com">
-    </div>
+        <input type="email" id="email" placeholder="your@example.com" name="email">
+    </section>
     
-    <div class="form-group form-full">
+    <section class="form-group form-full">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Write here your message..."></textarea>
-        
-    </div>
-    <div class="form-actions">
+        <textarea id="message" placeholder="Write here your message..." name="message"></textarea>
+    </section>
+
+    <section id="Contact_reasons_section">
+        <h2>What can I help you with?</h2>
+        <label>Website development<input type="checkbox" name="website-development" /></label>
+        <label>Web application development<input type="checkbox" name="web-app-development" /></label>
+        <label>Website redesign / improvement<input type="checkbox" name="website-redesign"></label>
+        <label>Bug fixing or maintenance<input type="checkbox" name="Bug-fixing"></label>
+        <label>Consultation / technical advice<input type="checkbox" name="Consultation"></label>
+        <label>Job opportunity<input type="checkbox" name="Job-opportunity"></label>
+        <label>Freelance collaboration<input type="checkbox" name="Freelance-collaboration"></label>
+        <label>Other<input type="checkbox" name="Other"></label>
+    </section>
+
+    <section id="Type-of-project-section">
+        <h2>What type of project do you need?</h2>
+        <label>
+            <select name="project-type">
+                <option value="0">Personal website</option>
+                <option value="1">Portfolio website</option>
+                <option value="2">Business website</option>
+                <option value="3">E-commerce website</option>
+                <option value="4">Web application</option>
+                <option value="5">Internal tool / dashboard</option>
+                <option value="6">Mobile application</option>
+                <option value="7">Other</option>
+            </select>
+        </label>        
+    </section>
+    
+    <section id="Status-of-the-project-section">
+        <h2>Where are you with your project?</h2>
+        <label><input type="radio" name="status-of-the-project" value=0>I have only an idea</label>
+        <label><input type="radio" name="status-of-the-project" value="1">I have a design/mockup</label>
+        <label><input type="radio" name="status-of-the-project" value="2">I already have a website</label>
+        <label><input type="radio" name="status-of-the-project" value="3">Development has started</label>
+        <label><input type="radio" name="status-of-the-project" value="4">I need improvements or fixes</label>
+    </section>
+
+    <section id="project-start-date-section">
+        <h2>When would you like to start?</h2>
+        <label> 
+            <select name="project-start-date">
+                <option value="0">As soon as possible</option>
+                <option value="1">Within 1 months</option>
+                <option value="2">Within 3 months</option>
+                <option value="3">Just planning at the moment</option>
+            </select>
+        </label>
+    </section>
+
+
+    <section class="form-actions">
         <input type="submit" value="Submit">
-    </div>
+    </section>
 </form>
