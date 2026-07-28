@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>András Szabó | Web Developer</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
     <header>
         <div id="navbar"></div>
     </header>
-    <main>
-        <section class="tartalom">
-            <div class="tartalom_szoveg">
-                <h1>András Szabó</h1>
-                <h2>Junior Web Developer | Frontend Developer</h2>
-                <p>I am a web developer from Hungary. I'm the current student of the web development course at the ProgramozásKarrier
+    <main class="home-main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <p class="hero-eyebrow">ANDRÁS SZABÓ · WEB DEVELOPER</p>
+                <h1 id="hero-title" class="hero-title">
+                    Clear, responsive websites and practical web tools.
+                </h1>
+                <p class="hero-text">
+                    I build accessible frontend experiences that work smoothly on both desktop and mobile.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="portfolio.html">View projects</a>
+                    <a class="button button-secondary" href="contact.html">Contact me</a>
+                </div>
+                <ul class="hero-skills" aria-label="Core skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Responsive design</li>
+                </ul>
             </div>
-            <img 
-                class="tartalom_kep" id="CV_image" 
-                src="IMG/Andras_Szabo-CV_pic_no_bckgr.png" 
-                alt="András Szabó - CV profile photo"
-            />
+            <div class="hero-visual">
+                <img class="hero-portrait"
+                    src="IMG/Andras_Szabo-CV_pic_no_bckgr.png"
+                    alt="András Szabó, web developer">
+            </div>
         </section>
-        
-        
-    
     </main>
     <footer id="footer"></footer>
     
