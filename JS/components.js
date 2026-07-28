@@ -20,7 +20,7 @@ loadComponent("contact_form", "/Components/contact_form.html");
 loadComponent("project-upload-form", "/Components/project_upload_form.html");
 
 function setActiveLink() {
-    const currentPage = window.location.pathname.split("/").pop() || "portfolio.html";
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     const links = document.querySelectorAll("#navbar .navbar_linkek");
     links.forEach(link => {
