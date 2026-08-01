@@ -91,7 +91,7 @@ input .nev-container
 
 #telefonszam{
     /* flex:1; */
-    max-width:10ch;
+    max-width:12ch;
 }
 
 .telefonszam-container{

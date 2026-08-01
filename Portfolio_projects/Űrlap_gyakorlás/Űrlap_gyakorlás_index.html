@@ -49,8 +49,14 @@
                         </div>
                         <div class="telefonszam-container  input-wrapper">
                             <label for="telefonszam">Telefonszám:</label>
-                            <input type="tel" id="telefonszam" name="telefonszam" pattern="[0-9]{8}[0-9]?" placeholder="12345678" required minlength="8" maxlength="9" inputmode="numeric" autocomplete="tel-national">
-                            
+                            <input 
+                                type="tel" 
+                                id="telefonszam" 
+                                name="telefonszam" 
+                                placeholder="12345678" 
+                                required 
+                                inputmode="numeric" 
+                                autocomplete="tel-national"> 
                             <div class="tooltip" role="tooltip">
                                 Csak számokat adj meg kötőjelek és szóközök nélkül (pl 30876567)
                             </div>
@@ -105,5 +111,6 @@
             <input type="submit" value="Regisztrálok">
         </form>
     </main>
+    <script src="./JS/phone_number_formatter.js"></script>
 </body>
 </html>
