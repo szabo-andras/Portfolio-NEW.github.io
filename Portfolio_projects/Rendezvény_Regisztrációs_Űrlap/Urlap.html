@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/rendezveny-regisztracios-urlap-styles.css">
+</head>
+<body>
+    <form id="urlap-form" action="#" method="post">
+        <h1>Informatikai konferencia - Regisztrációs űrlap</h1>           
+        <fieldset id="szemelyes-adatok-szekcio">
+            <legend>Személyes adatok</legend>
+            <div class="szemelyes-adat rugalmas-input">
+                <label for="vezeteknev">Vezetéknév:</label>
+                <input type="text" name="Vezeteknev" id="vezeteknev" required placeholder="Vezetéknév">
+            </div>
+            <div class="szemelyes-adat rugalmas-input">
+                <label for="keresztnev">Keresztnév:</label>
+                <input type="text" name="Keresztnev" id="keresztnev" required placeholder="Keresztnév">            
+            </div>
+            <div class="szemelyes-adat rugalmas-input">
+                <label for="email">e-mail:</label>
+                <input type="email" name="email" id="email" required placeholder="email@címed.hu">
+            </div>
+
+            <div id="szemelyes-adat-teljes-telefonszam">
+                <div id="szemelyes-adat-telefonszam-orszaghivo" class="szemelyes-adat">
+                    <label for="telefonszam-orszaghivo">Ország kód:</label>
+                    <input id="telefonszam-orszaghivo" type="num" name="Telefonszam_orszaghivo" pattern="" placeholder="(+123)" required>
+                </div>
+
+                <div id="szemelyes-adat-telefonszam" class="rugalmas-input szemelyes-adat">
+                    <label for="telefonszam">Telefonszám:</label>
+                    <input id="telefonszam" type="tel" name="Telefonszam" pattern="+## ##-##-##-##" placeholder="(+45) 12-12-12-12" required>
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset id="reszveteli-informaciok-szekcio">
+            <legend>Részvételi információk</legend>
+            <h2>Jegy típusa:</h2>
+            <section id="jegy-tipusa-szekcio" class="form-row">
+                <label for="jegy-tipusa">Milyen jegyet szeretnél venni?</label>
+                <select name="jegy-tipusa" id="jegy-tipusa" required>
+                    <option value="0">Normál jegy</option>
+                    <option value="1">Diák jegy (kedvezményes)</option>
+                    <option value="2">VIP jegy</option>
+                </select>
+            </section>
+
+            
+            <h2>Ételérzékenység:</h2>
+            <section id="etelerzekenyseg-szekcio" class="form-row">
+                <div class="etelerzekenyseg-tipus">
+                    <input type="radio" name="etelerzekenyseg_tipusa" id="nincs-etelerzekenyseg-radio" required value="0">
+                    <label for="nincs-etelerzekenyseg-radio">Nincs</label>
+                </div>
+                <div class="etelerzekenyseg-tipus">
+                    <input type="radio" name="etelerzekenyseg_tipusa" id="vegan-etelerzekenyseg-radio" required value="1">
+                    <label for="vegan-etelerzekenyseg-radio">Vegetáriánus / Vegán</label>
+                </div>
+                <div class="etelerzekenyseg-tipus">
+                    <input type="radio" name="etelerzekenyseg_tipusa" id="glutenmentes-etelerzekenyseg-radio" required value="2">
+                    <label for="glutenmentes-etelerzekenyseg-radio">Gluténmentes</label>
+                </div>
+            </section>
+            
+        </fieldset>
+
+        <fieldset id="hirlevel-szekcio">
+            <legend>Hírlevél</legend>
+            <label for="hirlevel-feliratkozas-chkbox">Feliratkozol a hírlevélre?</label>
+            <input type="checkbox" id="hirlevel-feliratkozas-chkbox" checked name="hirlevel">
+        </fieldset>
+        <input type="submit" value="Regisztrálok">
+    </form>
+</body>
+</html>

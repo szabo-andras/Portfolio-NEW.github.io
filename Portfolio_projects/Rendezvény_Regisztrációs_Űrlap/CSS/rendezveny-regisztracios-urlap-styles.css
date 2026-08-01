@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    color: #3B4A1E;
+    
+}
+
+h2
+{
+    padding:0;
+    margin:0;
+    font-size: medium;
+}
+
+form {
+    background: linear-gradient(
+    120deg,
+    rgba(203, 203, 88, 0.941) 20%,
+    rgba(245, 245, 220, 0.941) 50%,
+     rgba(206, 206, 115, 0.941)100%
+);
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin:1rem;
+    /* max-width:900px; */
+    /* width:90%; */
+    border:2px rgba(245, 245, 220, 0.777) solid;
+    gap:1rem;
+}
+
+legend{
+    margin:0 -0.5rem 0.5rem;
+    font-size: large;
+    font-weight: 550;
+}
+
+
+h1 {
+    font-size: large;
+    text-align: center;
+}
+
+fieldset {
+    width: 85%;
+    display:flex;
+    flex-wrap: wrap;
+    gap: .2rem;
+}
+
+
+/* Űrlap 3 szekciója */
+/* 1. Személyes adatok szekció */
+#szemelyes-adatok-szekcio {
+    gap:1rem;
+}  
+
+label {
+    min-width: 10ch;
+}
+
+section{
+    padding:.5rem 0 .8rem 1rem;
+}
+
+.rugalmas-input input  {
+    display:flex;
+    flex:1;
+}
+
+#email {
+    /* min-width: 25ch; */
+}
+
+.szemelyes-adat {
+    display:flex;
+    gap: 1rem;
+    flex:1;
+    
+}
+    /* Teljes telefonszám szekció */
+    input#telefonszam-orszaghivo {
+        width: 6ch;
+    }
+
+    #szemelyes-adat-teljes-telefonszam{
+        /* width:100%; */
+        display:flex;
+        flex-wrap: wrap;
+        gap:1rem;
+    }
+    
+   
+
+
+/* 2. Részvételi információk szekció*/
+    #reszveteli-informaciok-szekcio {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    /* Jegy típusa szekció */
+    
+    /* Ételérzékenység szekció */
+        #etelerzekenyseg-szekcio {
+            display:flex;
+            flex:1;
+            flex-wrap: wrap;
+        }
+
+        #etelerzekenyseg-tipusok {
+            display:flex;
+            
+            
+        }
+/* 3. Hírlevél sekció */
+
+
+
+/* Beküldés gomb */
+form input[type="submit"]{
+    background-color: aqua;
+    transition: background-color .2s ease-in-out;
+    font-size: large;
+    border-radius: 10px;
+    padding:0.2rem 0.5rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: orange;
+}
