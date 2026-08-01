@@ -20,14 +20,22 @@
 
     <section id="Contact_reasons_section">
         <h2>What can I help you with?</h2>
-        <label>Website development<input type="checkbox" name="website-development" /></label>
-        <label>Web application development<input type="checkbox" name="web-app-development" /></label>
-        <label>Website redesign / improvement<input type="checkbox" name="website-redesign"></label>
-        <label>Bug fixing or maintenance<input type="checkbox" name="Bug-fixing"></label>
-        <label>Consultation / technical advice<input type="checkbox" name="Consultation"></label>
-        <label>Job opportunity<input type="checkbox" name="Job-opportunity"></label>
-        <label>Freelance collaboration<input type="checkbox" name="Freelance-collaboration"></label>
-        <label>Other<input type="checkbox" name="Other"></label>
+        <label for="website-development-chkbox">Website development</label>
+        <input type="checkbox" id="website-development-chkbox" name="website-development" />
+        <label for="web-app-development-chkbox">Web application development</label>
+        <input type="checkbox"  id="web-app-development-chkbox" name="web-app-development" />
+        <label for="website-redesign-chkbox">Website redesign / improvement</label>
+        <input type="checkbox"  id="website-redesign-chkbox" name="website-redesign">
+        <label for="Bug-fixing-chkbox">Bug fixing or maintenance</label>
+        <input type="checkbox"  id="Bug-fixing-chkbox" name="Bug-fixing">
+        <label for="Consultation-chkbox">Consultation / technical advice</label>
+        <input type="checkbox"  id="Consultation-chkbox" name="Consultation">
+        <label for="Job-opportunity-chkbox">Job opportunity</label>
+        <input type="checkbox"  id="Job-opportunity-chkbox" name="Job-opportunity">
+        <label for="Freelance-collaboration-chkbox">Freelance collaboration</label>
+        <input type="checkbox"  id="Freelance-collaboration-chkbox" name="Freelance-collaboration">
+        <label for="Other-chkbox">Other</label>
+        <input type="checkbox"  id="Other-chkbox" name="Other">
     </section>
 
     <section id="Type-of-project-section">
@@ -48,23 +56,26 @@
     
     <section id="Status-of-the-project-section">
         <h2>Where are you with your project?</h2>
-        <label><input type="radio" name="status-of-the-project" value=0>I have only an idea</label>
-        <label><input type="radio" name="status-of-the-project" value="1">I have a design/mockup</label>
-        <label><input type="radio" name="status-of-the-project" value="2">I already have a website</label>
-        <label><input type="radio" name="status-of-the-project" value="3">Development has started</label>
-        <label><input type="radio" name="status-of-the-project" value="4">I need improvements or fixes</label>
+        <label for="idea-only-radio">I have only an idea</label>
+        <input type="radio" id="idea-only-radio" name="status-of-the-project" value=0>
+        <label for="design-mockup-radio">I have a design/mockup</label>
+        <input type="radio" id="design-mockup-radio" name="status-of-the-project" value="1">
+        <label for="have-website-radio">I already have a website</label>
+        <input type="radio" id="have-website-radio" name="status-of-the-project" value="2">
+        <label for="development-started-radio">Development has started</label>
+        <input type="radio" id="development-started-radio" name="status-of-the-project" value="3">
+        <label for="need-improvements-radio">I need improvements or fixes</label>
+        <input type="radio" id="need-improvements-radio" name="status-of-the-project" value="4">
     </section>
 
     <section id="project-start-date-section">
-        <h2>When would you like to start?</h2>
-        <label> 
-            <select name="project-start-date">
-                <option value="0">As soon as possible</option>
-                <option value="1">Within 1 months</option>
-                <option value="2">Within 3 months</option>
-                <option value="3">Just planning at the moment</option>
-            </select>
-        </label>
+        <h2 id="project-start-date-header">When would you like to start?</h2>
+        <select id="project-start-date" name="project-start-date" area-labelledby="project-start-date-header">
+            <option value="0">As soon as possible</option>
+            <option value="1">Within 1 month</option>
+            <option value="2">Within 3 months</option>
+            <option value="3">Just planning at the moment</option>
+        </select>
     </section>
 
 
