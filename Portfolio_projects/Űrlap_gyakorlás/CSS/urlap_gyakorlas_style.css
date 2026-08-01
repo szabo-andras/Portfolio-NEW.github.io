@@ -1,0 +1,148 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+#regisztracios-urlap{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:1rem;
+    border:1px black solid;
+    padding:1rem;
+    background:  linear-gradient(rgba(157, 241, 157, 0.785), white 60%, white 70%,rgba(145, 145, 226, 0.68) 100%);
+}
+
+legend, h2{
+    font-size: large;
+    font-weight: 700;
+    margin:0;
+    
+}
+
+#szemelyes-adatok-szekcio {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap:wrap;
+    flex: 0 1 auto;
+}
+
+label{
+    min-width: 11ch;
+}
+
+input {
+    flex:1;
+}
+
+#teljes-nev {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.nev-container,
+input .nev-container
+{
+    display:flex;
+    flex:1;
+    margin: 0.5rem;
+    gap:1rem;
+}
+
+
+.sor-container{
+    display:flex;
+    flex-wrap:wrap;
+    flex:1;
+    gap:1rem;
+    margin:.5rem;
+}
+
+.radio-sor-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.oszlop-container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    flex:1;
+    gap:1rem;
+    margin:.5rem;
+
+}
+
+#orszag-kod {
+    max-width: 12ch;
+}
+
+.telefonszam-container label {
+    margin: 0 1rem 0 0;
+}
+
+.formatumjeloles{
+    font-size: x-small;
+}
+
+
+#telefonszam{
+    /* flex:1; */
+    max-width:10ch;
+}
+
+.telefonszam-container{
+    display:flex;
+    
+}
+
+h2 {
+    width:100%;
+    margin:0;
+    padding:0;
+    font-size: large;
+}
+
+input[type="submit"] {
+    display: flex;
+    align-self: center;
+    width: 20%;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+
+    bottom: calc(100% + 12px);
+    left: 0;
+
+    max-width: 320px;
+
+    padding: 10px 14px;
+
+    background-color: #222;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 0.875rem;
+    line-height: 1.4;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.input-wrapper:focus-within .tooltip,
+.input-wrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
