@@ -21,12 +21,14 @@
 
 const phoneFormats = {
     "+36": {
-        groups : [2, 3, 2, 2]
+        groups: [2, 3, 2, 2],
+        separators: [" / ", "-", "-"]
     },
     "+45": {
-        groups : [2, 2, 2, 2]
+        groups: [2, 2, 2, 2],
+        separators: ["-", "-", "-"]
     }
-}
+};
 
 const countryCodeSelect = document.querySelector ("#orszag-kod");
 const phoneInput = document.querySelector ("#telefonszam");
@@ -72,8 +74,7 @@ phoneInput.addEventListener("input", () => {
 function cleanPhoneNumber(value) {
     return value.replace(/\D/g, "");
 }
-console.log(cleanPhoneNumber("30-123-12-12"));
-console.log(cleanPhoneNumber("30 abc 123"));
+
 
 // Kurzor helybentartása
 function getCursorDigitPosition(value, cursorPosition) {
@@ -81,9 +82,6 @@ function getCursorDigitPosition(value, cursorPosition) {
     return cleanPhoneNumber(beforeCursor).length;
 }
 
-console.log(
-    getCursorDigitPosition("30-123-12-12", 4)
-);
 
 function getCursorPositionAfterFormat(value, digitPosition) {
 
@@ -103,28 +101,28 @@ function getCursorPositionAfterFormat(value, digitPosition) {
     return value.length;
 }
 
-console.log(
-    getCursorPositionAfterFormat("30-123-12-12", 3)
-);
 
 // Telefonszám hossz ellenőrző függvény
 function formatPhoneNumber(value, countryCode) {
     const format = phoneFormats[countryCode];
-    const groups = format.groups;
+
     let position = 0;
-    const parts = [];
-    groups.forEach(groupLength => {
+    let result = "";
+
+    format.groups.forEach((groupLength, index) => {
         const part = value.substring(
             position,
             position + groupLength
         );
-        parts.push(part);
+
+        result += part;
         position += groupLength;
+
+        if (index < format.separators.length) {
+            result += format.separators[index];
+        }
     });
-    return parts.join("-");
+
+    return result;
 }
 
-
-console.log(
-    formatPhoneNumber("301231212", "+36")
-);
