@@ -1,0 +1,1 @@
+<!-- a CV.html fájlban új munkahely beszúrásához használd a "new-job-sablon.html" tartalmát! -->
