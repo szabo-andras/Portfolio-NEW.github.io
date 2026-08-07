@@ -1,3 +1,16 @@
+:root {
+    --primary:#0085a1;
+    --primary-light:#0086a11f;
+    --text:#222;
+    --background:#ffffff;
+    --border:#ddd;
+    --shadow:0 4px 12px rgba(0,0,0,.08);
+
+    border-bottom:1.5px var(--primary) solid;
+}
+
+
+
 * {
     box-sizing:border-box;
 }
@@ -50,14 +63,21 @@ main {
 }
 
 
-#experience-section{
+#experience-section,
+.right-column-section{
     width: 100%;
+}
+
+.right-column-section h2{
+    border-bottom:1.5px #0085a1 solid;
+    background-color: #0086a11f;
 }
 
 #right-column,
 .experience-item,
 .experience-panel {
     min-width:0;
+    margin-bottom: 2rem;
 }
 
 .experience-details-container{
@@ -205,7 +225,7 @@ display: block;
 }
 
 .experience-tab{
-    /* margin:.4rem; */
+    margin:.4rem;
     padding:.4rem;
     min-width: 15%;
 }
@@ -219,6 +239,12 @@ display: block;
 
 .experience-item {
     width:100%;
+
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.165);
 }
 
 .employer{
@@ -256,6 +282,9 @@ summary::-webkit-details-marker {
 .details-toggle {
     color:#0085a1;
     cursor: pointer;
+    padding:.4rem 1rem;
+    border:1px solid var(--primary);
+    border-radius:20px;
 }
 
 .details-toggle::after {
@@ -272,3 +301,60 @@ details[open] .details-toggle::after {
     flex-direction:column;
 }
 
+
+.experience-content {
+    position: relative;
+    /* height:60vh; */
+    overflow: hidden;
+    
+}
+
+.experience-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.experience-tabs,
+.experience-panel {
+    position: relative;
+    z-index: 1;
+    
+    max-height:40vh;
+    overflow-y: auto;
+}
+
+.experience-panel{
+    min-height: 40vh;
+}
+/***************************/
+/*Munkahelyenként külön kép*/
+/***************************/
+.crowne-plaza .experience-content::before {
+    background-image: url("../IMG/Workplaces/CrownePlazaCopenhagenTowers-big.jpeg");
+}
+
+.hotel-dangleterre .experience-content::before {
+    background-image: url("../IMG/Workplaces/dangleterre-big.jpg");
+}
+
+.soogaardskolen .experience-content::before {
+    background-image: url("../IMG/Workplaces/sogaardskolen-gentofte.jpeg");
+}
+
+.villa-copenhagen .experience-content::before{
+    background-image: url("../IMG/Workplaces/villa-copenhagen.jpeg");
+}
+
+.kobenhavns-kommune .experience-content::before{
+    background-image: url("../IMG/Workplaces/kobenhavns-kommune.png");
+}
+
+.tivoli-hotel .experience-content::before{
+    background-image: url("../IMG/Workplaces/tivoli-hotel.jpg");
+}
