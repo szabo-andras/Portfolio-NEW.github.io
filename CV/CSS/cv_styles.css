@@ -1,39 +1,74 @@
 :root {
-    --primary:#0085a1;
-    --primary-light:#0086a11f;
-    --text:#222;
-    --background:#ffffff;
-    --border:#ddd;
-    --shadow:0 4px 12px rgba(0,0,0,.08);
+    --font-body: Inter, sans-serif;
+    --font-heading: Outfit, sans-serif;
 
+    --color-background: #111315;
+    --color-surface: #191c1f;
+    --color-surface-raised: #202428;
+    --color-text: #f2f4f5;
+    --color-text-secondary: #aeb5ba;
+    --color-primary: #4fd1c5;
+    --color-primary-soft: rgba(79, 209, 197, 0.12);
+    --color-border: rgba(220, 225, 228, 0.18);
+
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+
+    --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.18);
 }
-
 
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
+
+
 html {
     overflow-y: scroll;
 }
 
+
 body {
+    margin: 0;
+    font-family: var(--font-body);
     font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    background: var(--color-background);
 }
 
 
 header {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-2xl) var(--space-md);
 }
 
+
+header h1,
+header h2,
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+
 main {
-    display:flex;
-    flex-wrap:nowrap;
-    padding-left: 1rem;
-    padding-right:1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--space-xl);
+    padding: 0 var(--space-md) var(--space-2xl);
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
@@ -41,99 +76,105 @@ main {
 
 
 #left-column {
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    padding-right:3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 3rem;
 }
-
 
 
 #szemelyes-infok li {
     list-style: none;
 }
 
-#right-column {    
-    flex:3;
+
+#right-column {
+    flex: 3;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
 }
 
 
 #experience-section,
-.right-column-section{
+.right-column-section {
     width: 100%;
-    border-bottom:1.5px var(--primary) solid;
+    border-bottom: 1.5px var(--color-primary) solid;
 }
 
-.right-column-section h2{
-    border-bottom:1.5px solid var(--primary);
-    background-color: var(--primary-light);
+
+.right-column-section h2 {
+    border-bottom: 1.5px solid var(--color-primary);
+    background-color: var(--color-primary-soft);
 }
+
 
 #right-column,
 .experience-item,
 .experience-panel {
-    min-width:0;
+    min-width: 0;
     margin-bottom: 2rem;
 }
 
-.experience-details-container{
-    padding-left:1rem;
-    display:flex;
+
+.experience-details-container {
+    padding-left: 1rem;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
 }
 
+
 #tasks-section-list {
-    list-style-type:none;
+    list-style-type: none;
 }
+
 
 .emphasised,
 strong {
-    color:#0085a1;
+    color: var(--color-primary);
 }
 
 
-.experience-panel li{
-    list-style-type:disc;
-    padding-bottom:1rem;
+.experience-panel li {
+    list-style-type: disc;
+    padding-bottom: 1rem;
 }
-
 
 
 .job-timeframe {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
+
 .timeframe-start,
-.timeframe-end{
-    gap:.3rem;
-    display:flex;
+.timeframe-end {
+    gap: 0.3rem;
+    display: flex;
 }
 
 
 #language-list {
-    display:flex;
-    flex-direction:column;
-}
-
-.certification-name{
-    min-width:17ch;
-}
-
-.language-element{
     display: flex;
-    flex-direction:column ;
-    /* justify-content: center; */
+    flex-direction: column;
+}
+
+
+.certification-name {
+    min-width: 17ch;
+}
+
+
+.language-element {
+    display: flex;
+    flex-direction: column;
     font-weight: 700;
 }
 
-.language-usage{
+
+.language-usage {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -141,14 +182,17 @@ strong {
     font-weight: 300;
 }
 
-.language-usage progress{
-    flex:3 3 auto;
-    max-width:150px;
+
+.language-usage progress {
+    flex: 3 3 auto;
+    max-width: 150px;
 }
 
+
 /*********************************************************/
-/*Language Progress bar for Chrome, Edge, Safari (WebKit)*/
+/* Language Progress bar for Chrome, Edge, Safari       */
 /*********************************************************/
+
 .language-usage progress {
     appearance: none;
     -webkit-appearance: none;
@@ -156,25 +200,29 @@ strong {
     height: 10px;
 }
 
+
 .language-usage progress::-webkit-progress-bar {
-    background: #d9d9d9;      /* üres rész */
+    background: #d9d9d9;
     border-radius: 5px;
 }
+
 
 .language-usage progress::-webkit-progress-value {
-    background: #0085a1;      /* kitöltött rész */
+    background: var(--color-primary);
     border-radius: 5px;
 }
-/*********************************************************/
 
 
 /***********************************/
-/*Language Progress bar for Firefox*/
+/* Language Progress bar for Firefox */
 /***********************************/
+
 .language-usage progress::-moz-progress-bar {
-    background: #0085a1;
+    background: var(--color-primary);
     border-radius: 5px;
 }
+
+
 /***********************************/
 
 .language-icon,
@@ -184,88 +232,92 @@ strong {
     font-size: xx-large;
     text-align: end;
 }
-.language-usage p{
-    text-align:end;
-    width:3ch;
-    font-size:xx-large;
-    margin:0;
+
+
+.language-usage p {
+    text-align: end;
+    width: 3ch;
+    font-size: xx-large;
+    margin: 0;
 }
+
 
 .certifications-list-item {
     display: flex;
     align-items: baseline;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-
-/* .nyelvtudás-szint {
-    display: grid;
-    grid-template-columns: 1 2;
-    
-} */
 
 .certification-year {
     text-align: center;
 }
 
-#skills-section li{
-    list-style-type:none;
-    padding-bottom: .5rem;;
+
+#skills-section li {
+    list-style-type: none;
+    padding-bottom: 0.5rem;
 }
 
-/* AZ EXPERIENCE DETAILS PANEL TELJES ELREJTÉSE: */
+
+/* AZ EXPERIENCE DETAILS PANEL TELJES ELREJTÉSE */
+
 .experience-panel {
     display: none;
-    min-width:0;
-    padding:1rem;
+    min-width: 0;
+    padding: 1rem;
 }
+
 
 .experience-panel.active {
-display: block;
+    display: block;
 }
 
-.experience-tab{
-    margin:.4rem;
-    padding:.4rem;
+
+.experience-tab {
+    margin: 0.4rem;
+    padding: 0.4rem;
     min-width: 15%;
 }
 
-.experience-tab.active{
-    font-weight:bold;
-    background-color: #0085a1;
-    color:antiquewhite;
+
+.experience-tab.active {
+    font-weight: bold;
+    background-color: var(--color-primary);
+    color: #111315;
 }
 
 
 .experience-item {
-    width:100%;
-
-    background: #ffffff;
-    border-radius: 12px;
+    width: 100%;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
     padding: 1rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.165);
+    box-shadow: var(--shadow-subtle);
 }
 
-.employer{
+
+.employer {
     font-size: x-large;
-    text-shadow: -2px -1px #0086a14b;
+    text-shadow: -2px -1px rgba(79, 209, 197, 0.25);
 }
 
+
 /****************************************************************************************/
-/* ELREJTEM A DETAILS ELEM EREDETI SAJÁT HÁROMSZÖGÉT, MERT "MÁSHOL AKAROM, HOGY LEGYEN" */
+/* ELREJTEM A DETAILS ELEM EREDETI SAJÁT HÁROMSZÖGÉT */
 /****************************************************************************************/
+
 summary {
     list-style: none;
 }
 
-/* summary::selection {
-    list-style: none;
-} */
 
 summary::-webkit-details-marker {
     display: none;
 }
+
+
 /****************************************************************************************/
 
 .experience-summary {
@@ -273,41 +325,43 @@ summary::-webkit-details-marker {
     align-items: baseline;
     justify-content: space-between;
     gap: 2rem;
-    border-bottom: 1px #0085a1 solid;
-    margin-bottom:1rem;
+    border-bottom: 1px var(--color-primary) solid;
+    margin-bottom: 1rem;
     width: 100%;
 }
 
 
 .details-toggle {
-    color:#0085a1;
+    color: var(--color-primary);
     cursor: pointer;
-    padding:.4rem 1rem;
-    border:1px solid var(--primary);
-    border-radius:20px;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
 }
+
 
 .details-toggle::after {
     content: " ▼";
 }
 
+
 details[open] .details-toggle::after {
     content: " ▲";
 }
 
+
 .employer-container {
-    width:50%;
-    display:flex;
-    flex-direction:column;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .experience-content {
     position: relative;
-    /* height:60vh; */
     overflow: hidden;
-    
 }
+
 
 .experience-content::before {
     content: "";
@@ -320,41 +374,50 @@ details[open] .details-toggle::after {
     z-index: 0;
 }
 
+
 .experience-tabs,
 .experience-panel {
     position: relative;
     z-index: 1;
-    
-    max-height:40vh;
+    max-height: 40vh;
     overflow-y: auto;
 }
 
-.experience-panel{
+
+.experience-panel {
     min-height: 40vh;
 }
+
+
 /***************************/
-/*Munkahelyenként külön kép*/
+/* Munkahelyenként külön kép */
 /***************************/
+
 .crowne-plaza .experience-content::before {
     background-image: url("../IMG/Workplaces/CrownePlazaCopenhagenTowers-big.jpeg");
 }
+
 
 .hotel-dangleterre .experience-content::before {
     background-image: url("../IMG/Workplaces/dangleterre-big.jpg");
 }
 
+
 .soogaardskolen .experience-content::before {
     background-image: url("../IMG/Workplaces/sogaardskolen-gentofte.jpeg");
 }
 
-.villa-copenhagen .experience-content::before{
+
+.villa-copenhagen .experience-content::before {
     background-image: url("../IMG/Workplaces/villa-copenhagen.jpeg");
 }
 
-.kobenhavns-kommune .experience-content::before{
+
+.kobenhavns-kommune .experience-content::before {
     background-image: url("../IMG/Workplaces/kobenhavns-kommune.png");
 }
 
-.tivoli-hotel .experience-content::before{
+
+.tivoli-hotel .experience-content::before {
     background-image: url("../IMG/Workplaces/tivoli-hotel.jpg");
 }

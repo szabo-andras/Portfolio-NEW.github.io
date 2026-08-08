@@ -1,0 +1,593 @@
+Rendben. Akkor még nem írunk CSS-t és nem módosítjuk a fájlokat. Először rögzítsük a cv-layout-modern vizuális és szerkezeti tervét.
+
+A két biztos döntés:
+
+* Body: Inter
+* Headings: Outfit
+* vizuális irány: dark metallic / luxury / developer
+* kártyás megjelenés marad
+* kevés, tudatos spacing
+* teal csak akcentus
+* fémes hatás: border/gradient/fény, nem textúra
+
+⸻
+
+1. Desktop layout
+
+A kiinduló struktúrát így alakítanám át vizuálisan:
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                                                                          │
+│                           ANDRÁS SZABÓ                                   │
+│                        JUNIOR WEB DEVELOPER                              │
+│                                                                          │
+│               HTML · CSS · JAVASCRIPT · GIT · GITHUB                    │
+│                                                                          │
+│       Building practical, user-focused web solutions.                  │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────┬───────────────────────────────────────────────────┐
+│                      │                                                   │
+│   CONTACT            │   WEB DEVELOPMENT PROJECTS                       │
+│                      │                                                   │
+│   LinkedIn           │   ┌───────────────────────────────────────────┐   │
+│   GitHub             │   │ Portfolio Website                         │   │
+│   Email              │   │                                           │   │
+│   Phone              │   │ HTML · CSS · JavaScript · Git             │   │
+│                      │   │                                           │   │
+│   ───────────────    │   │ Description / key achievements            │   │
+│                      │   └───────────────────────────────────────────┘   │
+│   TECHNICAL SKILLS   │                                                   │
+│                      │   WORK EXPERIENCE                                 │
+│   HTML5              │                                                   │
+│   CSS3               │   ┌───────────────────────────────────────────┐   │
+│   JavaScript         │   │ CROWNE PLAZA                              │   │
+│   Git & GitHub       │   │ Conference Set-up Team Leader             │   │
+│   VS Code            │   │ September 2021 — September 2025           │   │
+│                      │   │                                           │   │
+│   ───────────────    │   │ Tasks | Responsibilities | Achievements   │   │
+│                      │   │                                           │   │
+│   CORE COMPETENCIES  │   │ content                                   │   │
+│                      │   └───────────────────────────────────────────┘   │
+│   Process Improvement│                                                   │
+│   Team Leadership    │   ┌───────────────────────────────────────────┐   │
+│   Problem Solving    │   │ HOTEL D'ANGLETERRE                        │   │
+│   ...                │   │ Houseman                                   │   │
+│                      │   │ September 2021 — September 2022            │   │
+│   ───────────────    │   │                                           │   │
+│                      │   │ Tasks | Responsibilities | Achievements   │   │
+│   LANGUAGES          │   └───────────────────────────────────────────┘   │
+│                      │                                                   │
+│   Hungarian    █████ │   ┌───────────────────────────────────────────┐   │
+│   English      ████  │   │ SØGAARDSKOLEN                             │   │
+│   Danish       █     │   │ Cleaning Team Lead Assistant              │   │
+│                      │   └───────────────────────────────────────────┘   │
+│   ───────────────    │                                                   │
+│                      │                  ...                              │
+│   CERTIFICATIONS     │                                                   │
+│                      │                                                   │
+│   EDUCATION          │                                                   │
+│                      │                                                   │
+└──────────────────────┴───────────────────────────────────────────────────┘
+
+Az arányokat viszont megváltoztatnám
+
+A mostani:
+
+#left-column {
+    flex: 1;
+}
+#right-column {
+    flex: 3;
+}
+
+alapvetően jó gondolat, de a modern verzióban inkább egy fixebb sidebar + rugalmas content rendszert szeretnék.
+
+Kb.:
+
+sidebar             content
+  280px        +       remaining space
+
+Nem feltétlenül konkrétan 280px lesz a végleges érték, de a koncepció ez.
+
+Így a sidebar nem kezd el folyamatosan arányosan szélesedni nagy monitorokon.
+
+⸻
+
+2. Header
+
+A jelenlegi header túl sok különálló információt tartalmaz.
+
+Ezt vizuálisan egyetlen Hero / Identity Header egységgé alakítanám.
+
+┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│  ANDRÁS SZABÓ                                                │
+│  Junior Web Developer                                        │
+│                                                              │
+│  HTML   CSS   JavaScript   Git   GitHub                      │
+│                                                              │
+│  Building practical, user-focused web solutions with a       │
+│  background in operations and process improvement.           │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+
+Font hierarchy
+
+ANDRÁS SZABÓ
+────────────
+Outfit
+nagy
+erős
+Junior Web Developer
+────────────────────
+Outfit
+kisebb
+accent
+HTML · CSS · JavaScript · Git
+─────────────────────────────
+Inter
+small
+uppercase / letter spacing
+description
+───────────
+Inter
+normál
+secondary text
+
+A fejlécnek nem kell óriási magasságot elfoglalnia.
+
+Ez fontos a spacing problémád miatt.
+
+⸻
+
+3. Sidebar
+
+A sidebar nem egy külön nagy kártya lenne.
+
+Inkább:
+
+┌──────────────────────┐
+│ CONTACT              │
+│                      │
+│ LinkedIn             │
+│ GitHub               │
+│ Email                │
+│ Phone                │
+│                      │
+│ ──────────────────── │
+│                      │
+│ TECHNICAL SKILLS     │
+│                      │
+│ HTML5                │
+│ CSS3                 │
+│ JavaScript           │
+│ Git & GitHub         │
+│ VS Code              │
+│                      │
+│ ──────────────────── │
+│                      │
+│ CORE COMPETENCIES    │
+│                      │
+│ ...                  │
+│                      │
+└──────────────────────┘
+
+Tehát nem minden section külön kártya.
+
+Ez nagyon fontos a letisztult hatás miatt.
+
+A sidebarban inkább a:
+
+* heading
+* rövid content
+* spacing
+* finom divider
+
+adja a struktúrát.
+
+⸻
+
+4. Project card
+
+A Project szerintem kiemelt kártya legyen.
+
+Mert ez a legfontosabb bizonyíték arra, hogy webdevelopment irányba tartasz.
+
+╭────────────────────────────────────────────────────────────╮
+│ WEB DEVELOPMENT PROJECT                                    │
+│                                                            │
+│ Portfolio Website                                          │
+│                                                            │
+│ HTML5   CSS3   JAVASCRIPT   GIT   GITHUB                   │
+│                                                            │
+│ Designed and developed a responsive personal portfolio     │
+│ website with interactive components...                     │
+│                                                            │
+│ ────────────────────────────────────────────────────────── │
+│                                                            │
+│ Responsive Design     JavaScript     Component Structure  │
+│                                                            │
+╰────────────────────────────────────────────────────────────╯
+
+Itt jöhet a fémes border.
+
+Nem kell minden projectnek más-más erős effekt.
+
+⸻
+
+5. Experience card
+
+Itt szeretném megtartani a jelenlegi jó ötletedet:
+
+<details>
+    <summary>
+
+Ez nagyon jó HTML-alap.
+
+A card zárt állapotban:
+
+╭────────────────────────────────────────────────────────────╮
+│                                                            │
+│ CROWNE PLAZA                                               │
+│ Conference Set-up Team Leader              2021 — 2025    │
+│                                                            │
+│                                      SHOW EXPERIENCE →     │
+╰────────────────────────────────────────────────────────────╯
+
+Ennyi.
+
+Ez nagyon fontos.
+
+Ne legyen a zárt cardban túl sok információ.
+
+⸻
+
+6. Nyitott Experience card
+
+Kinyitva:
+
+╭────────────────────────────────────────────────────────────╮
+│ CROWNE PLAZA                                               │
+│ Conference Set-up Team Leader              2021 — 2025    │
+│                                                            │
+│ ┌──────────┬─────────────────┬──────────────┬────────────┐ │
+│ │ Tasks    │ Responsibilities │ Achievements │ Skills     │ │
+│ └──────────┴─────────────────┴──────────────┴────────────┘ │
+│                                                            │
+│  Setup team leading                                        │
+│                                                            │
+│  • Planned and coordinated weekly setup tasks...           │
+│  • Led and guided setup staff...                           │
+│  • Collaborated with management...                        │
+│                                                            │
+│  ───────────────────────────────────────────────────────── │
+│                                                            │
+│  [subtle workplace image]                                  │
+│                                                            │
+╰────────────────────────────────────────────────────────────╯
+
+A jelenlegi háttérképedet nem feltétlenül törölném.
+
+Viszont a jelenlegi:
+
+opacity: 0.15;
+
+jellegű megoldást finomabb vizuális elemként használnám.
+
+A kép ne legyen:
+
+„nézd, itt van egy hotel fényképe”
+
+hanem inkább:
+
+„a cardnak van egy nagyon finom texturális/fénybeli mélysége”.
+
+⸻
+
+7. A metallic hatás
+
+Itt lesz szerintem a design egyik kulcsa.
+
+A card:
+
+dark graphite surface
+        +
+subtle metallic border
+        +
+small teal accent
+
+Vizuálisan:
+
+        silver highlight
+             ↓
+╭────────────────────────────────────╮
+│                                    │
+│       DARK GRAPHITE                │
+│                                    │
+│       content                      │
+│                                    │
+╰────────────────────────────────────╯
+          ↑
+       dark edge
+
+A border lehet például egy gradientből képzett border.
+
+De nem akarom még megírni.
+
+Előbb az egész komponensrendszert rögzítsük.
+
+⸻
+
+8. Desktop → tablet → mobile
+
+Itt szerintem három állapotot tervezzünk.
+
+Desktop
+
+┌──────────────┬──────────────────────────┐
+│              │                          │
+│   SIDEBAR    │       CONTENT            │
+│              │                          │
+│              │ Projects                 │
+│              │                          │
+│              │ Experience               │
+│              │                          │
+└──────────────┴──────────────────────────┘
+
+⸻
+
+Tablet
+
+A sidebar még maradjon bal oldalon, de szűküljön:
+
+┌──────────┬──────────────────────────────┐
+│          │                              │
+│ SIDEBAR  │ CONTENT                      │
+│          │                              │
+└──────────┴──────────────────────────────┘
+
+Viszont a cardokban már kevesebb helyünk van.
+
+A summary például:
+
+CROWNE PLAZA
+Conference Set-up Team Leader
+2021 — 2025
+SHOW EXPERIENCE
+
+akár két sorba törhet.
+
+⸻
+
+9. Mobile
+
+Itt nem próbáljuk megőrizni a kétoszlopos layoutot.
+
+Teljesen lineáris:
+
+┌──────────────────────────────┐
+│        ANDRÁS SZABÓ          │
+│      JUNIOR WEB DEVELOPER    │
+│                              │
+│ HTML · CSS · JS · GIT        │
+└──────────────────────────────┘
+CONTACT
+TECHNICAL SKILLS
+CORE COMPETENCIES
+LANGUAGES
+CERTIFICATIONS
+EDUCATION
+──────────────────────────────
+WEB DEVELOPMENT PROJECTS
+┌──────────────────────────────┐
+│ Portfolio Website            │
+│ ...                          │
+└──────────────────────────────┘
+WORK EXPERIENCE
+┌──────────────────────────────┐
+│ CROWNE PLAZA                 │
+│ Conference Team Leader       │
+│ 2021 — 2025                  │
+│                              │
+│ SHOW EXPERIENCE              │
+└──────────────────────────────┘
+┌──────────────────────────────┐
+│ HOTEL D'ANGLETERRE           │
+│ Houseman                     │
+│ 2021 — 2022                  │
+└──────────────────────────────┘
+
+Ez nagyon fontos:
+
+mobile-on a sidebar nem sidebar többé.
+
+A tartalom sorrendjében jelenik meg.
+
+⸻
+
+10. A jelenlegi HTML-hez képest mit változtatnék?
+
+Itt jön egy érdekes rész.
+
+A jelenlegi HTML-ed meglepően jól használható ehhez.
+
+Megvan:
+
+<header>
+
+megvan:
+
+<main>
+    <div id="left-column">
+    <div id="right-column">
+
+megvan:
+
+<section id="projects-section">
+
+és:
+
+<section id="experience-section">
+
+Az experience pedig már eleve:
+
+<details class="experience-item">
+    <summary>
+
+Ezért nem akarom első körben átírni a HTML-t.
+
+A modern layout első verzióját próbáljuk meg a meglévő szemantikus struktúrára ráépíteni.
+
+Ez tanulási szempontból is jó gyakorlat:
+
+ugyanaz a tartalom + ugyanaz a HTML → teljesen más CSS → teljesen más UI.
+
+Pontosan ebből fogod látni, hogy mennyire erősen képes a CSS meghatározni egy weboldal vizuális karakterét.
+
+⸻
+
+11. CSS komponensekre bontás
+
+A modern stylesheetet én nem egy 400 soros „mindent bele” CSS-ként építeném.
+
+Logikailag így gondolkodnék:
+
+cv_styles_modern.css
+│
+├── 1. Design tokens
+│
+├── 2. Reset / base
+│
+├── 3. Typography
+│
+├── 4. Page layout
+│
+├── 5. Header
+│
+├── 6. Sidebar
+│
+├── 7. Section headings
+│
+├── 8. Project cards
+│
+├── 9. Experience cards
+│
+├── 10. Experience tabs
+│
+├── 11. Language / skills components
+│
+├── 12. Metallic effects
+│
+└── 13. Responsive breakpoints
+
+És a legfontosabb:
+
+Nem az egész CSS-t írjuk meg egyszerre.
+
+Hanem:
+
+1. design tokens
+
+↓
+
+2. typography
+
+↓
+
+3. page layout
+
+↓
+
+4. header/sidebar
+
+↓
+
+5. project card
+
+↓
+
+6. experience card
+
+↓
+
+7. responsive
+
+↓
+
+8. finomhangolás
+
+⸻
+
+12. A vizuális rendszer első változata
+
+Én ezt tekinteném a cv-layout-modern design briefjének:
+
+Elem	Döntés
+Body font	Inter
+Heading font	Outfit
+Background	nagyon sötét graphite
+Card	sötétebb graphite surface
+Primary accent	teal
+Metallic	silver / cool-white
+Border	nagyon finom metallic gradient
+Shadow	minimális
+Glow	csak accent elemeknél
+Border radius	közepes, nem túl lekerekített
+Sidebar	keskeny, strukturált
+Main content	széles
+Projects	kiemelt card
+Experience	collapsible cards
+Tabs	segmented control
+Mobile	teljesen egymás alá rendezett
+Desktop	sidebar + content
+Typography	kompakt
+Whitespace	tudatos, nem nagy
+Emojik	lehetőleg eltávolítva a professzionális UI-ból
+
+⸻
+
+És van még egy nagyon fontos döntés
+
+A „luxus” és a „junior webdeveloper” között szerintem az egyensúly legyen:
+
+             LUXURY
+                │
+       typography / spacing
+                │
+METALLIC ───────┼─────── DEVELOPER
+                │
+          dark UI / cards
+                │
+              TEAL
+
+Ne legyen:
+
+luxury hotel website
+
+hanem:
+
+developer portfolio
+        +
+premium visual system
+
+Ez szerintem sokkal hitelesebb lesz a célodhoz.
+
+⸻
+
+Következő lépés
+
+Ha ezt az irányt elfogadod, akkor elsőként csak a cv-layout-modern branchen létrehoznánk a modern CSS alapját, de még nem az egész layoutot.
+
+Az első körben csak:
+
+1. design tokenek,
+2. Inter + Outfit,
+3. dark graphite háttér,
+4. alap szövegszínek,
+5. alap spacing rendszer,
+6. alap page container.
+
+A HTML-hez és a működő JS-hez még nem nyúlnánk.
+
+Ezután megnézzük a böngészőben az alapfelületet, és csak akkor lépünk tovább a sidebar/header layoutra.
