@@ -1,58 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>András Szabó - Portfolio Projects</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
     <header>
-        <div id="navbar"></div>
+      <div id="navbar"></div>
     </header>
 
     <main>
-        <h1>Portfolio</h1>
-        <a href="contact.html" id="contact-button" class="button button-primary">Contact me</a>
-        <a href="project_upload.html" id="project_upload-button" class="button button-primary">Projekt feltöltése</a>
-        <section class="projects-section">
-            <h2>Projects</h2>
-            <div id="projects-grid" class="projects-grid"></div>
-        </section>
+      <h1>Portfolio</h1>
+      <a href="contact.html" id="contact-button" class="button button-primary">Contact me</a>
+      <a href="project_upload.html" id="project_upload-button" class="button button-primary">Projekt feltöltése</a>
+      <section class="projects-section">
+        <h2>Projects</h2>
+        <div id="projects-grid" class="projects-grid"></div>
+      </section>
 
-        <template id="project-card-template">
-            <a class="project-card" href="#">
-                <h3 class="project-title"></h3>
-                <div class="project-preview">
-                    <img src="" alt="">
-                </div>
-                <div class="project-status">
-                    <span class="status-dot"></span>
-                    <span class="status-label"></span>
-                </div>
-                <div class="tech-list"></div>
-            </a>
-        </template>
+      <template id="project-card-template">
+        <a class="project-card" href="#">
+          <h3 class="project-title"></h3>
+          <div class="project-preview">
+            <img src="" alt="" />
+          </div>
+          <div class="project-status">
+            <span class="status-dot"></span>
+            <span class="status-label"></span>
+          </div>
+          <div class="tech-list"></div>
+        </a>
+      </template>
 
-        <section>
-            <h2>Done</h2>
-        </section>
+      <section>
+        <h2>Done</h2>
+      </section>
 
-        <section>
-            <h2>Wishlist</h2>
-            <p>Ebben a listában láthatóak a feladatok, amiket szeretnék megvalósítani:</p>
-        </section>
+      <section>
+        <h2>Wishlist</h2>
+        <p>Ebben a listában láthatóak a feladatok, amiket szeretnék megvalósítani:</p>
+      </section>
 
-        <section>
-            <h2>In process</h2>
-            <p>Folyamatban levő, még nem befejezett projektek listája</p>
-        </section>
+      <section>
+        <h2>In process</h2>
+        <p>Folyamatban levő, még nem befejezett projektek listája</p>
+      </section>
     </main>
 
     <footer id="footer"></footer>
 
     <script src="JS/components.js"></script>
     <script src="JS/portfolio-projects.js"></script>
-</body>
+  </body>
 </html>

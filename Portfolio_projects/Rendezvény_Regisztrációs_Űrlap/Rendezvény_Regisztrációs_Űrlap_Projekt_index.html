@@ -1,88 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/project-pages-styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/project-pages-styles.css" />
     <title>Rendezvény_Regisztrációs_Űrlap</title>
-</head>
-<body>
+  </head>
+  <body>
     <header><div id="navbar"></div></header>
     <main>
-            
-        <div id="project-layout">
-            <section id="full_project_description">
-                <h1 id="project_title">Rendezvény Regisztrációs Űrlap</h1>
-                <img id="project_image" src="./IMG/Rendezveny_urlap_screenshot.png" alt="Rendezvény_Regisztrációs_Űrlap projekt képe">
-                <div id="project_status">
-                    <h2>Projektfeladat állapota:</h2>
-                    Done</div>
-                <section id="project_tech_section">
-                    <h2>Felhasznált technológiák</h2>
-                    <div id="project_tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    </div>
-                </section>
-                <section id="project_description_section">
-                    <h2>Feladat leírása</h2>
-                    <p>Készíts egy online jelentkezési lapot egy informatikai konferenciára. Az űrlapnak az alábbi mezőket és szabályokat kell tartalmaznia:</p>
-                    <ol>
-                        <li>
-                            <h2>Személyes adatok</h2>
-                            <ul>
-                                <li><strong>Teljes név</strong><span> sima szöveges beviteli mező. Kötelező kitölteni.</span></li>
-                                <li><strong>E-mail cím</strong><span>E-mail típusú mező. Kötelező kitölteni, és tartalmaznia kell egy mintaszöveget <em>(placeholder)</em>: pelda@domain.com.</span></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2>Részvételi információk</h2>
-                            <ul>
-                                <li>
-                                    <strong>Jegy típusa:</strong> <span>Egy legördülő menü ('< select >), ahol az alábbi három opció közül lehet választani:</span>
-                                    <ul>
-                                        <li>Normál jegy</li>
-                                        <li>Diák jegy (kedvezményes)</li>
-                                        <li>VIP jegy</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <strong>Ételérzékenység:</strong> <span>Egy rádiógomb-csoport (radio), ahol a felhasználó csak egyet választhat ki az alábbiak közül:</span>
-                                    <ul>
-                                        <li>Nincs</li>
-                                        <li>Vegetásiánus / Vegán</li>
-                                        <li>Gluténmentes</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2>Kiegészítő opciók</h2>
-                            <ul>
-                                <li><strong>Hírlevél:</strong> <span>Egy jelölőnégyzet (checkbox), amivel a felhasználó feliratkozhat a jövőbeli események értesítéseire. Legyen alapértelmezetten bejelölve!</span></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h2>Beküldés</h2>
-                            <ul>
-                                <li>Egy megfelelő típusú <strong>gomb</strong>, amivel el lehet küldni az űrlapot.</li>
-                            </ul>
-                        </li>
-                        <h2>Technikai elvárások:</h2>
-                        <ul>
-                            <li>Az űrlap a POST metódust használja</li>
-                            <li>Minden beviteli mezőhöz tartozzon egyértelműen összekapcsolt felirat (< label>) az id és for attribútumok használatával.Amint</li>
-                        </ul>
-                    </ol>
-                </section>
-
-            </section>
-            <div class="iframe-container">
-                <iframe id="project-iframe" src="./Urlap.html" width="100%" height="500px" ></iframe>
+      <div id="project-layout">
+        <section id="full_project_description">
+          <h1 id="project_title">Rendezvény Regisztrációs Űrlap</h1>
+          <img
+            id="project_image"
+            src="./IMG/Rendezveny_urlap_screenshot.png"
+            alt="Rendezvény_Regisztrációs_Űrlap projekt képe" />
+          <div id="project_status">
+            <h2>Projektfeladat állapota:</h2>
+            Done
+          </div>
+          <section id="project_tech_section">
+            <h2>Felhasznált technológiák</h2>
+            <div id="project_tech">
+              <span>HTML</span>
+              <span>CSS</span>
             </div>
+          </section>
+          <section id="project_description_section">
+            <h2>Feladat leírása</h2>
+            <p>
+              Készíts egy online jelentkezési lapot egy informatikai konferenciára. Az űrlapnak az alábbi mezőket és
+              szabályokat kell tartalmaznia:
+            </p>
+            <ol>
+              <li>
+                <h2>Személyes adatok</h2>
+                <ul>
+                  <li><strong>Teljes név</strong><span> sima szöveges beviteli mező. Kötelező kitölteni.</span></li>
+                  <li>
+                    <strong>E-mail cím</strong
+                    ><span
+                      >E-mail típusú mező. Kötelező kitölteni, és tartalmaznia kell egy mintaszöveget
+                      <em>(placeholder)</em>: pelda@domain.com.</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h2>Részvételi információk</h2>
+                <ul>
+                  <li>
+                    <strong>Jegy típusa:</strong>
+                    <span>Egy legördülő menü ('< select >), ahol az alábbi három opció közül lehet választani:</span>
+                    <ul>
+                      <li>Normál jegy</li>
+                      <li>Diák jegy (kedvezményes)</li>
+                      <li>VIP jegy</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Ételérzékenység:</strong>
+                    <span
+                      >Egy rádiógomb-csoport (radio), ahol a felhasználó csak egyet választhat ki az alábbiak
+                      közül:</span
+                    >
+                    <ul>
+                      <li>Nincs</li>
+                      <li>Vegetásiánus / Vegán</li>
+                      <li>Gluténmentes</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h2>Kiegészítő opciók</h2>
+                <ul>
+                  <li>
+                    <strong>Hírlevél:</strong>
+                    <span
+                      >Egy jelölőnégyzet (checkbox), amivel a felhasználó feliratkozhat a jövőbeli események
+                      értesítéseire. Legyen alapértelmezetten bejelölve!</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h2>Beküldés</h2>
+                <ul>
+                  <li>Egy megfelelő típusú <strong>gomb</strong>, amivel el lehet küldni az űrlapot.</li>
+                </ul>
+              </li>
+              <h2>Technikai elvárások:</h2>
+              <ul>
+                <li>Az űrlap a POST metódust használja</li>
+                <li>
+                  Minden beviteli mezőhöz tartozzon egyértelműen összekapcsolt felirat (< label>) az id és for
+                  attribútumok használatával.Amint
+                </li>
+              </ul>
+            </ol>
+          </section>
+        </section>
+        <div class="iframe-container">
+          <iframe id="project-iframe" src="./Urlap.html" width="100%" height="500px"></iframe>
         </div>
+      </div>
     </main>
     <footer><div id="footer"></div></footer>
     <script src="/JS/components.js"></script>
-</body>
+  </body>
 </html>

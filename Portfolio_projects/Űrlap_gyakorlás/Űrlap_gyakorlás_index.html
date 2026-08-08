@@ -1,105 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/urlap_gyakorlas_style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/urlap_gyakorlas_style.css" />
     <title>Űrlap_gyakorlás</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <form id="regisztracios-urlap" action="https://formspree.io/f/xqeroadq" method="post">
-            <h1>Informatikai konferencia - Regisztrációs űrlap</h1>
-            <!-- Személyes adatok szekció -->
-            <fieldset>
-                <legend>Személyes adatok</legend>
-                <section id="szemelyes-adatok-szekcio">
-                    <div id="teljes-nev">
-                        <div class="nev-container">
-                            <label for="vezeteknev">Vezetéknév:</label>
-                            <input type="text" name="vezeteknev" id="vezeteknev" placeholder="Vezetéknév" required> 
-                        </div>
-                        <div class="nev-container">
-                            <label for="keresztnev">Keresztnév:</label>
-                            <input type="text" name="keresztnev" id="keresztnev" placeholder="Keresztnév" required>
-                        </div>
-                    </div>
-                    <div class="sor-container">
-                        <label for="email">e-mail:</label>
-                        <input type="text" name="email" id="email" placeholder="felhasználónév@domain.com" >
-                    </div>
-                    <div class="sor-container">
-                        <div class="telefonszam-container  input-wrapper">
-                            <label for="orszag-kod">Ország kód:</label>
-                            <select name="orszag-kod" id="orszag-kod" required>
-                                <option value="+36">🇭🇺 +36 Hungary</option>
-                                <option value="+45">🇩🇰 +45 Denmark</option>
-                            </select>
-                        </div>
-                        <div class="telefonszam-container  input-wrapper">
-                            <label for="telefonszam">Telefonszám:</label>
-                            <input 
-                                type="tel" 
-                                id="telefonszam" 
-                                name="telefonszam" 
-                                placeholder="12345678" 
-                                required 
-                                inputmode="numeric" 
-                                autocomplete="tel-national"> 
-                            <div class="tooltip" role="tooltip">
-                                Csak számokat adj meg kötőjelek és szóközök nélkül (pl.: 12 123 12 12)
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </fieldset>
-            
-    <!-- Részvételi információk szekció -->
-            <fieldset>
-                <legend>Részvételi információk</legend>
-                <fieldset id="jegy-tipusa-szekcio" class="oszlop-container">
-                    <legend>Jegy típusa:</legend>
-                    <div class="sor-container">
-                        <label for="jegytipus-lista">Milyen jegyet szeretnél venni?</label>
-                        <select name="jegytipus-lista" id="jegytipus-lista" required>
-                            <option value="0">Normál jegy</option>
-                            <option value="1">Diák jegy</option>
-                            <option value="2">Nyugdíjas jegy</option>
-                        </select>
-                    </div>
-                </fieldset>
-                <fieldset id="etelerzekenyseg-szekcio" class="oszlop-container">
-                    <legend>Ételérzékenység:</legend>
-                    <div class="sor-container">
-                        <div class="radio-sor-container">
-                            <input type="radio" name="etelerzekenyseg" id="nincs-etelerzekenyseg-radio" required>
-                            <label for="nincs-etelerzekenyseg-radio">Nincs</label>
-                        </div>
-                        <div class="radio-sor-container">
-                            <input type="radio" name="etelerzekenyseg" id="vegetarianus-radio" required>
-                            <label for="vegetarianus-radio">Vegetáriánus</label>
-                        </div>
-                        <div class="radio-sor-container">
-                            <input type="radio" name="etelerzekenyseg" id="glutenerzekenyseg-radio" required>
-                            <label for="glutenerzekenyseg-radio">Gluténérzékeny</label>
-                        </div>
-                    </div>
-                </fieldset>
-            </fieldset>
+      <form id="regisztracios-urlap" action="https://formspree.io/f/xqeroadq" method="post">
+        <h1>Informatikai konferencia - Regisztrációs űrlap</h1>
+        <!-- Személyes adatok szekció -->
+        <fieldset>
+          <legend>Személyes adatok</legend>
+          <section id="szemelyes-adatok-szekcio">
+            <div id="teljes-nev">
+              <div class="nev-container">
+                <label for="vezeteknev">Vezetéknév:</label>
+                <input type="text" name="vezeteknev" id="vezeteknev" placeholder="Vezetéknév" required />
+              </div>
+              <div class="nev-container">
+                <label for="keresztnev">Keresztnév:</label>
+                <input type="text" name="keresztnev" id="keresztnev" placeholder="Keresztnév" required />
+              </div>
+            </div>
+            <div class="sor-container">
+              <label for="email">e-mail:</label>
+              <input type="text" name="email" id="email" placeholder="felhasználónév@domain.com" />
+            </div>
+            <div class="sor-container">
+              <div class="telefonszam-container input-wrapper">
+                <label for="orszag-kod">Ország kód:</label>
+                <select name="orszag-kod" id="orszag-kod" required>
+                  <option value="+36">🇭🇺 +36 Hungary</option>
+                  <option value="+45">🇩🇰 +45 Denmark</option>
+                </select>
+              </div>
+              <div class="telefonszam-container input-wrapper">
+                <label for="telefonszam">Telefonszám:</label>
+                <input
+                  type="tel"
+                  id="telefonszam"
+                  name="telefonszam"
+                  placeholder="12345678"
+                  required
+                  inputmode="numeric"
+                  autocomplete="tel-national" />
+                <div class="tooltip" role="tooltip">
+                  Csak számokat adj meg kötőjelek és szóközök nélkül (pl.: 12 123 12 12)
+                </div>
+              </div>
+            </div>
+          </section>
+        </fieldset>
 
+        <!-- Részvételi információk szekció -->
+        <fieldset>
+          <legend>Részvételi információk</legend>
+          <fieldset id="jegy-tipusa-szekcio" class="oszlop-container">
+            <legend>Jegy típusa:</legend>
+            <div class="sor-container">
+              <label for="jegytipus-lista">Milyen jegyet szeretnél venni?</label>
+              <select name="jegytipus-lista" id="jegytipus-lista" required>
+                <option value="0">Normál jegy</option>
+                <option value="1">Diák jegy</option>
+                <option value="2">Nyugdíjas jegy</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset id="etelerzekenyseg-szekcio" class="oszlop-container">
+            <legend>Ételérzékenység:</legend>
+            <div class="sor-container">
+              <div class="radio-sor-container">
+                <input type="radio" name="etelerzekenyseg" id="nincs-etelerzekenyseg-radio" required />
+                <label for="nincs-etelerzekenyseg-radio">Nincs</label>
+              </div>
+              <div class="radio-sor-container">
+                <input type="radio" name="etelerzekenyseg" id="vegetarianus-radio" required />
+                <label for="vegetarianus-radio">Vegetáriánus</label>
+              </div>
+              <div class="radio-sor-container">
+                <input type="radio" name="etelerzekenyseg" id="glutenerzekenyseg-radio" required />
+                <label for="glutenerzekenyseg-radio">Gluténérzékeny</label>
+              </div>
+            </div>
+          </fieldset>
+        </fieldset>
 
-    <!-- Hírlevél szekció -->
-            <fieldset>
-                <legend>Hírlevél feliratkozás</legend>
-                <section id="hirlevel-szekcio">
-                    <label for="hirlevel-feliretkozas-chkbox">Feliratkozol a hírlevélre?</label>
-                    <input type="checkbox" name="hirlevel-feliretkozas-chkbox" id="hirlevel-feliretkozas-chkbox" checked>
-                </section>
-            </fieldset>
-    <!-- Beküldés gomb -->
-            <input type="submit" value="Regisztrálok">
-        </form>
+        <!-- Hírlevél szekció -->
+        <fieldset>
+          <legend>Hírlevél feliratkozás</legend>
+          <section id="hirlevel-szekcio">
+            <label for="hirlevel-feliretkozas-chkbox">Feliratkozol a hírlevélre?</label>
+            <input type="checkbox" name="hirlevel-feliretkozas-chkbox" id="hirlevel-feliretkozas-chkbox" checked />
+          </section>
+        </fieldset>
+        <!-- Beküldés gomb -->
+        <input type="submit" value="Regisztrálok" />
+      </form>
     </main>
     <script src="./JS/phone_number_formatter.js"></script>
-</body>
+  </body>
 </html>
