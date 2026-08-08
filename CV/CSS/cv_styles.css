@@ -2,7 +2,7 @@
     --font-body: Inter, sans-serif;
     --font-heading: Outfit, sans-serif;
 
-    --color-background: #111315;
+    --color-background: #798fa5;
     --color-surface: #191c1f;
     --color-surface-raised: #202428;
     --color-text: #f2f4f5;
@@ -46,41 +46,162 @@ body {
 
 
 header {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    max-width: 1400px;
+    width: calc(100% - 2rem);
+
+    margin: 0 auto var(--space-xl);
+    padding: clamp(2.5rem, 6vw, 4.5rem) var(--space-xl);
+
     text-align: center;
-    padding: var(--space-2xl) var(--space-md);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1f2326 0%,
+            #15181a 48%,
+            #202427 100%
+        );
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-subtle);
+
+    overflow: hidden;
+}
+
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+
+            120deg,
+
+            transparent 20%,
+
+            rgba(255, 255, 255, 0.08) 50%,
+
+            transparent 80%
+
+        );
+
+    pointer-events: none;
+
+}
+
+header > * {
+
+    position: relative;
+
+    z-index: 1;
+
 }
 
 
-header h1,
-header h2,
-h1,
-h2,
-h3 {
+header h1 {
+    margin: 0;
+
     font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    line-height: 0.95;
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: var(--color-text);
+}
+
+header h2 {
+    margin: 0.75rem 0 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    line-height: 1.2;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    color: var(--color-primary);
+}
+header p {
+    margin: 1.25rem 0 0;
+
+    max-width: 720px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 0.5rem 1.25rem;
+
+    margin: 1.25rem 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+header li {
+    color: var(--color-text-secondary);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+header li:not(:last-child)::after {
+    content: "·";
+
+    margin-left: 1.25rem;
+
+    color: var(--color-primary);
 }
 
 
 main {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
     gap: var(--space-xl);
     padding: 0 var(--space-md) var(--space-2xl);
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
+    align-items: start;
 }
 
 
 #left-column {
-    flex: 1;
+    min-width: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-right: 3rem;
+    align-items: stretch;
+    padding-right: 0;
 }
 
 
@@ -90,10 +211,11 @@ main {
 
 
 #right-column {
-    flex: 3;
+    min-width: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 
@@ -114,7 +236,6 @@ main {
 .experience-item,
 .experience-panel {
     min-width: 0;
-    margin-bottom: 2rem;
 }
 
 
@@ -420,4 +541,230 @@ details[open] .details-toggle::after {
 
 .tivoli-hotel .experience-content::before {
     background-image: url("../IMG/Workplaces/tivoli-hotel.jpg");
+}
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+#left-column {
+    color: var(--color-text-secondary);
+}
+
+
+/* ----------------------------------------------------------
+   Sidebar sections
+   ---------------------------------------------------------- */
+
+#left-column section {
+    padding: 0 0 var(--space-lg);
+    margin: 0 0 var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+#left-column section:last-child {
+    border-bottom: none;
+}
+
+
+/* ----------------------------------------------------------
+   Sidebar headings
+   ---------------------------------------------------------- */
+
+#left-column h2,
+#left-column h3 {
+    margin: 0 0 var(--space-md);
+
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--color-text);
+}
+
+
+/* Small metallic/accent line */
+
+#left-column h2::after,
+#left-column h3::after {
+    content: "";
+
+    display: block;
+
+    width: 2.5rem;
+    height: 2px;
+
+    margin-top: 0.45rem;
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+}
+
+
+/* ----------------------------------------------------------
+   Lists
+   ---------------------------------------------------------- */
+
+#left-column ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+#left-column li {
+    list-style: none;
+    margin: 0;
+    padding: 0.3rem 0;
+
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+
+/* ----------------------------------------------------------
+   Contact links
+   ---------------------------------------------------------- */
+
+#left-column a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+
+    transition:
+        color 180ms ease,
+        padding-left 180ms ease;
+}
+
+
+#left-column a:hover {
+    color: var(--color-primary);
+    padding-left: 0.25rem;
+}
+
+
+/* ----------------------------------------------------------
+   Technical skills
+   ---------------------------------------------------------- */
+
+#skills-section li {
+    padding: 0.35rem 0;
+
+    color: var(--color-text);
+    font-size: 0.88rem;
+}
+
+
+/* ----------------------------------------------------------
+   Core competencies
+   ---------------------------------------------------------- */
+
+#left-column .competency {
+    color: var(--color-text-secondary);
+}
+
+
+/* ----------------------------------------------------------
+   Languages
+   ---------------------------------------------------------- */
+
+#language-list {
+    gap: 0.5rem;
+}
+
+
+.language-element {
+    font-size: 0.88rem;
+    color: var(--color-text);
+}
+
+
+.language-usage {
+    gap: 0.75rem;
+
+    color: var(--color-text-secondary);
+}
+
+
+.language-usage progress {
+    height: 5px;
+    max-width: 120px;
+}
+
+
+/* ----------------------------------------------------------
+   Certifications / education
+   ---------------------------------------------------------- */
+
+.certifications-list-item {
+    gap: 0.5rem;
+    padding: 0.35rem 0;
+}
+
+
+.certification-name {
+    min-width: 0;
+    color: var(--color-text);
+}
+
+
+.certification-year {
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================
+   RESPONSIVE LAYOUT
+   ========================================================== */
+
+@media screen and (max-width: 900px) {
+    main {
+        grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
+        gap: var(--space-lg);
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    #left-column,
+    #right-column {
+        width: 100%;
+    }
+        header {
+        width: calc(100% - 1rem);
+        margin-bottom: var(--space-lg);
+        padding: 2.5rem var(--space-md);
+    }
+
+    header h1 {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    header h2 {
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+    }
+
+    header ul {
+        gap: 0.35rem 0.75rem;
+    }
+
+    header li {
+        font-size: 0.7rem;
+    }
+
+    header li:not(:last-child)::after {
+        margin-left: 0.75rem;
+    }
 }
