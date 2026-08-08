@@ -6,7 +6,6 @@
     --border:#ddd;
     --shadow:0 4px 12px rgba(0,0,0,.08);
 
-    border-bottom:1.5px var(--primary) solid;
 }
 
 
@@ -66,11 +65,12 @@ main {
 #experience-section,
 .right-column-section{
     width: 100%;
+    border-bottom:1.5px var(--primary) solid;
 }
 
 .right-column-section h2{
-    border-bottom:1.5px #0085a1 solid;
-    background-color: #0086a11f;
+    border-bottom:1.5px solid var(--primary);
+    background-color: var(--primary-light);
 }
 
 #right-column,
@@ -92,7 +92,7 @@ main {
     list-style-type:none;
 }
 
-.emphathised,
+.emphasised,
 strong {
     color:#0085a1;
 }
