@@ -1,0 +1,544 @@
+Persze. Egy rövid, tanuláshoz használható dokumentumot készítek, amelynél nemcsak azt nézzük meg, mit jelent az elem, hanem azt is, mikor érdemes használni, mikor nem, és milyen szemantikai információt ad a böngészőnek és más felhasználói ágenseknek.
+
+HTML szemantikus szövegelemek
+
+Az alábbi HTML-elemek elsősorban szemantikai jelentést adnak a tartalomnak. Ez azt jelenti, hogy nem pusztán a megjelenést szabályozzák, hanem jelzik a böngésző, keresőmotorok és akadálymentesítő technológiák számára, hogy mit jelent az adott szöveg.
+
+⸻
+
+<address>
+
+Mire való?
+
+Az <address> az oldalhoz vagy egy adott tartalomhoz kapcsolódó kapcsolattartási információk jelölésére szolgál.
+
+<address>
+    András Szabó<br>
+    <a href="mailto:webdev@example.com">webdev@example.com</a> (title az a-tag-ben: <a title="ez az a szöveg, ami az egér hover esetén megjelenik a link alatt"></a>)
+</address>
+
+Gyakori használat
+
+* szerző elérhetősége
+* weboldal vagy vállalkozás kapcsolattartási adatai
+* e-mail-cím
+* telefonszám
+* fizikai cím, ha az kapcsolattartási információként jelenik meg
+
+Előnyök
+
+* Egyértelműen jelzi, hogy a tartalom kapcsolatfelvételi információ.
+* Szemantikailag értelmesebb, mint egy általános <div>.
+* Hasznos lehet akadálymentesítés és gépi feldolgozás szempontjából.
+
+Hátrányok / korlátok
+
+* Nem általános címformázó elem.
+* Nem minden esetben megfelelő egy postai cím önálló megjelölésére.
+* Alapértelmezett böngészőstílusa általában dőlt betű, amit CSS-sel felül lehet írni.
+
+Fontos különbség
+
+Ha például egy szerző kapcsolattartási adatait jelölöd:
+
+<address>
+    Written by András Szabó
+</address>
+
+az szemantikailag helyes.
+
+Egy regényben szereplő fiktív postai cím viszont nem feltétlenül <address>.
+
+⸻
+
+<q>
+
+Mire való?
+
+A <q> rövid, inline idézetet jelöl.
+
+<p>
+    Ahogy a mondás tartja:
+    <q>A gyakorlat teszi a mestert.</q>
+</p>
+
+A böngésző általában automatikusan idézőjeleket jelenít meg.
+
+Gyakori használat
+
+* rövid idézet mondaton belül
+* egy másik személy rövid kijelentése
+* egy mondatból kiemelt idézet
+
+Előnyök
+
+* Jelzi, hogy a szöveg idézet.
+* Inline elemként természetesen beilleszthető egy mondatba.
+* A böngésző automatikusan kezelheti az idézőjeleket.
+
+Hátrányok / korlátok
+
+* Hosszabb idézethez nem ez a megfelelő elem.
+* A <q> nem pusztán „idézőjeles szöveg”; a jelentése az, hogy idézet.
+
+Hosszabb idézethez
+
+A <blockquote> használatos.
+
+⸻
+
+<blockquote>
+
+Mire való?
+
+A <blockquote> hosszabb, önálló idézetet jelöl.
+
+<blockquote>
+    The only way to do great work is to love what you do.
+</blockquote>
+
+Gyakori használat
+
+* hosszabb idézet
+* könyvből, cikkből vagy beszédből származó részlet
+* több mondatos idézett szöveg
+
+Az idézet forrása a cite attribútummal is megadható:
+
+<blockquote cite="https://example.com/article">
+    ...
+</blockquote>
+
+Előnyök
+
+* Világosan jelzi az idézet szemantikai határát.
+* Megkülönbözteti az idézett tartalmat a saját szövegtől.
+* Hosszabb idézetekhez megfelelő szemantikai elem.
+
+Hátrányok / korlátok
+
+* Nem egyszerű behúzásra való.
+* A vizuális megjelenést nem érdemes az elem szemantikai jelentésével összekeverni.
+* Ha csak azért használod, mert egy szöveget be akarsz húzni, akkor inkább CSS-t használj.
+
+<q> vagy <blockquote>?
+
+Rövid, mondaton belüli idézet:
+
+<p>John azt mondta: <q>Keep learning.</q></p>
+
+Önálló, hosszabb idézet:
+
+<blockquote>
+    Keep learning, keep experimenting, and keep improving.
+</blockquote>
+
+⸻
+
+<abbr>
+
+Mire való?
+
+Az <abbr> egy rövidítést vagy mozaikszót jelöl.
+
+<p>
+    <abbr title="HyperText Markup Language">HTML</abbr>
+</p>
+
+A title attribútum megadhatja a rövidítés teljes jelentését.
+
+Gyakori használat
+
+* HTML
+* CSS
+* API
+* HTTP
+* URL
+* egyéb rövidítések és mozaikszavak
+
+Előnyök
+
+* Egyértelművé teheti a rövidítés jelentését.
+* A teljes jelentés a title attribútumban megadható.
+* A dokumentum szemantikailag pontosabb lesz.
+
+Hátrányok / korlátok
+
+* A title attribútum önmagában nem mindig ideális akadálymentesítési megoldás.
+* Nem minden rövidítéshez szükséges használni.
+* A túlzott használat feleslegesen bonyolíthatja a HTML-t.
+
+Jó gyakorlat
+
+Ha egy rövidítés először jelenik meg a dokumentumban, különösen hasznos lehet:
+
+<abbr title="Application Programming Interface">API</abbr>
+
+Későbbi előfordulásoknál már nem feltétlenül szükséges minden alkalommal megismételni.
+
+⸻
+
+<em>
+
+Mire való?
+
+Az <em> hangsúlyt (stress emphasis) jelöl.
+
+<p>
+    I <em>really</em> want to learn HTML.
+</p>
+
+A hangsúly megváltoztathatja a mondat jelentését vagy értelmezését.
+
+Gyakori használat
+
+* egy szó hangsúlyozása
+* mondaton belüli nyomaték
+* a mondat értelmezését befolyásoló hangsúly
+
+Előnyök
+
+* Nem pusztán vizuális formázás, hanem jelentést hordoz.
+* A szöveg struktúráját és hangsúlyát is jelzi.
+* Egymásba ágyazva különböző hangsúlyszintek is kifejezhetők.
+
+Hátrányok / korlátok
+
+* Nem egyszerűen „dőlt betű”.
+* Ha csak vizuálisan szeretnél dőlt betűt, CSS-t használj.
+* Nem feltétlenül alkalmas minden olyan szövegre, amelyet vizuálisan ki akarsz emelni.
+
+Fontos különbség
+
+<em>important</em>
+
+jelentése:
+
+Ezt a szót hangsúlyozom.
+
+Míg:
+
+font-style: italic;
+
+csak a vizuális megjelenést módosítja.
+
+⸻
+
+<strong>
+
+Mire való?
+
+A <strong> erős fontosságot, jelentőséget vagy sürgősséget fejez ki.
+
+<p>
+    <strong>Warning:</strong> This action cannot be undone.
+</p>
+
+Gyakori használat
+
+* figyelmeztetések
+* fontos információk
+* kritikus szövegrészek
+* olyan tartalom, amelynek nagyobb jelentősége van a környezetében
+
+Előnyök
+
+* Szemantikailag jelzi, hogy a tartalom fontos.
+* Nem csak vizuális kiemelést jelent.
+* Hasznos lehet akadálymentesítés és gépi feldolgozás szempontjából.
+
+Hátrányok / korlátok
+
+* Nem egyszerűen „félkövér szöveg”.
+* Ha csak a vizuális félkövér megjelenés a cél, CSS használata célszerűbb.
+* Nem minden kiemelt szöveghez indokolt.
+
+Fontos különbség
+
+<strong>Important information</strong>
+
+szemantikailag azt jelenti:
+
+Ez az információ fontos.
+
+Míg:
+
+font-weight: bold;
+
+csak ezt mondja:
+
+Ez a szöveg vastag betűvel jelenjen meg.
+
+⸻
+
+Gyors összehasonlítás
+
+Elem	                Jelentés	                    Tipikus használat
+<address>	            Kapcsolattartási információ	    Szerző / vállalkozás elérhetősége
+<q>	                    Rövid idézet	                Mondaton belüli idézet
+<blockquote>	        Hosszabb idézet	                Önálló idézett szöveg
+<abbr>	                Rövidítés / mozaikszó	        HTML, API, HTTP stb.
+<em>	                Hangsúly	                    „Ezt a szót hangsúlyozom”
+<strong>	            Fontosság	F                   igyelmeztetés, kritikus információ
+
+A legfontosabb gondolkodási szabály
+
+Ezeket az elemeket ne úgy válaszd ki, hogy:
+
+„Hogyan szeretném, hogy kinézzen?”
+
+hanem úgy, hogy:
+
+„Mit jelent ez a szöveg?”
+
+Például:
+
+* „Legyen dőlt” → nem automatikusan <em>
+* „Legyen félkövér” → nem automatikusan <strong>
+* „Legyen behúzva” → nem automatikusan <blockquote>
+* „Legyen idézőjelben” → nem automatikusan <q>
+
+Először a jelentést választod ki HTML-lel, majd a megjelenést CSS-sel.
+
+Ez a szemantikus HTML egyik legfontosabb alapelve.
+
+Ha szeretnéd, a következő lépésként érdemes lenne ugyanezt a <cite>, <mark>, <small>, <del>, <ins>, <code>, <pre> és <time> elemekkel folytatni, mert ezekkel együtt már nagyon jól kirajzolódik, hogyan kell gondolkodni a HTML-szöveg szemantikájáról.
+
+Igen. A <map> és a <picture> is fontos, de két teljesen eltérő problémát oldanak meg. Érdemes őket külön kezelni.
+
+HTML <map> és <picture> elemek
+
+<map>
+
+Mire való?
+
+A <map> egy képtérkép (image map) létrehozására szolgál.
+
+Lényege, hogy egyetlen képen belül több, külön kattintható területet (<area>) határozhatunk meg.
+
+<img src="iroda.png" alt="Az iroda alaprajza" usemap="#iroda-map">
+<map name="iroda-map">
+    <area
+        shape="rect"
+        coords="0,0,200,150"
+        href="office.html"
+        alt="Iroda"
+    >
+</map>
+
+Az <img> usemap attribútuma kapcsolja össze a képet a <map> elemmel.
+
+Hogyan működik?
+
+A kapcsolat:
+
+<img usemap="#iroda-map">
+          ↓
+<map name="iroda-map">
+          ↓
+<area>
+
+A <map> önmagában nem rajzol semmit. A tényleges kattintható területeket az <area> elemek határozzák meg.
+
+Gyakori használat
+
+* interaktív térképek
+* alaprajzok
+* diagramok
+* termékábrák
+* olyan képek, amelyeken több különálló terület kattintható
+
+Előnyök
+
+* Egyetlen kép több különálló része lehet interaktív.
+* Nem szükséges minden részhez külön képet készíteni.
+* Egyszerűbb esetekben jól használható interaktív diagramokhoz.
+
+Hátrányok
+
+* A koordinátákat (coords) kézzel vagy valamilyen szerkesztőeszközzel kell meghatározni.
+* Reszponzív képeknél a koordináták kezelése problémás lehet.
+* Összetett interaktív grafikákhoz gyakran jobb választás az SVG.
+* Modern weboldalakon viszonylag ritkán van rá szükség.
+
+Fontos megkülönböztetés
+
+A <map> nem ugyanaz, mint egy valódi földrajzi térkép.
+
+<map>      → egy KÉP részei kattinthatók
+SVG        → vektoros grafika elemei lehetnek interaktívak
+térképes API → valódi földrajzi térkép
+
+⸻
+
+<picture>
+
+Mire való?
+
+A <picture> lehetővé teszi, hogy különböző körülményekhez különböző képfájlt adjunk meg.
+
+Ez különösen hasznos:
+
+* reszponzív weboldalakon
+* különböző képarányok esetén
+* különböző képformátumok használatakor
+* teljesítményoptimalizáláskor
+
+Egyszerű példa
+
+<picture>
+    <source media="(max-width: 600px)" srcset="portrait-mobile.jpg">
+    <source media="(min-width: 601px)" srcset="landscape-desktop.jpg">
+    <img src="landscape-desktop.jpg" alt="Tájkép">
+</picture>
+
+Ebben az esetben:
+
+mobil kijelző
+      ↓
+portrait-mobile.jpg
+nagyobb kijelző
+      ↓
+landscape-desktop.jpg
+
+Miért van benne <img>?
+
+Ez nagyon fontos.
+
+A <picture> nem önálló képmegjelenítő elem.
+
+Mindig egy <img> szolgál alapértelmezett/fallback képként.
+
+<picture>
+    <source ...>
+    <source ...>
+    <img src="fallback.jpg" alt="Leírás">
+</picture>
+
+A böngésző megvizsgálja a <source> elemeket, és ha valamelyik feltételnek megfelel, annak megfelelő képet választja.
+
+Ha egyik <source> sem használható, az <img> marad.
+
+⸻
+
+<picture> és modern képformátumok
+
+A <picture> nemcsak képernyőméret alapján tud választani.
+
+Formátum alapján is használható:
+
+<picture>
+    <source srcset="photo.avif" type="image/avif">
+    <source srcset="photo.webp" type="image/webp">
+    <img src="photo.jpg" alt="Tájkép">
+</picture>
+
+A böngésző megpróbálhatja a modernebb formátumot használni:
+
+AVIF
+  ↓
+ha nem támogatott
+  ↓
+WebP
+  ↓
+ha az sem használható
+  ↓
+JPEG
+
+Ez jó példa arra, hogy a HTML segítségével nem azt mondjuk meg, hogy pontosan melyik fájlt kell betölteni, hanem alternatívákat adunk a böngészőnek.
+
+⸻
+
+Art direction
+
+A <picture> egyik legfontosabb használata az úgynevezett art direction.
+
+Nem egyszerűen ugyanazt a képet adjuk kisebb méretben, hanem más kivágást vagy más kompozíciót használunk.
+
+Például:
+
+Desktop:
+┌─────────────────────────────┐
+│        TELJES KÉP           │
+└─────────────────────────────┘
+Mobil:
+┌───────────────┐
+│   KÖZELI      │
+│   KIVÁGÁS     │
+└───────────────┘
+<picture>
+    <source
+        media="(max-width: 600px)"
+        srcset="portrait.jpg"
+    >
+    <img
+        src="landscape.jpg"
+        alt="Egy ember egy hegy előtt"
+    >
+</picture>
+
+Itt nem pusztán a fájl mérete változik. Más képet választunk a másik elrendezéshez.
+
+⸻
+
+<picture> vs. srcset
+
+Ez egy fontos különbség.
+
+Ha ugyanazt a képet szeretnéd különböző felbontásokban biztosítani:
+
+<img
+    src="photo-800.jpg"
+    srcset="
+        photo-400.jpg 400w,
+        photo-800.jpg 800w,
+        photo-1200.jpg 1200w
+    "
+    alt="Tájkép"
+>
+
+akkor általában az <img srcset> a megfelelő megoldás.
+
+Ha viszont más képet vagy más formátumot szeretnél bizonyos körülmények között:
+
+<picture>
+    <source ...>
+    <img ...>
+</picture>
+
+akkor a <picture> lehet megfelelő.
+
+Röviden
+
+Probléma	Megoldás
+Ugyanaz a kép, több felbontás	<img srcset>
+Más kép mobilon és desktopon	<picture>
+Más képarány/kivágás	<picture>
+Modern formátum + fallback	<picture>
+Több kattintható terület egy képen	<map> + <area>
+
+⸻
+
+A két elem közötti legfontosabb különbség
+
+	<map>	<picture>
+Elsődleges cél	Interaktivitás	Képválasztás
+Mit csinál?	Kattintható területeket hoz létre	Több képforrás közül választ
+Kapcsolódó elem	<area>	<source>, <img>
+Reszponzív használat	Korlátozott	Nagyon gyakori
+Modern webfejlesztésben	Ritkább	Gyakori
+Alternatíva	SVG	srcset / CSS
+
+Gondolkodási szabály
+
+A két elemnél két teljesen különböző kérdést teszünk fel:
+
+<map>:
+
+„A képnek mely részei legyenek külön-külön interaktívak?”
+
+<picture>:
+
+„Melyik képet kellene megjeleníteni ebben a környezetben?”
+
+Ez a különbség sokkal fontosabb, mint az, hogy hogyan néz ki a HTML szintaxisa.
