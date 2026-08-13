@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/css-gyakorlofeladat-6.css" />
+    <title>CSS alapjai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Risque&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1>CSS alapjai</h1>
+      <section>
+        <h2>Alap információk</h2>
+        <ul>
+          <li>kikerestem a Risque google-font betűtípust és belinkeltem a HTML fájl head-jébe.</li>
+          <li>
+            bemásoltam a CSS fájlba a html szelektorhoz az alapbeállítást, hogy az egész oldalon ezt a betűtípust
+            használja, ha nincs egyéb szabály.
+          </li>
+        </ul>
+      </section>
+      <article>
+        <h2>Ez itt az Article amiben a sectionok az egyes feladatok és megoldásaik</h2>
+
+        <!-- Input beviteli mezők létrehozása szekció -->
+
+        <section id="beviteli-mezok-szekcio">
+          <h3>Input mezők</h3>
+          <p>
+            Figyeld meg a címke elhelyezkedését az input mezőhöz képest. Figyeld meg, hogy milyen szellős az input mező
+            placeholder eleme körüli padding.
+          </p>
+          <label for="email">Email address</label>
+          <input type="email" name="e-mail" id="email" placeholder="Enter e-mail" />
+          <p>We'll never share your e-mail with anyone else.</p>
+          <label for="password">Password</label>
+          <input type="password" name="jelszó" id="password" placeholder="Password" />
+        </section>
+        <!-- Színes gombok szekció -->
+        <section id="szines-gombok-container">
+          <h3>Nézd meg a Bootswatch Lux nevű theme-jét</h3>
+          <p>
+            <a href="https://bootswatch.com/lux/" target="_blank">(https://bootswatch.com/lux/)</a>. A theme különböző
+            web komponenseket tesz elérhetővé a számodra, amelyeket egy designer csapat már létrehozott. Ahhoz, hogy
+            megszokd a jól kinéző weboldalak szerkesztését, próbáld meg magadtól létrehozni a theme-ben található
+            elemeket minél pontosabban. <br />
+            Tipp: ha nehéz a feladat, a Google Chrome Developer Tools-ban meg tudod lesni a megoldást. <br />
+            A stílusokat osztályokkal (class) add hozzá a megfelelő HTML elemekhez. Hozd létre a következő elemeket: a.
+            Primary, secondary, success, info, warning, danger gombok (button). A gombokat kétféle méretben (kicsi,
+            nagy) hozd létre. Javasolt osztálynevek: .btn-primary, .btn-secondary, .btn-success stb
+          </p>
+          <h3>Minta:</h3>
+          <img src="./IMG/gombok.png" alt="gombok-kepe" id="gombok-kepe" />
+          <h3>Megoldás:</h3>
+          <section id="nagy-szines-gombok-szekcio">
+            <h2>Nagy gombok</h2>
+            <button class="btn-primary">Primary</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-success">Success</button>
+            <button class="btn-info">Info</button>
+            <button class="btn-warning">Warning</button>
+            <button class="btn-danger">Danger</button>
+          </section>
+
+          <section id="kis-szines-gombok-szekcio">
+            <h2>Kis gombok</h2>
+            <button class="btn-primary">Primary</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-success">Success</button>
+            <button class="btn-info">Info</button>
+            <button class="btn-warning">Warning</button>
+            <button class="btn-danger">Danger</button>
+          </section>
+        </section>
+
+        <!-- Saját táblázat szekció -->
+
+        <section id="tablazat-szekcio">
+          <h2>Táblázat</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="tablazat-fejlec-sor-cellaja">Táblázat felső sora</th>
+                <th class="tablazat-fejlec-sor-cellaja">2.oszlop</th>
+                <th class="tablazat-fejlec-sor-cellaja">3.oszlop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tablazat-elso-sor-cellaja felkover">1/1 cella Félkövér</td>
+                <td class="tablazat-elso-sor-cellaja alahuzott">1/2 cella Aláhúzott</td>
+                <td class="tablazat-elso-sor-cellaja dolt">1/3 cella Dőlt</td>
+              </tr>
+              <tr>
+                <td class="tablazat-masodik-sor-cellaja">2/1 cella</td>
+                <td class="tablazat-masodik-sor-cellaja">2/2 cella</td>
+                <td class="tablazat-masodik-sor-cellaja">2/3 cella</td>
+              </tr>
+              <tr>
+                <td class="tablazat-harmadik-sor-cellaja">3/1 cella</td>
+                <td class="tablazat-harmadik-sor-cellaja">3/2 cella</td>
+                <td class="tablazat-harmadik-sor-cellaja">3/3 cella</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Listák szekció -->
+
+        <section id="listak-szekció">
+          <h2>Lista</h2>
+          <h3>Rendezetlen lista:</h3>
+          <ul id="rendezetlen-lista">
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa.</li>
+          </ul>
+          <h3>Rendezett lista</h3>
+          <ol id="rendezett-lista">
+            <li class="dolt">Ez a szöveg is dőlt betűs, mert a class="dolt".</li>
+            <li>Vitae ut hic pariatur harum.</li>
+            <li>Quisquam, error. Laborum, maxime suscipit.</li>
+            <li class="felkover">Ez pedig félkövér, mert a class="felkover"</li>
+            <li class="athuzott">Ez pedig itt áthúzott szöveg</li>
+          </ol>
+        </section>
+
+        <!-- Bekezdések szekció -->
+
+        <section id="bekezdesek">
+          <h2>Bekezdések</h2>
+          <h3>Középre igazított szöveg:</h3>
+          <p class="kozepre-igazitott-szoveg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id natus tempore ex aperiam nam optio inventore.
+            Odio perspiciatis non aliquid porro, ab ratione iste consequatur dignissimos architecto, quia ducimus? Et
+            amet id quae, vel praesentium aperiam! Rem labore quo et!
+          </p>
+          <h3>Jobbra igazított szöveg:</h3>
+          <p class="jobbra-igazitott-szoveg">
+            Ipsa molestiae incidunt quidem optio eius, animi voluptatem aut vel nobis. Ducimus, qui eligendi inventore
+            adipisci exercitationem <span>EZ ITT EGY INLINE ELEM "SPAN"-BEN</span> impedit perferendis labore
+            consequatur, sit distinctio numquam voluptate doloremque dolore assumenda illo facere voluptas blanditiis
+            ea. Ad doloribus sunt doloremque dolor quidem sit!
+          </p>
+          <h3>Sorkizárt szöveg:</h3>
+          <p class="sorkizart-szoveg">
+            Cum quibusdam suscipit sed odit aut veritatis recusandae ipsum eum ullam fugiat consequatur error, similique
+            esse tempora hic illo beatae, voluptas consectetur dignissimos repellat quam? Sed officia possimus ipsam
+            iusto voluptate repellat. Tenetur aperiam maiores accusantium ratione, sit ipsum nesciunt!
+          </p>
+          <p>
+            Laborum pariatur veritatis natus ullam dolores aliquid eius nostrum eligendi animi, qui officia quo nihil
+            sint voluptatum! Doloribus eum obcaecati velit quidem autem expedita saepe ipsam cum exercitationem quaerat,
+            officiis in omnis eligendi labore magni architecto nulla adipisci quia. Sunt.
+          </p>
+          <p>
+            Iure eaque accusamus eligendi! Dolores, inventore repellendus velit reprehenderit voluptas quos earum non
+            repudiandae porro ex sit. Modi numquam, voluptates neque necessitatibus optio excepturi aliquid autem
+            perspiciatis corrupti temporibus sapiente ipsam quam illo culpa ipsa. Ratione dicta eligendi debitis
+            ducimus.
+          </p>
+          <p>
+            Molestiae eveniet qui aliquid ea non corporis deleniti repellendus facere exercitationem odit vel vitae
+            voluptatibus saepe autem natus asperiores sunt nulla, esse rem sed reiciendis corrupti. A maiores qui
+            necessitatibus neque vel architecto suscipit, dolores possimus, autem dolor, dicta inventore.
+          </p>
+          <p>
+            Corporis, officia reprehenderit. Ipsam assumenda aperiam voluptatum tempora unde perspiciatis, ab voluptates
+            vitae fugiat voluptatem ex hic a ipsa. Nisi veniam explicabo quidem repellat veritatis recusandae iusto
+            delectus cum nobis, modi, vel, porro assumenda nulla harum quae mollitia. Doloremque, eos.
+          </p>
+        </section>
+
+        <!-- Három hasábos szöveg szekció -->
+
+        <section id="harom-hasabos-szoveg-szekcio">
+          <h2>3 Hasábos szöveg</h2>
+          Feladat: Csinálj egy három hasábos szöveget, mintha újságot olvasnál!
+          <p class="megjegyzes">
+            Megjegyzés: az alapértelmezett whitespace miatt a betűméretet (font-size) a section-ön 0-ra kellett
+            állítani, viszont ez után a benne levő paargrafus font-size vissza kellett állítani 1rem-re, ahhoz, hogy
+            minden nagyításban biztosan egy sorban maradjon a 33,33%-os szélességűre állított paragrafus.
+          </p>
+          <section>
+            <p class="harom-hasabos-paragrafus inline">
+              Ez az inline-block szöveg1 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab nihil a,
+              exercitationem iure similique quaerat maiores doloremque ea placeat, deserunt quis nesciunt minima tenetur
+              animi tempora dolore quasi. Nisi magni hic harum neque aliquam! Rerum doloribus nisi velit laudantium hic!
+            </p>
+            <p class="harom-hasabos-paragrafus inline">
+              Ez az inline szöveg 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolor corporis
+              veritatis nulla sint repellat sunt optio nam quis recusandae eaque, culpa, expedita quas, possimus
+              incidunt. Quod nostrum vero aliquam.
+            </p>
+            <p class="harom-hasabos-paragrafus inline">
+              Ez az inline szöveg 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae molestiae
+              reprehenderit praesentium sed asperiores, vero quod ea cumque possimus. Eligendi, facere cum voluptatem
+              temporibus nostrum quos sint omnis ea veniam nobis porro nam distinctio similique!
+            </p>
+          </section>
+        </section>
+
+        <!-- Feladatban szereplő táblázat szekció -->
+
+        <section id="eloirt-tablazat-szekcio">
+          <h2>Hozd létre a következő táblázatot HTML és CSS segítségével:</h2>
+          <h3>minta:</h3>
+          <img id="peldataplazat-kepe" src="./IMG/Képernyőfotó 2026-08-13 - 11.32.53.png" alt="peldatáblázat képe" />
+          <h3>megoldott feladat:</h3>
+          <table>
+            <thead>
+              <tr>
+                <th class="eloirt-tablazat-fejlec-sor-cellaja">Név</th>
+                <th class="eloirt-tablazat-fejlec-sor-cellaja kozepre-igazitott">Pontszám</th>
+                <th class="eloirt-tablazat-fejlec-sor-cellaja kozepre-igazitott">Érdemjegy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="eloirt-tablazat-elso-sor-cellaja">Hippi Hubert</td>
+                <td class="eloirt-tablazat-elso-sor-cellaja kozepre-igazitott">85</td>
+                <td class="eloirt-tablazat-elso-sor-cellaja kozepre-igazitott">4</td>
+              </tr>
+              <tr class="vilagoszold-hatter">
+                <td class="eloirt-tablazat-masodik-sor-cellaja">Hippo Potámusz</td>
+                <td class="eloirt-tablazat-masodik-sor-cellaja kozepre-igazitott">79</td>
+                <td class="eloirt-tablazat-masodik-sor-cellaja kozepre-igazitott">3</td>
+              </tr>
+              <tr>
+                <td class="eloirt-tablazat-harmadik-sor-cellaja">Ó Áron</td>
+                <td class="eloirt-tablazat-harmadik-sor-cellaja kozepre-igazitott">60</td>
+                <td class="eloirt-tablazat-harmadik-sor-cellaja kozepre-igazitott">1</td>
+              </tr>
+              <tr class="vilagoszold-hatter">
+                <td class="eloirt-tablazat-negyedik-sor-cellaja">Ó Petra</td>
+                <td class="eloirt-tablazat-negyedik-sor-cellaja kozepre-igazitott">88</td>
+                <td class="eloirt-tablazat-negyedik-sor-cellaja kozepre-igazitott">4</td>
+              </tr>
+              <tr class="utolso-tablazatsor">
+                <td class="eloirt-tablazat-negyedik-sor-cellaja felkover">Átlag</td>
+                <td class="eloirt-tablazat-negyedik-sor-cellaja kozepre-igazitott felkover">78</td>
+                <td class="eloirt-tablazat-negyedik-sor-cellaja kozepre-igazitott felkover">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

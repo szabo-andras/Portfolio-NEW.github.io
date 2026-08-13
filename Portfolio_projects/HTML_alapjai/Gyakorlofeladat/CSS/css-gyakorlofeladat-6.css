@@ -1,0 +1,208 @@
+html {
+    font-size: 10px;
+    font-family: "Risque", serif;
+    
+    font-style: normal;
+        
+}
+
+
+table{
+    font-family:Arial, Helvetica, sans-serif;
+    width:30%;
+    box-sizing:border-box;
+    padding: 0;
+    border-collapse: collapse;
+    font-size: .55rem;
+    height: 20vh;
+}
+
+section {
+    padding: 1rem;
+    border: 1px solid green;
+    border-radius: 15px;
+    
+    box-shadow: 2px 2px 1px green;
+}
+
+.tablazat-fejlec-sor-cellaja {
+    border: 1px solid rgb(238, 8, 8);
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+
+.tablazat-elso-sor-cellaja {
+    border: 1px solid rgb(211, 238, 8);
+    font-size: .9rem;
+    font-weight: 500;  
+}
+
+.tablazat-masodik-sor-cellaja {
+    border: 1px solid rgb(8, 12, 238);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.tablazat-harmadik-sor-cellaja {
+    border: 1px solid rgb(8, 238, 8);
+    font-size: .7rem;
+    font-weight: 300;
+}
+
+#rendezetlen-lista {
+    list-style-type: square;
+    font-size: 1.2rem;
+    color: rgb(11, 59, 59);
+    background-color: bisque;
+}
+
+.kozepre-igazitott {
+    text-align: center;
+}
+
+.alahuzott {
+    text-decoration: underline;
+}
+
+.felkover {
+    font-weight: 1000;
+}
+
+.dolt {
+    font-style: italic;
+}
+
+.athuzott {
+    text-decoration: line-through;    
+}
+
+.kozepre-igazitott-szoveg {
+    text-align: center;
+}
+
+.jobbra-igazitott-szoveg {
+    text-align: right;
+} 
+
+.sorkizart-szoveg {
+    text-align: justify;
+}
+
+#bekezdesek {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .inline {
+    display: inline;
+} */
+
+
+#harom-hasabos-szoveg-szekcio section{
+    font-size: 0;
+    padding:1.2rem 0;
+    box-sizing: border-box;
+}
+
+.harom-hasabos-paragrafus {
+    display: inline-block;
+    min-height: 100px;
+    width: 33.33%;
+    background-color: aqua;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-size:1rem;
+    border-right: 1px solid black;
+}
+
+
+th, td, tr {
+    gap:0;
+    padding:.2rem 0 .3rem .1rem;
+    border: .5px solid black;
+    /* height: 1rem; */
+    vertical-align:top;
+}
+thead {
+    background-color: rgb(38, 166, 154);
+}
+
+
+.vilagoszold-hatter {
+    background-color:rgb(221,242,240);
+}
+
+.utolso-tablazatsor {
+    background-color: rgb(140,211,205);
+}
+
+
+#nagy-szines-gombok-szekcio button {
+    min-height: 3rem;
+    font-size: large;
+    padding:2rem 3rem;
+}
+
+#kis-szines-gombok-szekcio button {
+    height: 2rem;
+    font-size: x-small;
+    /* padding:.2rem; */
+    filter: opacity(.5);
+}
+
+
+
+[class^=btn] {
+    text-transform: uppercase;
+    padding:.4rem .8rem;
+    color:white;
+    border:none;
+    
+}
+
+.btn-primary{
+    background-color:black;
+}
+.btn-secondary {
+    color:black;
+}
+.btn-success {
+    background-color: green;
+}
+
+.btn-info{
+    background-color: rgb(31, 155, 207);
+}
+
+.btn-warning{
+    background-color: orange;
+}
+          
+.btn-danger {
+    background-color: red;
+}
+
+
+#beviteli-mezok-szekcio label {
+    display: block;
+    width: 25%;
+}
+
+#beviteli-mezok-szekcio input {
+    display:block;
+    padding: 1rem;
+    width:25%;
+
+}
+
+#peldataplazat-kepe {
+    width:30%;
+}
+
+#gombok-kepe {
+    width: 70%;
+}
+
+.megjegyzes {
+    color:red;
+    font-family: 'Times New Roman', Times, serif;
+}
