@@ -542,3 +542,15 @@ A két elemnél két teljesen különböző kérdést teszünk fel:
 „Melyik képet kellene megjeleníteni ebben a környezetben?”
 
 Ez a különbség sokkal fontosabb, mint az, hogy hogyan néz ki a HTML szintaxisa.
+
+
+<dl>
+    <dt></dt>
+    <dd></dd>
+    <dd></dd>
+    <dd></dd>
+    <dt></dt>
+    <dd></dd>
+    <dd></dd>
+    <dd></dd>
+</dl>

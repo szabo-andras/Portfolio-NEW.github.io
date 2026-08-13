@@ -1,0 +1,91 @@
+****************************************************************
+Ha ingyenes videótanfolyamna van szükséged, a HTML és CSS mögött
+álló hivatalos szervezet (W3C - World Wide Web Consortium) kezdöknek szóló tanfolyamát ajánljuk (opcionális):
+https://www.edx.org/course/htm15-and-css-fundamentals-2
+b) Segitség FreeCodeCamp oldalon:
+https://1earn.freecodecamp.org/responsive-web-design/basic-css/
+•https://1earn.freecodecamp.org/responsive-web-design/applied-visual-design/
+
+
+****************
+CSS szelektorok:
+****************
+    https://www.w3schools.com/cssref/css_selectors.php
+
+
+********************
+betűméret beállítás:
+********************
+    relatív mértékegységek: em, rem
+    em: a szülő elem méretéhez képest változtat, tehát, pl ha 2em azt jelenti, hogy a 3. alelem x*2*2 méretű lesz, ha x az eredeti elem
+    rem: a html méretéhez képesti relatív méret. pl.:
+    html {
+        font-size:10px (ez azért jó, mert ha pl 14-es betűtípust szeretnénk valahol, akkor  1.4rem méretűre kell állítanunk ott a méretet)
+    }
+
+    div{
+        font-size:1.4rem
+    }
+    akkor bárhol a dokumentumban a div-ekben szereplő szöveg mérete a html 10px*1.4rem= 14px lesz.
+
+
+***********************
+Betűtípus kiválasztása:
+***********************
+kukac @ font-face elemmel
+
+@font-face {
+ font-family: "cartoon";
+ src: url("/fonts/Cartoon.ttf");
+ font-weight: 900;
+}
+
+
+***********************
+box-sizing: border-box;
+***********************
+    Ezzel a beállítással lehet megoldani, hogy az elem méretébe a border és a padding is beletartozzon. Tehát, ha növelem a border méretét, attól még nem fog szétesni az oldal, hanem a doboz tartalma lesz kisebb helyen.
+
+
+***************
+calc() függvény    
+***************
+    2 különböző típusú mérettel való számításhoz használjuk.
+        pl width: calc(50% + 22px)
+
+
+******************************************************
+A konténer méretének változtatása betűmérethez képest:
+******************************************************
+    em mértékegységgel a konténer mérete a benne levő betűmérethez is igazodik. 
+        font-size: 16px;
+        container-height: 2em;
+
+    akkor a container 32px magas lesz
+
+
+************************
+Háttér szín és háttérkép
+************************
+    background-color: rgba (200,200,200, .8)
+
+        .8= mennyire NEM átlátszó a szín. 0-1-ig megadható
+
+    background-image: url(./) <-- relatív elérési utat adunk meg, vagyis a jelenlegi mappához képest
+
+    DEMO: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size
+
+
+*******************
+Parallax-scrolling:
+*******************
+    background-attachment: fixed; <-- a csatolmány a scrollozással együtt megy/helyben marad.
+
+
+**********************************
+background-origin, background-clip
+**********************************
+    Értékei lehetnek:
+        content-box, padding-box, border-box
+        background-origin: megadja, hogy a háttérkép bal-felső sarka hol kezdődjön
+        background-clip: megadja, hogy hol vágjuk le a képet
