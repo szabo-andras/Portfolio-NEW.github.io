@@ -1,0 +1,101 @@
+section{
+    display:flex;
+    flex-direction: column;
+}
+.feladat-kep {
+    width:50%;
+}
+
+.flexbox-elem {
+    box-shadow: 1px 1px 3px black;
+    background-color: brown;
+    text-align: center;
+    padding: .5rem;
+    width: 50px;
+    height: 50px;
+    align-content: center;
+}
+.flexbox-tarolo {
+    display: flex;
+    background-color: chocolate;
+    width:50%;
+    padding: .4rem;
+    gap: .5rem;
+
+}
+
+#feladat-13-flexbox-tarolo {
+    justify-content: space-between;
+}
+
+
+#feladat-14-flexbox-tarolo {
+    
+    flex-direction: column-reverse;
+    align-items:center;
+}
+
+#feladat-15-flexbox-tarolo {
+    height:200px;
+    justify-content: center;
+}
+
+#feladat-15-flexbox-elem-B {
+    align-self: center;
+}
+
+#feladat-16-flexbox-tarolo {
+    height:200px;
+}
+
+#feladat-16-flexbox-elem-B {
+    align-self: flex-end;
+}
+
+#feladat-17-flexbox-tarolo {
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+}
+
+#feladat-18-flexbox-tarolo {
+    align-items: center;
+    flex-wrap: wrap;
+    height:200px;
+}
+
+
+#feladat-19-flexbox-elem-B {
+    order: +1;
+}
+
+
+#feladat-19-flexbox-elem-G {
+    order: -6;
+}
+
+
+#feladat-20-flexbox-tarolo {
+    height: 200px;
+    justify-content: space-between;
+
+}
+
+#feladat-20-flexbox-elem-A {
+    align-self: flex-start;
+}
+
+#feladat-20-flexbox-elem-B {
+    align-self:center;
+}
+
+#feladat-20-flexbox-elem-C {
+    align-self:flex-end;
+}
+
+#feladat-20-flexbox-elem-D {
+    align-self:center;
+}
+
+#feladat-20-flexbox-elem-E {
+    align-self: flex-start;
+}
