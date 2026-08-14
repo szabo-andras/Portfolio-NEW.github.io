@@ -1,0 +1,217 @@
+body {
+    display:flex;
+    flex-direction: column;
+    gap:.2rem;
+    padding:.2rem;
+}
+
+.flexbox-tarolo {
+    display:flex;
+    flex-direction: row-reverse;
+    font-size: 50px;
+    text-align: center;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.flexbox-item {
+    box-shadow:3px 3px 5px black;
+    outline: 1px solid lightblue;
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;    
+    align-content: center;
+}
+
+.flex-tarolo-egy-elemmel {
+    display: flex;
+    outline: 1px solid gray;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.elem {
+    width:100px;
+    height:100px;
+    background-color: aqua;
+    text-align: center;
+    
+    align-content: center;
+}
+
+#feladat-6-tizenkettes-tarolo {
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:.2rem;
+    margin:.3rem;
+    background-color: burlywood;
+}
+
+.tizenkettes-tarolo-elem{
+    outline: 1px solid rgb(10, 1, 1);
+    background-color: red;
+    min-width: 24%;
+    padding: .3%;
+}
+
+
+#flexbox-nyolcadik-feladat-kepe {
+    width: 30%;
+}
+
+
+#negy-elemu-tarolo {
+    display:flex;
+    gap:.2rem;
+}
+
+.flexbox-elem {
+    background-color:blueviolet;
+    width: 100px;
+    height: 100px;
+}
+
+
+#masodik-elem {
+
+    order:3;
+}
+
+#harmadik-elem {
+    background-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    
+}
+
+#negyedik-elem {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    order:-3;
+}
+
+/* 9. Feladat  */
+#kilencedik-feladat-tarolo{
+    display:flex;
+    justify-content: space-between;
+    
+}
+#elso-elem-kilencedik-feladat{
+    flex-shrink: 1;
+    background-color:blue;
+    width: 300px;
+    height: 300px;
+
+}
+
+#masodik-elem-kilencedik-feladat{
+    flex-grow: 2;
+    flex-shrink: 2;
+    background-color: green;
+    width: 300px;
+    height: 300px;
+}
+
+#feladat-10-tarolo {
+    display:flex;
+    gap: .2rem;
+    min-height: 3rem;
+}
+
+#feladat-10-elem-1 {
+    flex-basis: 10%;
+    background-color: green;
+    
+    
+}
+
+#feladat-10-elem-2 {
+    flex-basis: 20%;
+    background-color: yellow;
+}
+#feladat-10-elem-3 {
+    flex-basis: 20%;
+        background-color: red;
+}
+#feladat-10-elem-4 {
+    flex-basis: 50%;
+    background-color: blue;
+    
+}
+
+.megoldas {
+    
+    background: linear-gradient(120deg, rgba(111, 250, 136, 0.517) 20%, rgba(219, 251, 73, 0.304) 90%);
+    
+}
+
+.feladat{
+    /* box-shadow: 3px 3px 3px rgba(128, 0, 30, 0.315); */
+    background: linear-gradient(120deg, rgba(250, 127, 111, 0.517) 20%, rgba(251, 201, 73, 0.304) 90%);
+    padding: .5rem;
+}
+
+.feladat-leiras {
+    font-family:'Courier New', Courier, monospace
+}
+
+section {
+    border:1px solid black;
+    box-shadow: 3px 3px 3px rgba(0, 128, 0, 0.315);
+    margin: 1rem;
+}
+
+#negy-elemu-tarolo2 {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 600px;
+}
+
+#tarolo2-elem1 {
+    background-color: aqua;
+}
+
+#tarolo2-elem2 {
+    background-color: rgb(255, 51, 0);
+}
+
+#tarolo2-elem3 {
+    background-color: rgb(255, 0, 187);
+}
+
+#tarolo2-elem4 {
+    background-color: rgb(212, 255, 0);
+}
+
+/***************/
+/* 11. Feladat */
+/***************/
+#ket-elemes-tarolo {
+    display: flex;
+    height:400px;
+}
+
+#elem-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: red;
+    width: 400px;
+    /* align-self:baseline; */
+    
+}
+
+#elem-2 {
+    flex-grow: 2;
+    flex-shrink: 2;
+    background-color: aqua;
+    width:400px;
+}
+

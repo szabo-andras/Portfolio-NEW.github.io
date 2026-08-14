@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/flexbox-styles.css" />
+        <title>Flexbox</title>
+    </head>
+    <body>
+        <h1>Flexbox</h1>
+        <section>
+            <div id="feladat-" class="feladat">
+                <h3>1. Feladat:</h3>
+                <p class="feladat-leiras">
+                    Hozz létre egy flexbox tárolót (állítsd be a display tulajdonságát flexre), hozz benne létre négy
+                    elemet (tetszőleges tartalommal vagy anélkül), és a korábban tanult formázási tulajdonságokat és a
+                    szelektorok szabályait felhasználva állítsd be a gyermek elemek szélességét és magasságát 100
+                    pixelre. Egyéb tanult formázásokat is használhatsz, hogy a végeredmény látványosabb legyen. Nem
+                    kötelező a tananyagban megoldásban formázást használnod. Saját ötlettel is előállhatsz. A Flexbox
+                    tanfolyamon belül a következő formázási módot használjuk:
+                </p>
+                <h3>2. Feladat</h3>
+                <p class="feladat-leiras">
+                    Állítsd be a korábban elkészített tárolód flex-direction tulajdonságát row-reverse-re. Mi történik?
+                    Most kezdd el összezárni jobbról balra a böngésződet. Mi történik?
+                </p>
+                <p class="feladat-leiras">
+                    Bővítsd ki a tárolóban lévő elemek számát nyolcra és állítsd a flex-wrap tulajdonságot wrapre. Most
+                    csökkentsd a böngésződ méretét. Mi történik? Most állítsd be, hogy az elemek oszlopban jelenjenek
+                    meg, majd add meg a wrap-reverse tulajdonságot. Mielőtt megnéznéd a végeredményt, szerinted mi
+                    történik?
+                </p>
+                <h3>3. Feladat</h3>
+                <p class="feladat-leiras">
+                    a) Bővítsd ki a tárolóban lévő elemek számát nyolcra és állítsd a flex-wrap tulajdonságot wrapre.
+                    Most csökkentsd a böngésződ méretét. Mi történik?
+                </p>
+                <p>
+                    b)(ezt már nem látszik, mert a következő feladattal át kellett állítani: Most állítsd be, hogy az
+                    elemek oszlopban jelenjenek meg, majd add meg a wrap-reverse tulajdonságot. Mielőtt megnéznéd a
+                    végeredményt, szerinted mi történik?)
+                </p>
+                <p class="feladat-leiras">
+                    c) (ez egy másik feladat b) része volt) Kicsinyíted a böngésződet, és a következő történik egy
+                    tárolóban lévő elemekkel. Az eddig tanult flex tulajdonságokkal érd el ezt az állapotot:
+                </p>
+            </div>
+            <div class="megoldas">
+                <h3>Megoldás:</h3>
+                <div class="flexbox-tarolo">
+                    <div class="flexbox-item">A</div>
+                    <div class="flexbox-item">B</div>
+                    <div class="flexbox-item">C</div>
+                    <div class="flexbox-item">D</div>
+                    <div class="flexbox-item">E</div>
+                    <div class="flexbox-item">F</div>
+                    <div class="flexbox-item">G</div>
+                    <div class="flexbox-item">H</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="feladat-4" class="feladat">
+                <h3>4. Feladat</h3>
+                <p class="feladat-leiras">
+                    a) A négyelemű tárolódnál állítsd be, hogy oszlopban jelenjen meg, és állítsd be a justify-content
+                    tulajdonságot flex-endre. Mielőtt megnéznéd az eredményt, szerinted mi fog történni? Most állítsd
+                    be, hogy a tároló magassága 600 pixel legyen. Mi változik?
+                </p>
+            </div>
+            <div class="megoldas">
+                <h3>Megoldás:</h3>
+                <div id="negy-elemu-tarolo2">
+                    <div id="tarolo2-elem1">1</div>
+                    <div id="tarolo2-elem2">2</div>
+                    <div id="tarolo2-elem3">3</div>
+                    <div id="tarolo2-elem4">4</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="feladat-" class="feladat">
+                <h3>5. Feladat:</h3>
+                <p class="feladat-leiras">
+                    Hozz létre egy tárolót egyetlen elemmel, állítsd be a tároló magasságát (például legyen a tároló
+                    200x200 pixeles, az elem pedig 100x100-as), és az eddig tanultak alapján helyezd el úgy az elemet a
+                    tárolóban, hogy az pontosan a tároló középpontjára kerüljön.
+                </p>
+            </div>
+            <h3>Megoldás:</h3>
+
+            <div class="flex-tarolo-egy-elemmel megoldas">
+                <div class="elem">A</div>
+            </div>
+        </section>
+
+        <section>
+            <div id="feladat-6" class="feladat">
+                <h3>6. Feladat:</h3>
+                <p class="feladat-leiras">
+                    a) Hozz létre egy 400 pixel magasságú, 12 elemű tárolót, és rendezd a sorokat a tároló aljára.
+                </p>
+                <p class="feladat-leiras">
+                    b) Most az eddig tanult tulajdonságok segítségével rendezd úgy el a 12 elemet, hogy a böngészőlap
+                    kicsinyítésével minden sorba 4 elem kerüljön, a szélső elemek a tároló szélén helyezkedjenek el, és
+                    minden elem között azonos távolság legyen
+                </p>
+            </div>
+            <div class="megoldas" id="megoldas-feladat-6">
+                <h3>Megoldás:</h3>
+                <div id="feladat-6-tizenkettes-tarolo">
+                    <div class="tizenkettes-tarolo-elem">1</div>
+                    <div class="tizenkettes-tarolo-elem">2</div>
+                    <div class="tizenkettes-tarolo-elem">3</div>
+                    <div class="tizenkettes-tarolo-elem">4</div>
+                    <div class="tizenkettes-tarolo-elem">5</div>
+                    <div class="tizenkettes-tarolo-elem">6</div>
+                    <div class="tizenkettes-tarolo-elem">7</div>
+                    <div class="tizenkettes-tarolo-elem">8</div>
+                    <div class="tizenkettes-tarolo-elem">9</div>
+                    <div class="tizenkettes-tarolo-elem">10</div>
+                    <div class="tizenkettes-tarolo-elem">11</div>
+                    <div class="tizenkettes-tarolo-elem">12</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="feladat-7-8" class="feladat">
+                <h3>7. Feladat</h3>
+                <p class="feladat-leiras">
+                    Hozz létre egy négyelemű tárolót, majd kettőt rendezz egy külön osztályba a flexbox-elem névvel, a
+                    harmadikat és a negyediket pedig lásd el külön id-vel. Ezután a szelektorokat használva a
+                    stíluslapon adj nekik külön stílust (például legyen eltérő a színűk, a hátterük színe, a betűméretük
+                    stb., ez rád van bízva).
+                </p>
+                <h3>8. Feladat</h3>
+                <p class="feladat-leiras">
+                    Az előző feladatban létrehozott négyelemű tárolóval és szelektorokkal folytatva a munkát, rendezd
+                    úgy az elemeket az order tulajdonság segítségével, hogy ezt a sorrendet kapd (4. elem a sor elején,
+                    1. elem a 2. helyen, 3. elem a 3. helyen és a 2. elem a végén):
+                </p>
+                <img
+                    src="./IMG/Képernyőfotó 2026-08-13 - 21.23.14.png"
+                    alt="flexbox-feladat-kepe"
+                    id="flexbox-nyolcadik-feladat-kepe" />
+            </div>
+            <div class="megoldas">
+                <h3>Megoldás: feladat 7-8.</h3>
+                <div id="negy-elemu-tarolo" class="megoldas">
+                    <div id="elso-elem" class="flexbox-elem">A</div>
+                    <div id="masodik-elem" class="flexbox-elem order-minusz-egy">B</div>
+                    <div id="harmadik-elem" class="flexbox-elem">C</div>
+                    <div id="negyedik-elem" class="flexbox-elem">D</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="feladat-9" class="feladat">
+                <h3>9. Feladat</h3>
+                <p class="feladat-leiras">
+                    Hozz létre egy olyan kételemű tárolót, amelyben a két elem mérete adott és azonos. Hogyan tudod
+                    létrehozni a most tanult két tulajdonsággal azt az állapotot, hogy ha a tároló szélessége a két elem
+                    együttes szélességénél nagyobb, akkor csak a második elem nő, de a két elem mindig kitölti a teljes
+                    tárolót, ha azonban a tároló szélessége a két elem együttes szélessége alá csökken, akkor a második
+                    elem 2x gyorsabban csökken, mint az első elem? A feladatot nem kell fejben megoldani, nyugodtan
+                    próbálgasd a tanult tulajdonságokat, amíg el nem éred ezt az állapotot.
+                </p>
+            </div>
+
+            <div class="megoldas">
+                <h3>Megoldás</h3>
+                <div id="kilencedik-feladat-tarolo">
+                    <div id="elso-elem-kilencedik-feladat" class="flexbox-elem-kilencedik-feladat">A</div>
+                    <div id="masodik-elem-kilencedik-feladat" class="flexbox-elem-kilencedik-feladat">B</div>
+                </div>
+            </div>
+            <br />
+        </section>
+
+        <section>
+            <div id="feladat-10" class="feladat">
+                <h3>10. Feladat</h3>
+                <p class="feladat-leiras">
+                    Hozz létre egy olyan négyelemű tárolót, amelyben az elemek bármilyen böngészőméret mellett teljesen
+                    kitöltik a tárolót, és a méretük egymáshoz képest 1:2:5.
+                </p>
+            </div>
+            <div class="megoldas-container megoldas">
+                <div>
+                    <h3>Megoldás</h3>
+                    <div class="feladat-megoldas" id="feladat-10-tarolo">
+                        <div id="feladat-10-elem-1">1</div>
+                        <div id="feladat-10-elem-2">2</div>
+                        <div id="feladat-10-elem-3">3</div>
+                        <div id="feladat-10-elem-4">4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="feladat" id="feladat-11">
+                <h3>11. Feladat</h3>
+                <p>
+                    Hozz létre egy kettő, 400 pixel méretű elemet tartalmazó tárolót úgy, hogy ha a tároló szélessége
+                    meghaladja a 800 pixelt, akkor a második elem kétszer olyan gyorsan nőjön, ha viszont 800 pixel alá
+                    csökken, akkor kétszer olyan gyorsan csökkenjen, mint az első elem.
+                </p>
+            </div>
+            <div class="megoldas-container megoldas">
+                <div>
+                    <h3>Megoldás</h3>
+                    <div id="ket-elemes-tarolo">
+                        <div id="elem-1" class="ket-elemes-tarolo_elem">1</div>
+                        <div id="elem-2" class="ket-elemes-tarolo_elem">2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
