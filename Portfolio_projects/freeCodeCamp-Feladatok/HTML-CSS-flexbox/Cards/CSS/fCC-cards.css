@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    outline:1px black solid;
+    width: 300px;
+    height: 300px;
+}
+
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.middle {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    align-self: flex-end;
+}
