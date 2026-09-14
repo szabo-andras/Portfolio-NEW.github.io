@@ -1,0 +1,25 @@
+* {
+    padding: 10px;
+}
+
+header{
+    background-color: darkkhaki;
+}
+
+footer{
+    background-color: lightgray;
+}
+
+main{
+    background-color: lightcoral;
+}
+
+.grid-tarolo {
+    background-color:darkgreen;
+    color:whitesmoke;
+}
+
+.grid-tarolo div{
+    outline: 1px solid white;
+    background-color: green;
+}
