@@ -1,27 +1,98 @@
-div, main, header, footer {
+div,
+main,
+header,
+footer {
     padding: 10px;
 }
 
-header{
+header {
     background-color: darkkhaki;
 }
 
-footer{
+footer {
     background-color: lightgray;
 }
 
-main{
+main {
     background-color: lightcoral;
 }
 
 .grid-tarolo {
     display: grid;
-    background-color:darkgreen;
-    color:whitesmoke;
+    background-color: darkgreen;
+    color: whitesmoke;
+    
 }
 
-.grid-tarolo div{
-    
-    outline: 1px solid white;
+.grid-tarolo div {
+    border: 1px solid white;
     background-color: green;
+    gap: 10px;
+}
+
+.belso-grid-tarolo {
+    display:grid;
+    grid-template-columns: 90%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.belso-grid-tarolo div {
+    background-color: deepskyblue;
+    color:black;
+    font-weight: 700;
+}
+
+.fill-fit-tarolo {
+    background-color: darkslategray;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+    gap: 100px;
+}
+
+@media screen and (min-width: 576px) {
+    .grid-elem1 {
+        grid-area: A ;
+    }
+    .grid-elem2 {
+        grid-area: B;
+    }
+    .grid-elem3 {
+        grid-area: C;
+    }
+    .grid-elem4 {
+        grid-area: D;
+    }
+    .grid-elem5 {
+        grid-area: E;
+    }
+    .grid-elem6 {
+        grid-area: F;
+    }
+
+    .grid-tarolo {
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas:
+                "A B"
+                "C C"
+                "D E"
+                "F F";
+    }
+
+    .belso-grid-tarolo {
+                grid-template-columns: repeat(2, 150px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .grid-tarolo {
+        grid-template-columns: 2fr 1fr 1fr;       
+        grid-template-areas:
+                "A B D"
+                "C C D"
+                "F E D";
+    }
+    .belso-grid-tarolo {
+        grid-template-columns: repeat(3, 125px);
+    }
 }
