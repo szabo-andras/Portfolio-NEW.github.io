@@ -1,4 +1,4 @@
-* {
+div, main, header, footer {
     padding: 10px;
 }
 
@@ -15,11 +15,13 @@ main{
 }
 
 .grid-tarolo {
+    display: grid;
     background-color:darkgreen;
     color:whitesmoke;
 }
 
 .grid-tarolo div{
+    
     outline: 1px solid white;
     background-color: green;
 }
