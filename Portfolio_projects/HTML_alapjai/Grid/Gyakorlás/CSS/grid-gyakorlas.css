@@ -1,11 +1,90 @@
+:root {
+    --bg-megoldas: rgba(107, 107, 32, 0.815);
+}
+
+body{
+    background-color: rgb(51, 51, 51);
+}
+
+html{
+    font-size: 14px;
+}
+
+#article-grid_feladatok_es_megoldasaik {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 15px;
+    
+    padding: 15px 25px;
+}
+
+h1{
+    grid-column: 1/-1;
+    font-size: 6rem;
+    color:whitesmoke;
+}
+h2{
+    padding-top:0;
+    margin-top:0;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+[id*="feladat"] h2::after,
+[id*="megoldas"] h2::after {
+    content: ":"; 
+}
+
+.code{
+    display:flex;
+    flex-direction:column;
+    padding: 0rem 1rem;
+}
+
+
+
+
+.feladat-leiras{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.1rem;
+    font-weight: 600;
+    background-color: antiquewhite;
+    padding:5px;
+    box-shadow: 0px 0px 1.5px 3px yellow;
+}
+
+section[id*="feladat"] {
+    margin:0;
+    padding: 1.5em;
+    
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px  2px rgb(128, 21, 2);
+    background-color: rgba(55, 255, 0, 0.473);
+    color: black;
+    
+}
+
+
+.megoldas {
+    margin-top: 20px;
+    padding:10px 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: rgb(174, 113, 33);
+    box-shadow: 0px 0px 1.5px 3px yellow;
+}
+
+
+#cim{
+    grid-column: 1/-1;
+}
 
 /* 1. Feladat */
 
 #feladat1-grid-tarolo {
-    background-color: yellow;
+    background-color: var(--bg-megoldas);
     display:grid;
-    
-    padding: 5px;
+    padding: 2px;
     gap:5px;
     grid-template-columns: repeat(2 , 200px);
 }
@@ -18,7 +97,7 @@
 /* 2. Feladat */
 
 #feladat2-grid-tarolo{
-    background-color: yellow;
+    background-color: var(--bg-megoldas);
     display:grid;
 
     padding: 5px;
@@ -35,16 +114,25 @@
 
 
 /* 3. Feladat */
+#feladat3{
+    grid-column: 1 / -1;
+}
 
 #feladat3-grid-tarolo {
     background-color: yellow;
     display: grid;
     grid-template-columns: repeat(100, 10px);
     grid-template-rows: repeat(100, 10px);
+    outline: 1px solid black;
 }
 
 
+
 /* 4. Feladat */
+
+#feladat4 {
+    grid-column: 1 / -1;
+}
 
 #feladat4-grid-tarolo {
     display:grid;
@@ -156,16 +244,23 @@ img {
     "Bal_menu Lablec Lablec";
     gap: 5px 5px;
 }
+ #feladat11-grid-tarolo h2{
+    font-size: 1.5rem;
+ }
+
+ #feladat11-grid-tarolo h3 {
+     font-size: 1.3rem;
+ }
+
 
 #feladat11-grid-elem-Fejlec{
     grid-area: Fejlec;
-    border:1px solid red;
-    
+    border:2px dotted red;
 }
 
 #feladat11-grid-elem-Bal_menu{
     grid-area: Bal_menu;
-    border: 1px solid red;
+    border: 2px dotted red;
     display: flex;
     flex-direction: column;
     padding:5px;
@@ -174,15 +269,15 @@ img {
 
 #feladat11-grid-elem-Szoveg_blokk_1{
     grid-area: Szoveg_blokk_1;
-    border: 1px solid red;
+    border: 2px dotted red;
 }
 #feladat11-grid-elem-Szoveg_blokk_2 {
     grid-area: Szoveg_blokk_2;
-    border: 1px solid red;
+    border: 2px dotted red;
 }
 #feladat11-grid-elem-Lablec {
     grid-area: Lablec;
-    border: 1px solid red;
+    border: 2px dotted red;
     text-align: center;
 }
 
@@ -236,7 +331,7 @@ img {
 }
 
 #feladat13-grid-elem2 {
-    align-self: center;
+    align-self: end;
 }
 
 
@@ -287,13 +382,29 @@ img {
     background-color: lightskyblue;
 }
 
-#feladat17-grid-tarolo{
+
+/* 17. Feladat */
+
+#feladat17-grid-tarolo-auto-fill{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr) );
     gap: 2px;
 }
 
-#feladat17-grid-tarolo div{
+#feladat17-grid-tarolo-auto-fill div,
+#feladat17-grid-tarolo-auto-fit div{
     background-color: brown;
     border: 1px dotted black;
+}
+
+#feladat17-grid-tarolo-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2px;
+}
+
+@media screen and (max-width: 567px) {
+    html{
+        font-size: 5px;
+    };
 }

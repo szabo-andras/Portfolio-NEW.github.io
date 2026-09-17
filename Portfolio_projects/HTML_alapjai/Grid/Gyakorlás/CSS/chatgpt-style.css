@@ -1,0 +1,776 @@
+/* =========================================================
+   CSS GRID PLAYGROUND
+   ========================================================= */
+
+:root {
+    --bg-main: #0d1117;
+    --bg-surface: #161b22;
+    --bg-card: #1c2128;
+    --bg-code: #0d1117;
+
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+
+    --accent: #39d0c8;
+    --accent-soft: rgba(57, 208, 200, 0.15);
+
+    --border: #30363d;
+    --border-accent: rgba(57, 208, 200, 0.5);
+
+    --debug-grid: #ffd166;
+    --debug-item: #ff5c5c;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(57, 208, 200, 0.08),
+            transparent 35%),
+        var(--bg-main);
+
+    color: var(--text-main);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+#article-grid_feladatok_es_megoldasaik {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(420px, 1fr));
+
+    gap: 1.5rem;
+
+    width: min(1600px, 100%);
+    margin: 0 auto;
+
+    padding: 2rem;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+#cim {
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    padding: 3rem 2rem;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(57, 208, 200, 0.12),
+            rgba(255, 255, 255, 0.02));
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+
+/* decorative glow */
+
+#cim::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    top: -120px;
+    right: -80px;
+
+    background: var(--accent);
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: 0.15;
+}
+
+
+#cim h1 {
+    position: relative;
+
+    margin: 0;
+
+    color: var(--text-main);
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+
+#cim h1::after {
+    content: "_";
+
+    color: var(--accent);
+
+    animation: cursor 1s infinite;
+}
+
+
+#cim h2 {
+    position: relative;
+
+    margin: 0.75rem 0 0;
+
+    color: var(--text-muted);
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TASK CARDS
+   ========================================================= */
+
+section[id*="feladat"] {
+    position: relative;
+
+    margin: 0;
+    padding: 1.5rem;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.01));
+
+    color: var(--text-main);
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+section[id*="feladat"]:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--border-accent);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(57, 208, 200, 0.08);
+}
+
+
+/* =========================================================
+   TASK TITLE
+   ========================================================= */
+
+.feladat-cim {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--accent);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* number / title decoration */
+
+.feladat-cim::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    background: var(--accent);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px var(--accent),
+        0 0 18px rgba(57, 208, 200, 0.5);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.feladat-leiras {
+    margin-bottom: 1.25rem;
+
+    color: var(--text-muted);
+
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   SOLUTION AREA
+   ========================================================= */
+
+.megoldas {
+    padding: 1rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--bg-code);
+}
+
+
+/* =========================================================
+   GRID DEBUG CONTAINERS
+   ========================================================= */
+
+/*
+   A Grid container kap egy sárgás "playground" hátteret.
+   Ettől vizuálisan rögtön látható,
+   hol kezdődik a Grid.
+*/
+
+[id*="grid-tarolo"] {
+    position: relative;
+
+    background-color: var(--debug-grid);
+
+    border: 2px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 6px;
+
+    padding: 6px;
+}
+
+
+/* =========================================================
+   GRID ITEMS
+   ========================================================= */
+
+[id*="grid-tarolo"]>div {
+    background-color: var(--debug-item);
+
+    color: #111;
+
+    border: 2px solid rgba(0, 0, 0, 0.5);
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+
+[id*="grid-tarolo"]>div:hover {
+    transform: scale(1.03);
+
+    filter: brightness(1.1);
+}
+
+
+/* =========================================================
+   CODE-LIKE TEXT
+   ========================================================= */
+
+code,
+pre {
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: var(--accent);
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+
+a:hover {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(57, 208, 200, 0.7);
+}
+/* 1. Feladat */
+
+#feladat1-grid-tarolo {
+    background-color: yellow;
+    display: grid;
+    padding: 2px;
+    gap: 5px;
+    grid-template-columns: repeat(2, 200px);
+}
+
+
+#feladat1-grid-tarolo div {
+    border: 1px solid black;
+    background-color: red;
+}
+
+/* 2. Feladat */
+
+#feladat2-grid-tarolo {
+    background-color: yellow;
+    display: grid;
+
+    padding: 5px;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+}
+
+#feladat2-grid-tarolo div {
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+/* 3. Feladat */
+#feladat3 {
+    grid-column: 1 / -1;
+}
+
+#feladat3-grid-tarolo {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(100, 10px);
+    grid-template-rows: repeat(100, 10px);
+    outline: 1px solid black;
+}
+
+
+
+/* 4. Feladat */
+
+#feladat4 {
+    grid-column: 1 / -1;
+}
+
+#feladat4-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(2, 200px) repeat(2, 100px) 1fr;
+}
+
+.feladat4-grid-elem {
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+/* 5. Feladat */
+
+#feladat5-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+}
+
+.feladat5-grid-elem {
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+/* 6. Feladat */
+
+#feladat6-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    height: 100px;
+    align-content: end;
+    background-color: yellow;
+}
+
+.feladat6-grid-elem {
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+/* 7. Feladat */
+
+#feladat7-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 5px;
+    background-color: yellow;
+}
+
+.feladat7-grid-elem {
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+/* 8. Feladat */
+
+img {
+    width: 100%;
+}
+
+#feladat8-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 5px;
+    background-color: yellow;
+    grid-template-areas:
+        "A A B "
+        "C D D"
+        "E E E";
+    font-size: 22px;
+}
+
+#feladat8-grid-elem-A {
+    grid-area: A;
+    border: 1px solid black;
+    background-color: red;
+}
+
+#feladat8-grid-elem-B {
+    grid-area: B;
+    border: 1px solid black;
+    background-color: red;
+}
+
+#feladat8-grid-elem-C {
+    grid-area: C;
+    border: 1px solid black;
+    background-color: red;
+}
+
+#feladat8-grid-elem-D {
+    grid-area: D;
+    border: 1px solid black;
+    background-color: red;
+}
+
+#feladat8-grid-elem-E {
+    grid-area: E;
+    border: 1px solid black;
+    background-color: red;
+}
+
+
+/* 11. Feladat */
+
+#feladat11{
+    grid-column: 1/-1;
+}
+
+#feladat11-grid-tarolo {
+    display: grid;
+    
+    grid-template-areas:
+        "Bal_menu Fejlec Fejlec"
+        "Bal_menu Szoveg_blokk_1 Szoveg_blokk_2"
+        "Bal_menu Lablec Lablec";
+    gap: 5px 5px;
+}
+
+#feladat11-grid-elem-Fejlec {
+    grid-area: Fejlec;
+    border: 1px solid red;
+
+}
+
+#feladat11-grid-elem-Bal_menu {
+    grid-area: Bal_menu;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#feladat11-grid-elem-Szoveg_blokk_1 {
+    grid-area: Szoveg_blokk_1;
+    border: 1px solid red;
+}
+
+#feladat11-grid-elem-Szoveg_blokk_2 {
+    grid-area: Szoveg_blokk_2;
+    border: 1px solid red;
+}
+
+#feladat11-grid-elem-Lablec {
+    grid-area: Lablec;
+    border: 1px solid red;
+    text-align: center;
+}
+
+#feladat11-grid-elem-Bal_menu a:checked {
+    text-decoration: none;
+}
+
+.feladat11_navigacios_csoport h3 {
+    padding: 2px;
+    margin: 0;
+    ;
+}
+
+.feladat11_navigacios_csoport {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+/* 12. Feladat */
+
+#feladat12-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 5px;
+    background-color: lightgray;
+}
+
+#feladat12-grid-tarolo div {
+    background-color: lightskyblue;
+}
+
+#feladat12-grid-elem2 {
+    justify-self: center;
+}
+
+
+/* 13. Feladat */
+
+#feladat13-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 5px;
+    background-color: lightgray;
+    height: 150px;
+}
+
+#feladat13-grid-tarolo div {
+    background-color: lightskyblue;
+}
+
+#feladat13-grid-elem2 {
+    align-self: end;
+}
+
+
+/* 14. Feladat */
+
+#feladat14-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 5px;
+    background-color: lightgray;
+    height: 150px;
+    justify-items: end;
+}
+
+#feladat14-grid-tarolo div {
+    background-color: lightskyblue;
+}
+
+
+/* 15. Feladat */
+
+#feladat15-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 5px;
+    background-color: lightgray;
+    height: 150px;
+    align-items: center;
+}
+
+#feladat15-grid-tarolo div {
+    background-color: lightskyblue;
+}
+
+
+/* 16.Feladat  */
+
+#feladat16-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    background-color: lightgray;
+
+
+}
+
+#feladat16-grid-tarolo div {
+    background-color: lightskyblue;
+}
+
+#feladat17-grid-tarolo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2px;
+}
+
+#feladat17-grid-tarolo div {
+    background-color: brown;
+    border: 1px dotted black;
+}
+
+/* =========================================================
+   SPECIAL FULL-WIDTH TASKS
+   ========================================================= */
+
+#feladat3,
+#feladat4 {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes cursor {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #article-grid_feladatok_es_megoldasaik {
+        grid-template-columns: 1fr;
+
+        padding: 1rem;
+
+        gap: 1rem;
+    }
+
+    #cim {
+        padding: 2rem 1.25rem;
+    }
+
+    section[id*="feladat"] {
+        padding: 1.25rem;
+    }
+
+    #feladat3,
+    #feladat4 {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    #article-grid_feladatok_es_megoldasaik {
+        padding: 0.75rem;
+    }
+
+    section[id*="feladat"] {
+        padding: 1rem;
+    }
+}
+
