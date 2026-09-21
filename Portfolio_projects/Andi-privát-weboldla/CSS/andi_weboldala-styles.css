@@ -1,0 +1,198 @@
+:root{
+--oldal-hatter: linear-gradient(150deg, rgba(255, 228, 139, 1) 10%, rgba(247, 247, 247, 1) 60%);
+--vilagos-arany: rgba(255,228,139,1);
+--fenyozold: rgba(2, 108, 124, 1);
+--cotton-candy: rgba(243, 154, 157, 1);
+--zold: rgba(77, 161, 103, 1);
+--royal-szilva: rgba(140, 26, 106, 1);
+
+/* box-shadow */
+--box-shadow:  2px 3px 5px 2px var(--cotton-candy);
+}
+
+body {
+    background: var(--oldal-hatter);
+    margin:0;
+    display: grid;
+    grid-template-columns: 1fr;
+        grid-template-areas:
+            "oldalcim"
+            "fejlec"
+            "idojaras"
+            "elem1"
+            "elem2"
+            "elem3"
+            "lablec";
+    gap:1rem 1rem;
+
+    
+}
+
+html{
+    font-size: clamp(8px, 1vw, 12px);
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* html,
+body {
+    width: 100vw;
+    max-width: 100vw;
+} */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6, a{
+    color: var(--fenyozold);
+    text-shadow: 1px 1px 2px var(--cotton-candy);
+}
+
+h1{
+    font-size: clamp(2rem, 7vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+
+
+a {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    text-shadow: 1px 1px 2px var(--cotton-candy);
+    
+}
+
+a:hover {
+    
+    color: var(--cotton-candy);
+    text-shadow: 1px 1px 2px var(--fenyozold);  
+}
+
+#navigacio-box {
+    display:flex;
+    justify-content: flex-end;
+}
+
+#navigacio-box ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+    text-decoration: none;
+    gap: 1.2rem;
+    /* font-size: 1.5rem; */
+    padding:0 1rem;
+}
+
+
+
+
+#oldalcim {
+    grid-area: oldalcim;
+}
+
+
+#fejlec,
+#idojaras_kijelzo,
+#elem1,
+#elem2,
+#elem3,
+#lablec{
+    box-shadow: var(--box-shadow);
+    background-color:rgba(248, 188, 240, 0.168);
+}
+
+
+
+#fejlec {
+    grid-area: fejlec;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: aliceblue;
+}
+
+
+
+#idojaras_kijelzo{
+    padding: 10px;
+    grid-area: idojaras;
+    min-width: 0;
+    max-width:100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url(https://www.weatherwizkids.com/wp-content/themes/weather-wiz-kids/img/nav_weather.png);
+    background-color: rgba(58, 83, 246, 0.871);
+        
+    background-blend-mode: screen;
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    
+}
+
+#elem1 {
+    grid-area: elem1;
+}
+
+#elem2 {
+    grid-area: elem2;
+}
+
+#elem3 {
+    grid-area: elem3;
+}
+
+#lablec {
+    grid-area: lablec;
+    align-self:end;
+}
+
+
+
+.cikk{
+    font-size: 1.5rem;
+    display:flex;
+    flex-direction:column;
+    padding: 1.5rem;
+    background-color: var(--oldal-hatter);
+}
+ 
+
+
+
+
+@media screen and (min-width: 567px){
+    html {
+           
+    }
+
+    body{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "oldalcim oldalcim oldalcim oldalcim"
+            "fejlec fejlec fejlec fejlec"
+            "idojaras idojaras idojaras idojaras"
+            "elem1 elem1 elem1 elem1"
+            "elem2 elem2 elem3 elem3"
+            "lablec lablec lablec lablec";
+        gap: 2rem 1rem;
+        justify-self: center;
+        margin: 0 3rem;
+        max-width: 1000px;
+    }
+
+} 

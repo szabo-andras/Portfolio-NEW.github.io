@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/andi_weboldala-styles.css" />
+        <link rel="stylesheet" href="./CSS/idojaras-megjelenito_tablazat.css" />
+        <title>Andi - Főoldal</title>
+    </head>
+    <body>
+        <h1 id="oldalcim">Xy oldala</h1>
+        <section id="fejlec">
+            <nav id="navigacio-box">
+                <ul>
+                    <li class="navigacios_elem"><a href="#">Főoldal</a></li>
+                    <li class="navigacios_elem"><a href="#">Wardrobe</a></li>
+                    <li class="navigacios_elem"><a href="#">Utazásszervezés</a></li>
+                    <li class="navigacios_elem"><a href="#">Álláskeresés</a></li>
+                    <li class="navigacios_elem"><a href="#">Bevásárlás</a></li>
+                    <li class="navigacios_elem"><a href="#">Feladatlista</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- Időjárás Kijelző -->
+        <section id="idojaras_kijelzo">
+            <h2>Időjárás kijelző</h2>
+            <fieldset>
+                <label for="idojaras-datum">Dátum</label>
+                <input type="date" id="idojaras-datum" name="idojaras-datum" data-idojaras-kivalasztott-datum="datum" />
+
+                <!-- Megjelenítendő adatok -->
+                <h3 class="idojaras_urlap-szakaszcim">Megjelenítendő adatok:</h3>
+
+                <!-- Hőmérséklet -->
+                <input
+                    type="checkbox"
+                    checked
+                    id="idojaras-chkbox-homerseklet"
+                    name="Hőmérséklet"
+                    data-idojaras="homerseklet" />
+                <label for="idojaras-chkbox-homerseklet">Hőnérséklet (Celsius)</label>
+
+                <!-- Hőérzet -->
+                <input type="checkbox" checked id="idojaras-chkbox-hoerzet" name="Hőérzet" data-idojaras="hoerzet" />
+                <label for="idojaras-chkbox-hoerzet">Hőérzet</label>
+
+                <!-- Szélerő -->
+                <input type="checkbox" checked id="idojaras_urlap-szelero" name="szélerő" data-idojaras="szelero" />
+                <label for="idojaras_urlap-szelero">Szélerő</label>
+
+                <!-- Csapadék -->
+                <input type="checkbox" checked id="idojaras_urlap-csapadek" name="csapadék" data-idojaras="csapadek" />
+                <label for="idojaras_urlap-csapadek">Csapadék</label>
+
+                <!-- UV index -->
+                <input type="checkbox" id="idojaras_urlap-UV" name="UV index" data-idojaras="uv" />
+                <label for="idojaras_urlap-UV">UV index</label>
+            </fieldset>
+            <div id="idojaras-megjelenito_tablazat"></div>
+        </section>
+        <section id="elem1" class="cikk">
+            <h2>1. elem</h2>
+            <p>
+                <span
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, eveniet veniam unde rem,
+                    quisquam totam laboriosam magni deleniti qui perspiciatis dolore ad? Aperiam, recusandae quo. Ullam
+                    doloremque earum officia expedita veritatis placeat temporibus ipsa, molestias est debitis. Aut
+                    ipsum pariatur sit facere harum.</span
+                ><span
+                    >Obcaecati fugit ratione iusto quas facere dignissimos, tempore neque saepe laudantium ab aperiam
+                    quasi perspiciatis assumenda sequi at cumque ut nesciunt repellendus, odio, distinctio placeat quia
+                    facilis corrupti. Eum, a rem, voluptas amet quae totam nesciunt vero, optio voluptates impedit
+                    labore commodi eligendi!</span
+                >
+            </p>
+        </section>
+        <section id="elem2" class="cikk">
+            <h2>2. elem</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis error mollitia tempore quis molestiae
+                sequi numquam non aperiam, esse in dignissimos ipsum exercitationem possimus iste quam tempora veniam
+                blanditiis harum, a hic repellat! Alias!
+            </p>
+            <p>
+                Alias deleniti non dolorem vitae ab distinctio, reprehenderit minima asperiores esse odit consequatur
+                ullam dicta, laudantium eius expedita ad animi optio quaerat aperiam! Sed accusantium dolorem
+                necessitatibus distinctio commodi ipsa molestias totam et perferendis?
+            </p>
+            <p>
+                Autem at placeat animi unde vero tempora atque, expedita ullam, enim rem nostrum. Magni, cum explicabo
+                pariatur sed voluptates autem tempore et molestiae deserunt ea iusto nemo cumque eaque distinctio
+                provident maxime minus animi!
+            </p>
+            <p>
+                Sequi tenetur, doloremque illum molestiae inventore perspiciatis eaque facere unde voluptas odit iure
+                sapiente voluptatem quis magnam optio, tempore labore vel cum corporis! Aut ullam numquam id quibusdam,
+                quos inventore explicabo harum sed eveniet?
+            </p>
+        </section>
+        <section id="elem3" class="cikk">
+            <h2>3. elem</h2>
+            <p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sit.</span
+                ><span>Quod maiores iure sint odit? Quisquam qui voluptate reprehenderit perferendis!</span
+                ><span>Odit soluta culpa iure ad veniam nemo est. Dicta, deserunt?</span>
+            </p>
+        </section>
+        <section id="lablec"><h2>Lábléc</h2></section>
+        <script src="./Components/Idojaras/idojaras-megjelenito.js"></script>
+    </body>
+</html>

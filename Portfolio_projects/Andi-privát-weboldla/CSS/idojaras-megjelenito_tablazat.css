@@ -1,0 +1,44 @@
+#idojaras-megjelenito_tablazat table {
+    min-width: 100%;
+    border: 1px solid var(--cotton-candy);
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+    
+}
+
+#idojaras-megjelenito_tablazat {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    
+    
+    
+}
+
+#idojaras_kijelzo fieldset {
+    width: 100%;
+}
+
+#idojaras-megjelenito_tablazat th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: var(--cotton-candy);
+    font-size: .9rem;
+    color:var(--fenyozold);
+    /* padding: 0px 1rem; */
+    text-shadow: 1px 1px 2px var(--vilagos-arany);
+    border:1px solid black;
+}
+
+#idojaras-megjelenito_tablazat * {
+    padding: .2rem .5rem;
+    border:1px solid black;
+    font-size: .8rem;
+    text-align: center;
+    background-color:rgba(237, 247, 93, 0.17) ;
+
+}
