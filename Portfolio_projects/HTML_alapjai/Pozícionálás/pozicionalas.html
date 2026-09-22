@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./CSS/pozicionalas-styles.css" />
+        <title>Pozícionálás</title>
+    </head>
+    <body>
+        <h1>Pozícionálás feladatok</h1>
+        <nav>
+            <ul>
+                <li class="nav-elem">
+                    <a href="#feladat1">1. Feladat</a>
+                </li>
+                <li class="nav-elem"><a href="#feladat2">2. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat3">3. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat4">4. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat5">5. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat6">6. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat7">7. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat8">8. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat9">9. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat10">10. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat11">11. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat12">12. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat13">13. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat14">14. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat15">15. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat16">16. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat17">17. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat18">18. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat19">19. Feladat</a></li>
+                <li class="nav-elem"><a href="#feladat20">20. Feladat</a></li>
+            </ul>
+        </nav>
+        <!-- 1. Feladat -->
+        <section class="feladat-container" id="feladat1">
+            <h2 class="cim-feladat">1. Feladat</h2>
+            <div class="feladat-leiras">
+                <ul>
+                    <li>Hozz létre egy tetszőleges blokk elemet,</li>
+                    <li>adj neki keretet, hogy látható legyen a méretezés,</li>
+                    <li>majd állítsd be a szélességét 600 pixelre.</li>
+                    <li>Ezután kezdd el összenyomni a böngészőt úgy, hogy a szélessége kisebb legyen 600 pixelnél.</li>
+                    <li>Mi történik?</li>
+                </ul>
+                <em>
+                    Megjegyzés: a feladatok megoldása a „CSS - Téglalapok elrendezése - feladatmegoldások” cím ű
+                    dokumentumban található. A feladatok néha egymásra épülnek, ezért el őször mindig oldd meg a
+                    feladatot, és csak utána haladj tovább az anyaggal.</em
+                >
+            </div>
+        </section>
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás</h2>
+            <div class="container-megoldas">
+                <div id="feladat1-blokk-elem">Tetszőleges blokk elem</div>
+            </div>
+            <p class="megjegyzes">
+                Mivel az elem szélessége mindig 600px, ezért, ha az ablak szélessége kisebb lesz 600px-nél, az ablak
+                alján megjelenik egy vízszintes görgetősáv...
+            </p>
+        </section>
+
+        <!-- 2.Feladat -->
+        <section class="feladat-container" id="feladat2">
+            <h2 class="cim-feladat">2.Feladat</h2>
+            <div class="feladat-leiras">
+                <ul>
+                    <li>
+                        Állítsd át az 1. feladatban a width tulajdonságot a max-width tulajdonságra. Mit tapasztalsz?
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás</h2>
+            <div class="container-megoldas">
+                <div id="feladat2-blokk-elem">Tetszőleges blokk elem</div>
+            </div>
+            <p class="megjegyzes">Amikor az ablak szélessége kisebb, mint 600px, az elem elkezd zsugorodni</p>
+        </section>
+
+        <!-- 3. Feladat -->
+        <section class="feladat-container" id="feladat3">
+            <h2 class="cim-feladat">3. Feladat</h2>
+            <div class="feladat-leiras">
+                Az előző feladatokat folytatva most a min-width tulajdonságot használd. Mit tapasztalsz?
+            </div>
+        </section>
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás</h2>
+            <div class="container-megoldas">
+                <div id="feladat3-blokk-elem">Tetszőleges blokk elem</div>
+                <p class="megjegyzes">
+                    Amikor az ablak szélessége kisebb, mint 580px, akkor megint az alsó görgetősáv jelenik meg, mert az
+                    elem kilóg
+                </p>
+            </div>
+        </section>
+        <!-- 4. Feladat -->
+        <section class="feladat-container" id="feladat4">
+            <h2 class="cim-feladat">4. Feladat</h2>
+            <div class="feladat-leiras">
+                <ul>
+                    <li>Hozz létre 4 egyforma méretű, kerettel rendelkező blokk elemet;</li>
+                    <li>
+                        <p>
+                            létrehozhatsz nekik egy szülő tárolót is szintén kerettel, hogy az elmozdulás mértéke is jól
+                            látható legyen. Például:
+                        </p>
+                        <img src="./feladat-kepek/feladat-4.png" alt="Negyedik feladat képe" />
+                    </li>
+                    <li>
+                        A tanultak alapján:
+                        <ol>
+                            <li>
+                                Told el a D elemet úgy, hogy a bal felső sarka a C elem jobb alsó sarkánál legyen (ha
+                                keretet is adtál meg, akkor azt is vedd számításba, vagy használj outline-t, ami
+                                megegyezik a borderrel csak nem foglal helyet)
+                            </li>
+                            <li>Told el az A elemet a tárolód méretének egynegyedével lefelé. Mit tapasztalsz?</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás</h2>
+            <div class="container-megoldas4">
+                <div class="feladat4-elem">A</div>
+                <div class="feladat4-elem">B</div>
+                <div class="feladat4-elem">C</div>
+                <div class="feladat4-elem">D</div>
+            </div>
+        </section>
+        <!-- 4. Feladat C1  -->
+        <section class="feladat-container" id="feladat4-c1">
+            <h2 class="cim-feladat">4. Feladat C1</h2>
+            <div class="feladat-leiras">
+                <p>Hozd létre a következő elrendezéseket:</p>
+                <img src="./feladat-kepek/feladat-4-c1.png" alt="4. feladat c1 mintája" />
+            </div>
+        </section>
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás 4c1</h2>
+            <div class="container-megoldas4">
+                <div class="feladat4c1-elem">A</div>
+                <div class="feladat4c1-elem">B</div>
+                <div class="feladat4c1-elem">C</div>
+                <div class="feladat4c1-elem">D</div>
+            </div>
+        </section>
+        <!-- 4. Feladat C2  -->
+        <section class="feladat-container" id="feladat4-c2">
+            <h2 class="cim-feladat">4. Feladat C2</h2>
+            <div class="feladat-leiras">
+                <img src="./feladat-kepek/feladat-4-c2.png" alt="4.feladat c2 mintája" />
+            </div>
+        </section>
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás 4c2</h2>
+            <div class="container-megoldas">
+                <div class="container-megoldas4">
+                    <div class="feladat4c2-elem">A</div>
+                    <div class="feladat4c2-elem">B</div>
+                    <div class="feladat4c2-elem">C</div>
+                    <div class="feladat4c2-elem">D</div>
+                </div>
+            </div>
+        </section>
+        <!-- 5. Feladat -->
+        <section class="feladat-container" id="feladat5">
+            <h2 class="cim-feladat">5. Feladat</h2>
+            <div class="feladat-leiras">
+                <ol>
+                    <li>
+                        Állítsd a szülő tároló position tulajdonságát relative-re, majd állítsd be csak az A elem
+                        position tulajdonságát absolute-ra és told el jobbra a B elem méretével. Mi történik a többi
+                        elemmel?
+                    </li>
+                    <li>
+                        Most állítsd csak a B elem position tulajdonságát absolute-ra és told el jobbra. Mi történik?
+                    </li>
+                    <li>Most helyezd eltolásokkal a tároló bal felső sarkába az absolute pozicionált elemedet.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Megoldás 5a -->
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás 5a.</h2>
+            <div class="container-megoldas">
+                <div class="container-megoldas5a">
+                    <div class="feladat5a-elem">A</div>
+                    <div class="feladat5a-elem">B</div>
+                    <div class="feladat5a-elem">C</div>
+                    <div class="feladat5a-elem">D</div>
+                </div>
+                <p>Az első (A) elem "kiemelődött" a helyéről és helyére a következő elem került.</p>
+            </div>
+        </section>
+        <!-- Megoldás 5b -->
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás 5b.</h2>
+            <div class="container-megoldas">
+                <div class="container-megoldas5b">
+                    <div class="feladat5b-elem">A</div>
+                    <div class="feladat5b-elem">B</div>
+                    <div class="feladat5b-elem">C</div>
+                    <div class="feladat5b-elem">D</div>
+                </div>
+                <p>A B elem kiemelődött a konténerből és a C elem becsúszött mögé (a "B" elem korábbi helyére)</p>
+            </div>
+        </section>
+
+        <!-- Megoldás 5c -->
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás 5c.</h2>
+            <div class="container-megoldas">
+                <div class="container-megoldas5c">
+                    <div class="feladat5c-elem">A</div>
+                    <div class="feladat5c-elem">B</div>
+                    <div class="feladat5c-elem">C</div>
+                    <div class="feladat5c-elem">D</div>
+                </div>
+                <p>
+                    A container-t <code>position:relative;</code> -ra állítjuk (mert static esetén a body-hoz igazodna),
+                    majd az absolute-ra állított elemnél beállítjuk: <code>top:0;</code>. Eredményként az elem eltakarja
+                    az ott elhelyezkedő elemet. ("B" takarja "A"-t)
+                </p>
+            </div>
+        </section>
+
+        <!-- Haladó Feladat -->
+        <section class="feladat-container" id="feladat-halado">
+            <h2 class="cim-feladat">Haladó Feladat</h2>
+            <div class="feladat-leiras">
+                Az alábbiakban különböző gyakorlati példákat láthatsz a fixed és sticky beállításokkal. Mielőtt
+                megnéznéd a megoldást, próbálj meg létrehozni a következőkhöz hasonló elemeket a tanultak alapján:
+                <ol>
+                    <li>oldal jobb szélén lebegő űrlap,</li>
+                    <li>
+                        a képernyő közepén megjelenő, felugró ablak (a felugrást, bezárást még nem kell tudnod, ahhoz
+                        nem elég a html és css),
+                    </li>
+                    <li>
+                        az oldal tetejéhez tapadó menü (a végig odatapadóhoz a fixed, a csak bizonyos mértékű lefelé
+                        görgetés után tapadóhoz a sticky értéket kell használni).
+                    </li>
+                </ol>
+                az A feladat lehetséges megoldásait nem a feladatmegoldások dokumentumban, hanem az alábbi codesbandoxos
+                hivatkozásokat megnyitva láthatod.
+                <p>Gyakorlati példák a fixed és sticky beállításokra:</p>
+                <ol>
+                    <li>
+                        <a href="https://codesandbox.io/s/flamboyant-yonath-8kbov?file=/style.css" target="_blank"
+                            >Oldal jobb szélén lebegő űrlap</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://codesandbox.io/s/charming-morning-q25ut?file=/index.html" target="_blank"
+                            >Felugró ablak</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://codesandbox.io/s/amazing-lehmann-286rm?file=/style.cs" target="_blank"
+                            >Oldal tetejéhez tapadó menü
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <!-- Haladó Feladat a) Megoldás -->
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Haladó feladat a. Megoldás</h2>
+            <div class="container-megoldas-halado-a">
+                <form action="#" method="get" id="lebego-form">
+                    <fieldset>
+                        <legend>Első űrlap szakasz</legend>
+                        <label for="nev">Név</label>
+                        <input type="text" name="Nev" id="nev" />
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!-- Haladó feladat b. Megoldás -->
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Haladó feladat b. Megoldás</h2>
+            <div class="container-megoldas-halado-b">
+                <div id="kozepso-felugro-ablak">
+                    Ez a középső felugró ablak
+                    <div id="bezaras-X">&Cross;</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Haladó feladat c. Megoldás -->
+        <section class="megoldas-container">
+            <h2 class="cim-megoldas">Megoldás</h2>
+            <div class="container-megoldas-halado-c">
+                Ezt a menüt már az oldal létrehozásakor létrehoztam sticky-ben
+            </div>
+        </section>
+    </body>
+</html>

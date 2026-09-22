@@ -1,0 +1,261 @@
+:root{
+    --nagyitas: 1.5;
+}
+
+
+body{
+    margin:2rem;
+    background-color:bisque;
+}
+*{
+    box-sizing: border-box;
+}
+h1{
+    background-color: bisque;
+    position:sticky;
+    top:0;
+    z-index: 1000;
+}
+nav {
+    background-color: bisque;
+    position:sticky;
+    top:37px;
+    z-index: 900;
+    
+}
+nav ul{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 1rem;
+    list-style-type: none;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    border: 1px solid pink;
+    display:inline-block;
+    
+}
+
+img {
+    width:400px;
+}
+
+
+
+.cim-feladat{
+    padding-top:1rem;
+    position: sticky;
+    top:90px;
+    background-color: bisque;
+}
+
+.megoldas-container{
+    margin:1rem;
+    padding:2rem;
+    background: linear-gradient(180deg, rgba(249, 251, 250, 0.585) 70%, rgb(45, 241, 31)100%);
+    box-shadow: 0px 3px  1rem .5rem rgb(45, 241, 31, .5);
+}
+
+.megjegyzes{
+    font-weight: 100;
+    font-style: italic;
+    font-size: small;
+    color:green;
+}
+.megjegyzes::before{
+    content: "Megjegyzés: ";
+    font-weight: 700;
+    font-style: normal;
+}
+
+#feladat1-blokk-elem {
+    outline: 1px solid black;
+    width:600px;
+}
+
+#feladat2-blokk-elem {
+    max-width:600px;
+    outline: 1px solid red;
+}
+
+
+#feladat3-blokk-elem {
+    max-width: 600px;
+    min-width: 580px;
+    outline: 1px solid red;
+}
+
+
+.container-megoldas4{
+    width:600px;
+    height: 600px;
+    display:inline-block;
+    outline:1px solid black;
+}
+
+.feladat4-elem{
+    display:block;
+    width:100px;
+    height:100px;
+    outline:1px solid green;
+}
+
+ol {
+    list-style-type: lower-latin;
+    
+}
+
+
+.feladat4-elem:nth-child(3) {
+    background-color:blueviolet;
+}
+
+.feladat4-elem:nth-child(4) {
+    position: relative;
+    left: 101px;
+    top:1px;
+    background-color:dodgerblue;
+}
+
+.feladat4-elem:nth-child(1) {
+    position: relative;
+    top: 25%;
+    background-color: firebrick;
+}
+
+.feladat4c1-elem {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    outline: 1px solid green;
+}
+
+.feladat4c2-elem {
+    position:relative;
+    width: 100px;
+    height: 100px;
+    outline: 1px solid green;
+}
+
+.feladat4c2-elem:nth-child(2) {
+    left:21%;
+}
+
+.feladat4c2-elem:nth-child(3) {
+    left: 42%;
+}
+
+.feladat4c2-elem:nth-child(4) {
+    left: 63%;
+}
+
+.feladat5a-elem {
+    width: 100px;
+    height: 100px;
+    outline: 1px solid green;
+}
+
+.container-megoldas5a {
+    position:relative;
+}
+
+.feladat5a-elem:nth-child(1) {
+    position:absolute;
+    left:100px;
+    color:red;
+}
+
+
+.feladat5b-elem {
+    width: 100px;
+    height: 100px;
+    outline: 1px solid green;
+}
+.feladat5b-elem:nth-child(2) {
+    position:absolute;
+    background-color: aqua;
+}
+
+.feladat5b-elem:nth-child(3) {
+    background-color: red;
+}
+
+
+.container-megoldas5c {
+    position:relative;
+    height:500px;
+    width: 500px;
+    outline:1px solid blue;
+}
+
+.feladat5c-elem {
+    height: 100px;
+    width: 100px;
+    outline: 1px solid black;
+}
+
+.feladat5c-elem:nth-child(2) {
+    position: absolute;
+    background-color: aqua;
+    top:0;
+}
+
+
+
+.container-megoldas-halado-a {
+    border:2px solid brown;
+    height: 800px;
+    width: 800px;
+    
+}
+
+#lebego-form {
+    width:200px;
+    height:200px;
+    outline:1px solid black;
+    position: fixed;
+    top:10rem;
+    right:0;
+    background-color:orange;
+}
+
+#kozepso-felugro-ablak {
+    width:300px;
+    height:400px;
+    position:fixed;
+    top:calc(50vh - 200px);
+    left:calc(50vw - 150px);
+    background-color:rgba(128, 128, 128, 0.36);
+    z-index: 1100;
+}
+
+#bezaras-X {
+
+    font-weight:600;
+    font-size: 2rem;
+    border:1px solid red;
+    border-radius:50% 50%;
+    height:1rem;
+    width:1rem;
+    
+    line-height: .3rem;
+    float:right;
+    
+    
+
+}
+
+#bezaras-X:hover {
+    color:red;
+    border:2px solid red;
+    cursor:pointer;
+    transition:all .5s ease-in;    
+    box-shadow: 0px 0px 3px 2px rgb(251, 250, 250);
+    line-height: calc(.3rem * var(--nagyitas));
+    font-size: calc( 2rem * var(--nagyitas));
+    width: calc(1rem * var(--nagyitas));
+    height:calc(1rem * var(--nagyitas));
+}
