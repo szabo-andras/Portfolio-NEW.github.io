@@ -1,0 +1,113 @@
+:root {
+    --padding-left-right: 2rem;
+    --padding-top-bottom: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+#header {
+    display:flex;
+    padding: var(--padding-top-bottom) var(--padding-left-right) var(--padding-top-bottom) var(--padding-left-right);
+    justify-content:space-between;
+    background-color: yellowgreen;
+}
+
+#header::after{
+    content:"Menü";
+    color: white;
+}
+
+#navigacio-container ul, 
+#navigacio-container  {
+  visibility: hidden;
+  display:flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+
+
+#section-banner {
+    background-color: dodgerblue;
+    padding: var(--padding-top-bottom) var(--padding-left-right) var(--padding-top-bottom) var(--padding-left-right);
+}
+
+#section-skills {
+    background-color: lightcoral;
+    padding: var(--padding-top-bottom) var(--padding-left-right) var(--padding-top-bottom) var(--padding-left-right);
+}
+
+#section-portfolio {
+    background-color: chartreuse;
+    padding: var(--padding-top-bottom) var(--padding-left-right) var(--padding-top-bottom) var(--padding-left-right);
+}
+
+#section-contact {
+    background-color: goldenrod;
+    padding: var(--padding-top-bottom) var(--padding-left-right) var(--padding-top-bottom) var(--padding-left-right);
+}
+
+#footer {
+    background-color: lightseagreen;
+    padding: var(--padding-top-bottom) var(--padding-left-right) var(--padding-top-bottom) var(--padding-left-right);
+}
+
+.portfolio-elem {
+    background-color: lightyellow;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 576px){
+
+    #header::after {
+        content: "";
+display:none;    }
+
+    #navigacio-container ul, 
+    #navigacio-container {
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .portfolio-elem {
+        width:50%;
+    }
+    #portfolio-container {
+         display:flex;
+        flex-wrap:wrap;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .portfolio-elem {
+        width: calc(100% / 3);
+    }
+    main {
+    display:flex;
+    flex-wrap:wrap;
+    }
+    #section-banner {
+        width:50%;
+    }
+    #section-skills {
+        width:50%;
+    }
+    #section-portfolio,
+    #section-contact {
+        width: 100%;
+    }
+    
+}
+
