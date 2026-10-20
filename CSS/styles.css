@@ -32,35 +32,34 @@ strong {
 *BUTTONS* 
 \*******/
 .button {
-    display: inline-block;
-    text-decoration: none;
     font-weight: 500;
-    height: 3rem;
+    /* height: 3rem; */
     line-height: 2rem;
-    color: black;
-    border-radius: 0.3rem;
-    background-color: var(--sötétzöld);
-    box-shadow: 0.1rem 0.1rem 0.2rem black;
-    padding: 0.5rem;
+    /* color: black; */
+    /* border-radius: 0.3rem; */
+    /* box-shadow: 0.1rem 0.1rem 0.2rem black; */
+    /* padding: 0.5rem; */
 
-    text-align: center;
+    /* text-align: center; */
     font-size: medium;
     width: 10rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background: linear-gradient(145deg, rgba(71, 180, 168, 0.45), rgba(15, 97, 90, 0.45));
     box-shadow:
         0 5px 15px rgba(15, 23, 42, 0.28),
         0 0 0 1px rgba(238, 248, 247, 0.3);
 
     transition:
-        /* color 0.5s ease, */
-        /* transform 0.8s ease,
-        background-color 0.8s ease; */ all
-        0.8s ease;
+        transform 0.8s ease,
+        background-color 0.8s ease,
+        color 0s ease,
+        box-shadow 0.5s ease;
 }
 .button:hover {
     transform: scale(1.2);
-    box-shadow: 0 10px 10px var(--világoszöld);
+    box-shadow:
+        0 10px 10px var(--világoszöld),
+        0 -2px 10px white inset;
     color: white;
 
     background-color: var(--sötétzöld);
@@ -247,8 +246,8 @@ header {
 
 .hero-title {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 400;
+    /* font-size: 2rem; */
+    /* font-weight: 400; */
 }
 
 .hero-text {
@@ -377,7 +376,7 @@ header {
     .hero-eyebrow {
         font-size: 3rem;
         grid-area: hero-eyebrow;
-        margin: 4rem auto;
+        /* margin: 4rem auto; */
     }
 
     .hero-content {
