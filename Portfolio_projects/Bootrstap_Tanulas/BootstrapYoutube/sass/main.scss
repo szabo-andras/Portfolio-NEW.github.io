@@ -5,6 +5,19 @@ $secondary: #f79d84ff;
 $warning: #69585fff;
 $info: #52dee5ff;
 
+
+
+
+section {
+    padding: 60px 0;
+}
+
+@media (max-width: 767.98px) {
+    .project-selector:not(.project-selected) .tab-content {
+        display: none;
+    }
+}
+
 // hello
 
 
