@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>András Szabó | Web Developer Portfolio</title>
+        <meta
+            name="description"
+            content="Explore András Szabó’s web development portfolio, including professional experience, selected projects, and contact details." />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../css/main.min.css" />
+        <style>
+            body {
+                background-color: rgb(222, 220, 220);
+                gap: 0;
+            }
+
+            section[id] {
+                min-height: 100vh;
+                scroll-margin-top: var(--navbar-height, 56px);
+            }
+
+            section[id] > div > .section-heading {
+                position: sticky;
+                top: var(--navbar-height, 56px);
+                z-index: 1000;
+            }
+
+            .section-heading + .row {
+                margin-top: 0;
+            }
+
+            #projectTabs .nav-link {
+                color: #000;
+            }
+
+            #projectTabs .nav-link.active {
+                color: #fff;
+                background-color: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+        </style>
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target="#navbar">
+        <!-- Navbar -->
+        <nav class="ps-3 d-flex navbar navbar-expand-lg navbar-dark bg-dark justify-content-between sticky-top">
+            <!-- Brand -->
+            <div class="">
+                <a class="navbar-brand fw-bold" href="#"> <span>András Szabó – Web Developer</span></a>
+            </div>
+            <!-- Social Icons -->
+            <div class="social-icons d-flex gap-2 mx-auto">
+                <a href="#LinkedIn" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a
+                    href="https://github.com/szabo-andras/szabo-andras.github.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub"
+                    class="social-icon"
+                    aria-label="GitHub"
+                    ><i class="bi bi-github"></i
+                ></a>
+                <div class="dropdown">
+                    <button
+                        class="btn btn-outline-light btn-sm dropdown-toggle"
+                        type="button"
+                        id="languageDropdown"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="Language selection: English">
+                        EN
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="../AndrásSzabó-BootstrapPortfolio.html#intro"
+                                lang="hu"
+                                hreflang="hu"
+                                data-language-link="hu"
+                                >Magyar (HU)</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="dropdown-item active"
+                                href="./AndrásSzabó-BootstrapPortfolio.html#intro"
+                                lang="en"
+                                hreflang="en"
+                                aria-current="page"
+                                data-language-link="en"
+                                >English (EN)</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Toggler -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar"
+                aria-controls="navbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <!-- Toggler menuitems -->
+                <div class="navbar-nav ms-lg-auto">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="About" href="#intro">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="Tapasztalat" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="CV" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="Reviews" href="#reviews">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="Contact" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- main image & intro text -->
+        <section id="intro" class="d-flex flex-column justify-content-center my-4 bg-light">
+            <div class="container-md">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 text-center d-none d-md-block">
+                        <img
+                            src="../Assets/Andras_Szabo-CV_pic_no_bckgr.png"
+                            alt="Portrait of András Szabó"
+                            class="img-fluid" />
+                    </div>
+                    <div class="col-md-8 text-center text-md-end">
+                        <h1 class="section-heading">
+                            <span class="display-6">András Szabó – Web Developer</span>
+                        </h1>
+                        <h2 class="display-5 text-muted">HTML CSS Bootstrap</h2>
+                        <p class="lead my-4 text-muted">
+                            I can build you a
+                            <a
+                                class="text-danger"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#weboldalArticle"
+                                aria-controls="weboldalArticle">
+                                website
+                            </a>
+                            , or a
+                            <a
+                                class="text-danger"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#webalkalmazasArticle"
+                                aria-controls="webalkalmazasArticle">
+                                web application
+                            </a>
+                        </p>
+
+                        <p class="d-inline-block">Already know what you need?</p>
+                        <a href="#contact" class="btn btn-danger btn-lg d-inline-block" type="button">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Rólam  -->
+        <section id="experience" class="my-4 bg-dark">
+            <div class="container shadow-sm py-md-3 py-1">
+                <div id="experience-heading" class="section-heading text-center text-primary sticky shadow">
+                    <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
+                        My story so far
+                    </h2>
+                </div>
+                <div class="row p-4">
+                    <p>
+                        My career has taken me to <strong>Hungary</strong>,<strong> Transylvania</strong>,<strong>
+                            Romania</strong
+                        >
+                        and<strong> Denmark</strong>, where I gained experience in sales, business operations, and
+                        hospitality. These roles taught me to work independently, adapt quickly, and identify practical
+                        problems that can be solved more simply and effectively.
+                    </p>
+
+                    <p>
+                        I have always been interested in how logic and technology can improve everyday life and the way businesses operate.
+                    </p>
+
+                    <p>
+                        These experiences confirmed that I enjoy thinking in systems, analyzing problems, and creating practical solutions.
+                    </p>
+                    <p>
+                        I am currently building my web development skills, primarily through hands-on projects. My goal is to combine my business perspective and problem-solving abilities with technical skills to create digital solutions that deliver real value.
+                    </p>
+                    <p>
+                        I am open to teamwork, exciting projects, and continuous learning, while also aiming to create my own applications and digital products in the long term.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio szakasz -->
+        <section id="portfolio" class="my-4 bg-dark">
+            <div class="container shadow-sm py-md-3 py-1">
+                <div class="section-heading text-center text-primary sticky shadow">
+                    <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">Portfolio Projects</h2>
+                </div>
+                <h3 class="h5">Some of the major projects I built before I began learning web development:</h3>
+
+                <div class="container px-4 project-selector">
+                    <!-- Dropdown: md méret alatt -->
+                    <div class="dropdown d-md-none my-3">
+                        <button
+                            class="btn btn-outline-primary dropdown-toggle w-100"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Choose a project
+                        </button>
+
+                        <ul class="dropdown-menu w-100">
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-target="#Google_Sheets_Travel">
+                                    Travel Planner
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-target="#Hydrovital-Excel">
+                                    Sales Database
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button" data-bs-target="#Rudolph_Employee_Database">
+                                    HR Database
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs mt-3 d-none d-md-flex" id="projectTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link active border"
+                                id="travel-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#Google_Sheets_Travel"
+                                type="button"
+                                role="tab"
+                                aria-controls="Utazásszervező"
+                                aria-selected="true">
+                                Travel Planner
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link border"
+                                id="hydrovital-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#Hydrovital-Excel"
+                                type="button"
+                                role="tab"
+                                aria-controls="Hydrovital-adatbázis"
+                                aria-selected="false">
+                                Sales Database
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link border"
+                                id="Rudolph-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#Rudolph_Employee_Database"
+                                type="button"
+                                role="tab"
+                                aria-controls="HR-adatbázis"
+                                aria-selected="false">
+                                HR Database
+                            </button>
+                        </li>
+                    </ul>
+                    <!-- Tab-ok tartalma -->
+                    <div class="tab-content border shadow p-3" id="projectTabContents">
+                        <!-- Utazástervező tab tartalma -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="Google_Sheets_Travel"
+                            role="tabpanel"
+                            aria-labelledby="travel-tab"
+                            tabindex="0">
+                            <h3 class="h5">Google Sheets-Based Travel Planning and Expense Tracking Automation</h3>
+                            <p>
+                                My latest personal project was a travel planning and expense tracking system built for a three-month trip that we organized ourselves. It was based on
+                                <strong>Google Sheets</strong>-based travel planning and expense tracking system. My
+                                goal was to manage the planning and financial tasks for a trip spanning multiple
+                                countries and cities in one place.
+                            </p>
+
+                            <div>
+                                <h4 class="h6">For expense tracking, I primarily used the following tools:</h4>
+                                <ul>
+                                    <li><strong>Google Forms</strong></li>
+                                    <li><strong>formulas</strong></li>
+                                    <li><strong>automatic currency conversion</strong>,</li>
+                                    <li><strong>drop-down lists</strong></li>
+                                    <li><strong>summaries</strong></li>
+                                </ul>
+                                This allowed me to record expenses in different currencies, track the daily budget, and simplify expense reconciliation afterward.
+                            </div>
+
+                            <p>
+                                I also extended the system with Google Apps Script, with support from ChatGPT. The automations routed expenses submitted through the form to the worksheet for the relevant city and generated worksheets for each city’s daily itinerary and accommodation details based on the route plan. I based these on a worksheet structure I had created manually earlier, then refined the generated sheets by hand as needed.
+                            </p>
+
+                            <p>
+                                I started with my own practical needs, defined how the system should work, and used AI to develop an automated solution that reduced repetitive manual tasks. This experience strengthened my interest in technology, process automation, and building digital tools tailored to specific needs.
+                            </p>
+                        </div>
+                        <!-- Értékesítési adatbázis tab tartalma -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="Hydrovital-Excel"
+                            role="tabpanel"
+                            aria-labelledby="Hydrovital-adatbázis"
+                            tabindex="0">
+                            <h3 class="h5">Sales Tracker and Customer Database – MS Excel, MS Access</h3>
+                            <p>
+                                To support my sales work, I created an Excel-based tracking system that brought sales contracts, customer details, and revenue tracking together in one place.
+                            </p>
+                            <p>
+                                The system helped me manage sales-related information in a structured way, review customer and contract details more easily, and monitor revenue.
+                            </p>
+                            <p>
+                                I designed the solution around my own workflows and used Excel to create a practical tool that supported day-to-day work and organized business information.
+                            </p>
+                        </div>
+                        <div
+                            class="tab-pane fade"
+                            id="Rudolph_Employee_Database"
+                            role="tabpanel"
+                            aria-labelledby="HR-adatbázis"
+                            tabindex="0">
+                            <h3 class="h5">Rudolph Logistik Kft. – Employee Database – MS Access</h3>
+                            <p>
+                                As early as 2007, I was interested in how technology could make workflows more efficient.
+                            </p>
+                            <p>
+                                At Rudolph Logistik Kft. in Győr, some worksheets in the Excel file had become so full over the years that new columns could no longer be added. This became a serious issue when a new employee benefits system was introduced.
+                            </p>
+                            <p>
+                                Instead of managing the data in one place, the employee database had to be kept up to date across two Excel files. High staff turnover led to frequent discrepancies between them.
+                            </p>
+                            <p>
+                                Using the existing Excel file as a starting point, I built a Microsoft Access database with forms to manage HR data for approximately 1,100 employees. I also created queries and reports for tasks that had previously taken several hours of manual filtering at the end of each month.
+                            </p>
+                            <p>
+                                The system tracked salaries, roles, education, training, and employee benefits. This project was an early example of turning existing data into a more structured and manageable system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vélemények  -->
+        <section id="reviews" class="my-4 bg-light">
+            <div class="container shadow-sm py-md-3 py-1">
+                <div id="reviews-heading" class="section-heading text-center text-primary sticky shadow">
+                    <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
+                        <i class="bi bi-stars"></i>What Others Say<i class="bi bi-stars"></i>
+                    </h2>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3 p-2">
+                    <div class="card p-2 border-1 text-primary">
+                        <div class="card-header text-center">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
+                                alt="Colleague portrait"
+                                class="w-75 p-4" />
+                            <h2>Colleague name</h2>
+                            <h3 class="text-secondary fs-5">Workplace</h3>
+                        </div>
+                        <div class="card-body text-muted">
+                            <p>
+                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
+                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
+                                saepe voluptas omnis?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-2 border-1 text-primary">
+                        <div class="card-header text-center">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
+                                alt="Colleague portrait"
+                                class="w-75 p-4" />
+                            <h2>Colleague name</h2>
+                            <h3 class="text-secondary fs-5">Workplace</h3>
+                        </div>
+                        <div class="card-body text-muted">
+                            <p>
+                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
+                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
+                                saepe voluptas omnis?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-2 border-1 text-primary">
+                        <div class="card-header text-center">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
+                                alt="Colleague portrait"
+                                class="w-75 p-4" />
+                            <h2>Colleague name</h2>
+                            <h3 class="text-secondary fs-5">Workplace</h3>
+                        </div>
+                        <div class="card-body text-muted">
+                            <p>
+                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
+                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
+                                saepe voluptas omnis?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card p-2 border-1 text-primary">
+                        <div class="card-header text-center">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
+                                alt="Colleague portrait"
+                                class="w-75 p-4" />
+                            <h2>Colleague name</h2>
+                            <h3 class="text-secondary fs-5">Workplace</h3>
+                        </div>
+                        <div class="card-body text-muted">
+                            <p>
+                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
+                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
+                                saepe voluptas omnis?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kapcsolat Űrlap -->
+        <section id="contact" class="min-vh-100 my-4 bg-dark">
+            <div class="container shadow-sm py-md-3 py-1">
+                <div id="contact-heading" class="section-heading text-center text-primary sticky shadow">
+                    <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
+                        Tell me what you have in mind:
+                    </h2>
+                </div>
+                <div class="row mx-auto pb-3 col-md-9">
+                    <form class="row g-1 p-3 needs-validation" novalidate>
+                        <fieldset class="row border rounded p-3 mb-4">
+                            <legend>A few details about you:</legend>
+
+                            <div class="col-lg-6">
+                                <!-- Vezetéknév Input -->
+                                <div class="col-12">
+                                    <label for="vezeteknev" class="form-label">Last name:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-person-circle"> </i>
+                                        </span>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="vezeteknev"
+                                            placeholder="Last name"
+                                            required />
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <!-- Vezetéknév tooltip -->
+                                        <span class="input-group-text">
+                                            <span class="tt" data-bs-placement="top" title="Your family name...">
+                                                <i class="bi bi-question-circle text-muted"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Keresztnév Input -->
+                                <div class="col-12">
+                                    <label for="keresztnev" class="form-label">First name:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="keresztnev"
+                                            placeholder="First name"
+                                            required />
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <!-- Keresztnév tooltip -->
+                                        <span class="input-group-text">
+                                            <span
+                                                class="tt"
+                                                data-bs-placement="right"
+                                                title="Your given name, as your friends call you...">
+                                                <i class="bi bi-question-circle text-muted"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- e-mail Input -->
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="email"
+                                            aria-describedby="inputGroupPrepend"
+                                            required
+                                            placeholder="username@domain.com" />
+                                        <div class="invalid-feedback">Please enter an email address!</div>
+                                        <!-- email tooltip -->
+                                        <span class="input-group-text">
+                                            <span
+                                                class="tt"
+                                                data-bs-placement="top"
+                                                title="Enter an email address where I can reply to you..."
+                                                ><i class="text-muted bi bi-question-circle"></i
+                                            ></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Telefonszám Input -->
+                                <div class="col-12">
+                                    <label for="telefonszám" class="form-label">Phone number:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="inputGroupTelefonszam">
+                                            <i class="bi bi-telephone-fill"></i>
+                                        </span>
+
+                                        <input type="tel" class="form-control" id="telefonszám" required />
+                                        <div class="invalid-feedback">Please enter a valid phone number!</div>
+                                        <!-- telefonszám tooltip -->
+                                        <span class="input-group-text">
+                                            <span
+                                                class="tt"
+                                                data-bs-placement="right"
+                                                title="A number where I can reach you...">
+                                                <i class="bi bi-question-circle text-muted"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="customer-country" class="form-label">Country</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-globe2"></i></span>
+                                    <select class="form-select" id="customer-country" required>
+                                        <option selected disabled value="">Select...</option>
+                                    </select>
+
+                                    <div class="invalid-feedback">Please select a country!</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row border rounded p-3 mb-4">
+                            <div class="col-12">
+                                <fieldset class="row border rounded p-3 mb-4">
+                                    <legend>Are you enquiring as a company or an individual?</legend>
+
+                                    <div>
+                                        <input class="form-check-input" type="radio" name="Cég?" id="ceg-chkbox" />
+                                        <label for="ceg-chkbox">Company</label>
+                                    </div>
+                                    <div>
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="Cég?"
+                                            id="maganszemely-chkbox" />
+                                        <label for="maganszemely-chkbox">Individual</label>
+                                    </div>
+
+                                    <div class="form-floating mb-4 mt-5">
+                                        <textarea
+                                            class="form-control"
+                                            id="uzenet"
+                                            name="Üzenet"
+                                            required
+                                            style="height: 140px"></textarea>
+                                        <label for="uzenet">Your message:</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </fieldset>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">You must agree before submitting.</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 text-center">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+        <!-- Offcanvas -->
+        <!-- Oldalról beúszó "weboldalArticle" cikk -->
+        <div
+            class="offcanvas offcanvas-start bg-light dark-light shadow"
+            tabindex="-1"
+            id="weboldalArticle"
+            aria-labelledby="weboldalArticleLabel"
+            data-bs-backdrop="false"
+            style="--bs-offcanvas-width: min(600px, 95vw)">
+            <!-- Fejléc -->
+            <div class="offcanvas-header bg-dark text-white">
+                <h2 class="offcanvas-title fs-5" id="weboldalArticleLabel">Website or web application?</h2>
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+
+            <!-- Görgethető tartalom -->
+            <div class="offcanvas-body">
+                <p class="lead">
+                    The key difference between a website and a web application is what visitors use it to do.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Website:</strong> primarily shares information, presents something, or helps visitors find what they are looking for.
+                    </li>
+                    <li>
+                        <strong>Web application:</strong> allows users to perform actions, manage data, and interact with the system.
+                    </li>
+                </ul>
+
+                <p>
+                    The two categories are not mutually exclusive. A website can be interactive, and a web application can also include informational pages.
+                </p>
+
+                <hr />
+
+                <h3 class="h4 mt-4">1. Website</h3>
+
+                <p>A traditional website might be a business website or a web developer’s portfolio.</p>
+
+                <p>Typical features:</p>
+
+                <ul>
+                    <li>An introduction and information about services.</li>
+                    <li>Showcasing work and projects.</li>
+                    <li>A way to get in touch.</li>
+                    <li>Publishing articles and other information.</li>
+                </ul>
+
+                <div class="card bg-light border-0 mb-3">
+                    <div class="card-body">
+                        <h4 class="h6">Example: your portfolio</h4>
+                        <p class="mb-0">
+                            A visitor opens your site, explores your work, reads your introduction, and then contacts you. The site’s primary purpose is to share information and build trust.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="h4 mt-4">2. Web application</h3>
+
+                <p>A web application enables users to complete a task.</p>
+
+                <p>Typical features:</p>
+
+                <ul>
+                    <li>Managing user accounts.</li>
+                    <li>Creating, updating, and deleting data.</li>
+                    <li>Searching and filtering.</li>
+                    <li>Saving data and loading it again later.</li>
+                    <li>Automated calculations.</li>
+                    <li>Personalized content and notifications.</li>
+                </ul>
+
+                <div class="card bg-light border-0 mb-3">
+                    <div class="card-body">
+                        <h4 class="h6">Example: a household app</h4>
+                        <p>
+                            Household members record the items they have at home, specify where they are stored, and manage a shared shopping list.
+                        </p>
+                        <p class="mb-0">
+                            The system can compare recipe ingredients with the items already in stock and create a list of anything that is missing.
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h3 class="h4 mt-4">3. What is the technical difference?</h3>
+
+                <p>
+                    The programming language you use does not determine whether you are building a website or a web
+                    application. Both can be built with HTML, CSS, and JavaScript.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Aspect</th>
+                                <th scope="col">Website</th>
+                                <th scope="col">Web application</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Primary purpose</th>
+                                <td>Sharing information</td>
+                                <td>Completing tasks</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HTML and CSS</th>
+                                <td>Content and presentation</td>
+                                <td>Interface and presentation</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">JavaScript</th>
+                                <td>Interactive elements</td>
+                                <td>Interactions and data processing</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Backend</th>
+                                <td>Not necessarily required</td>
+                                <td>Often required</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Database</th>
+                                <td>Not necessarily required</td>
+                                <td>Often required</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sign-in</th>
+                                <td>Usually not required</td>
+                                <td>Common</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="small text-muted">
+                    These are typical differences, not strict rules. A website can use a database, and a simple web application can work without a backend.
+                </p>
+
+                <hr />
+
+                <h3 class="h4 mt-4">4. How is a website structured?</h3>
+
+                <p>
+                    For a simple static website, the browser receives the HTML, CSS, and possibly JavaScript files, then displays the content.
+                </p>
+
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <div class="border rounded p-3 mb-2">
+                            <strong>Browser</strong>
+                        </div>
+                        <div aria-hidden="true" class="fs-3">↓</div>
+                        <div class="border rounded p-3 mb-2 bg-light">HTML + CSS + JavaScript</div>
+                        <div aria-hidden="true" class="fs-3">↓</div>
+                        <div class="border rounded p-3">The website is displayed</div>
+                    </div>
+                </div>
+
+                <p>A database or custom backend is not necessarily needed for this.</p>
+
+                <h3 class="h4 mt-4">5. How might a web application be structured?</h3>
+
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <div class="border rounded p-3 mb-2">
+                            <strong>User</strong>
+                        </div>
+                        <div aria-hidden="true" class="fs-3">↓</div>
+                        <div class="border rounded p-3 mb-2 bg-light">
+                            Frontend<br />
+                            <small>HTML + CSS + JavaScript</small>
+                        </div>
+                        <div aria-hidden="true" class="fs-3">↓</div>
+                        <div class="border rounded p-3 mb-2 bg-light">Backend / API</div>
+                        <div aria-hidden="true" class="fs-3">↓</div>
+                        <div class="border rounded p-3">Database</div>
+                    </div>
+                </div>
+
+                <h4 class="h5 mt-4">Frontend</h4>
+                <p>
+                    The interface that users see and interact with, including buttons, forms, tables, and other interactive elements.
+                </p>
+
+                <h4 class="h5 mt-4">Backend</h4>
+                <p>
+                    Software running on a server that can check permissions, process requests, and handle business logic.
+                </p>
+
+                <h4 class="h5 mt-4">API</h4>
+                <p>A defined interface through which the frontend can send requests to the backend.</p>
+
+                <h4 class="h5 mt-4">Database</h4>
+                <p>A database stores users, products, recipes, and other data persistently.</p>
+
+                <p>
+                    This architecture is not always necessary. A simple application can store data in the browser, for example, using
+                    <code>localStorage</code>                     for local storage. However, this alone does not provide shared storage that can be accessed from
+                    multiple devices.
+                </p>
+
+                <hr />
+
+                <h3 class="h4 mt-4">6. What role does JavaScript play?</h3>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Technology</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">HTML</th>
+                                <td>Structure</td>
+                                <td>Shopping list items</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CSS</th>
+                                <td>Presentation</td>
+                                <td>The list’s layout and colors</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">JavaScript</th>
+                                <td>Behavior</td>
+                                <td>Adding a new item</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Backend</th>
+                                <td>Server-side processing</td>
+                                <td>Checking permissions</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Database</th>
+                                <td>Persistent data storage</td>
+                                <td>Saving the shopping list</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>
+                    With JavaScript, for example, you can let users add items to a list or check off items they have purchased. That is enough to create a simple, working web application.
+                </p>
+
+                <p>
+                    If you want other household members to see changes on their own phones, you will also need shared data storage, usually through a server-side or cloud service.
+                </p>
+
+                <div class="alert alert-info mt-4">
+                    <strong>Key takeaway:</strong>
+                    A web application is defined not by how complex its technology is, but by the task it enables people to complete.
+                </div>
+
+                <hr />
+
+                <h3 class="h4 mt-4">7. How to structure your learning</h3>
+
+                <h4 class="h5 mt-3">Step 1: Build a website</h4>
+                <ul>
+                    <li>Semantic HTML.</li>
+                    <li>CSS, Flexbox, and Grid.</li>
+                    <li>Responsive design.</li>
+                    <li>Bootstrap.</li>
+                    <li>Accessible navigation and forms.</li>
+                </ul>
+
+                <h4 class="h5 mt-3">Step 2: Add JavaScript interactivity</h4>
+                <ul>
+                    <li>Event handling.</li>
+                    <li>Manipulating the DOM.</li>
+                    <li>Processing form data.</li>
+                    <li>Working with arrays and objects.</li>
+                    <li>Storing data in the browser.</li>
+                </ul>
+
+                <h4 class="h5 mt-3">Step 3: Build a fuller web application</h4>
+                <ul>
+                    <li>Using APIs.</li>
+                    <li>How a backend works.</li>
+                    <li>Database management.</li>
+                    <li>User authentication and permissions.</li>
+                    <li>Sharing data between users.</li>
+                </ul>
+
+                <p>
+                    You do not need to learn everything at once. Build on each step and gradually increase the complexity of your projects.
+                </p>
+
+                <div class="alert alert-success mt-4">
+                    <h3 class="h5">Quick check</h3>
+                    <p>
+                        Imagine building a weather page that shows the current temperature in Copenhagen, the forecast for the next few hours, and precipitation levels. The data comes from a weather API.
+                    </p>
+                    <p class="mb-0">
+                        <strong>Would you consider this a website or a web application?</strong>
+                        Consider whether the page only displays information or also lets users perform actions.
+                    </p>
+                </div>
+
+                <!-- Alsó bezárógomb -->
+                <div class="d-grid mt-4">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">
+                        Close article
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- az alábbi kód a dropdown működéséhez és a tartalom megjelenítéséhez kell -->
+        <script>
+            const navbar = document.querySelector(".navbar");
+
+            const syncStickyOffsets = () => {
+                document.documentElement.style.setProperty("--navbar-height", `${navbar.offsetHeight}px`);
+            };
+
+            syncStickyOffsets();
+            new ResizeObserver(syncStickyOffsets).observe(navbar);
+
+            document.querySelectorAll("[data-language-link]").forEach((link) => {
+                link.addEventListener("click", () => {
+                    const navbarBottom = navbar.getBoundingClientRect().bottom;
+                    const sections = [...document.querySelectorAll("section[id]")];
+                    const currentSection =
+                        sections.find((section) => {
+                            const bounds = section.getBoundingClientRect();
+                            return bounds.top <= navbarBottom && bounds.bottom > navbarBottom;
+                        }) ??
+                        sections.reduce((nearest, section) =>
+                            Math.abs(section.getBoundingClientRect().top - navbarBottom) <
+                            Math.abs(nearest.getBoundingClientRect().top - navbarBottom)
+                                ? section
+                                : nearest,
+                        );
+
+                    if (currentSection) {
+                        link.href = `${link.href.split("#")[0]}#${encodeURIComponent(currentSection.id)}`;
+                    }
+                });
+            });
+
+            document.querySelectorAll(".dropdown-item[data-bs-target]").forEach((item) => {
+                item.addEventListener("click", function () {
+                    const target = this.getAttribute("data-bs-target");
+                    const tabButton = document.querySelector(`#projectTabs [data-bs-target="${target}"]`);
+
+                    if (tabButton) {
+                        bootstrap.Tab.getOrCreateInstance(tabButton).show();
+                    }
+
+                    document.querySelectorAll(".dropdown-item[data-bs-target]").forEach((dropdownItem) => {
+                        dropdownItem.classList.remove("active");
+                        dropdownItem.removeAttribute("aria-current");
+                    });
+
+                    this.classList.add("active");
+                    this.setAttribute("aria-current", "true");
+                    this.closest(".project-selector").classList.add("project-selected");
+
+                    document.querySelector(".dropdown-toggle").textContent = this.textContent;
+                });
+            });
+
+            // Ez a szakasz felelős a bootstrap űrlap validálásért, és az általam megadott
+            // validációs szövegek megjelenítéséért
+            document.querySelectorAll(".needs-validation").forEach((form) => {
+                form.addEventListener("submit", (event) => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add("was-validated");
+                });
+            });
+        </script>
+
+        <script>
+            //  Ez a kód a tooltip megjelenítését teszi lehetővé:
+            const tooltips = document.querySelectorAll(".tt");
+            tooltips.forEach((t) => {
+                new bootstrap.Tooltip(t);
+            });
+        </script>
+    </body>
+</html>

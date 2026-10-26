@@ -1,186 +1,173 @@
+Task: Convert an Existing Website into a Multilingual Website
 
+## Project configuration
 
-Task: Convert My Existing Website into a Multilingual Website
+Complete this configuration before implementation. Ask the user for any required value that is missing or ambiguous. Do not silently assume a target language.
 
-1. Project context
+```yaml
+source_language:
+  name: ""                  # For example: Hungarian
+  code: ""                  # BCP 47 language tag, for example: hu
 
-I have an existing website built with HTML, CSS, Bootstrap, and JavaScript.
+target_languages:
+  - name: ""                # Add one entry per requested language
+    code: ""                # For example: en, de, fr-CA
+    variant: ""             # Optional, when relevant: en-GB, en-US, es-MX
 
-The website is currently written in Hungarian. I want to keep the Hungarian version as the original version and create a complete English version of the entire website.
+output:
+  directory_pattern: "/{language_code}/"  # Default for static sites; adapt to project architecture
+  preserve_source_language_in_place: true
 
-I want to use AI to automate the creation of additional language versions of my websites in the future. Therefore, the solution should be reliable, maintainable, and reusable across projects.
+translation:
+  tone: "natural, professional, appropriate for the website audience"
+  glossary: []              # Optional: project-specific terms and preferred translations
+  unresolved_terms_policy: "report for user review; do not guess"
 
-2. First step: Inspect and analyze the project
+language_switcher:
+  style: "Bootstrap dropdown beside social icons, inside their existing container when present"
+  preserve_current_page: true
+  preserve_current_section: true
+
+seo:
+  production_base_url: ""  # Leave empty if unknown; do not invent a domain
+```
+
+The user may request one or several target languages. Generate a complete, independent website version for every requested target language in the same task. The source language remains the original; never translate one target-language version through another target language when translating from the source is possible.
+
+If the project structure makes the default output directory pattern unsuitable, explain why and ask for approval before choosing a materially different URL or directory architecture.
+
+## 1. Project context
+
+The user has an existing website, possibly built with HTML, CSS, Bootstrap, JavaScript, or other web technologies. The source website is written in the configured source language. The goal is to preserve that original version and create complete, working versions in every configured target language.
+
+The process should be reliable, maintainable, reusable across projects, and safe for existing user work.
+
+## 2. First step: inspect and analyze
 
 Before modifying any files:
 
-1. Inspect the entire project directory and identify all relevant HTML files, CSS files, JavaScript files, images, fonts, and other assets.
-2. Identify the website’s current page structure and internal navigation.
-3. Determine how Bootstrap and other external dependencies are loaded.
+1. Inspect the project directory and identify relevant public HTML pages, CSS, JavaScript, images, fonts, data files, and other assets. Exclude dependencies, generated files, demos, empty templates, and internal tools unless they are part of the public website.
+2. Identify page structure, URL patterns, internal navigation, and equivalent pages in each language.
+3. Determine how Bootstrap and other external or local dependencies are loaded.
 4. Identify forms, buttons, interactive components, tooltips, modals, offcanvas elements, and other functionality that must continue working.
-5. Identify all Hungarian text that needs to be translated, including navigation labels, headings, paragraphs, buttons, form labels, placeholders, validation messages, tooltips, accessibility attributes, page titles, meta descriptions, and relevant JavaScript-generated content.
-6. Identify any existing language-related functionality.
-7. Check for existing Git changes before making any modifications. Do not discard or overwrite my existing work.
+5. Identify all user-facing source-language content, including navigation, headings, body text, buttons, labels, placeholders, validation messages, tooltips, accessibility attributes, metadata, and JavaScript-generated content.
+6. Identify existing localization, language selection, routing, or translation conventions.
+7. Check Git status and existing changes before modifying files. Do not discard, overwrite, or revert existing work.
+8. Check whether the configured languages, URL structure, translation variants, glossary, or production URL are incomplete or ambiguous.
 
-Do not modify any files during this initial inspection.
+Do not modify files during this initial inspection. Present a concise report of the structure, proposed changes, risks, missing configuration, and questions. Wait for the user's approval before implementation.
 
-Present a concise report describing the current structure, the proposed changes, potential risks, and any questions that must be resolved before implementation.
+If required language configuration is missing, ask the user to complete it before implementation. Reasonable defaults may be proposed for optional settings, but target languages must be explicitly selected by the user.
 
-Wait for my approval before proceeding.
+## 3. Language architecture
 
-3. Language architecture
+After approval:
 
-After approval, create an English version of every relevant Hungarian HTML page.
+* Keep the original source-language website in its existing location.
+* Create a corresponding version of every intended public page for every configured target language.
+* Use the configured directory pattern by default, for example `/en/`, `/de/`, and `/fr-CA/` when those are the selected language codes.
+* Reuse shared CSS, JavaScript, images, fonts, and other assets wherever possible; avoid needless duplication.
+* Preserve the site's design, responsive behavior, HTML hierarchy, and functionality.
+* Do not assume every HTML file is a public page. Use the inspection findings to decide which files need translated counterparts.
+* Maintain a clear page mapping from the source page to each translated equivalent.
 
-Use this directory structure unless the existing project architecture provides a compelling reason to choose another structure:
+For example, if the source page is `/portfolio.html` and the configured languages are English and German, corresponding pages might be `/en/portfolio.html` and `/de/portfolio.html`. Adapt this to the actual project structure.
 
-* Keep the existing Hungarian website in its current location.
-* Create an /en/ directory containing the corresponding English HTML pages.
-* Reuse existing CSS, JavaScript, images, fonts, and other assets wherever possible.
-* Avoid unnecessary duplication of shared resources.
-* Preserve the existing website’s design, responsive behavior, and functionality.
+## 4. Translation requirements
 
-For example:
+Translate source-language content directly into every configured target language. Use the configured variant and glossary when provided.
 
-* /index.html should have its English counterpart at /en/index.html.
-* /portfolio.html should have its English counterpart at /en/portfolio.html.
-* /contact.html should have its English counterpart at /en/contact.html.
+For each target version:
 
-Adapt these examples to the actual filenames and page structure found in the project.
+* Preserve meaning and intent; use natural, professional language suited to the site's audience.
+* Preserve HTML structure, element hierarchy, classes, IDs, data attributes, form names, input types, event handlers, validation rules, and JavaScript hooks wherever possible.
+* Do not translate technical identifiers, CSS class names, JavaScript variable or function names, file paths, API keys, or other functional identifiers unless a necessary change is explicitly justified.
+* Translate user-visible content, accessibility-related text such as `aria-label`, `aria-description`, and image `alt` text, page titles, meta descriptions, placeholders, validation messages, and relevant JavaScript-generated content.
+* Set each document's `lang` attribute to the configured BCP 47 language tag for that version. Preserve the configured source-language tag on source pages.
+* Preserve UTF-8 encoding and ensure language-specific characters display correctly.
+* Do not remove difficult content. If a phrase is ambiguous, culturally specific, or lacks a glossary entry, flag it for review instead of inventing a meaning.
+* Do not leave source-language user-facing text untranslated in target pages unless it is a proper name, technical term, or explicitly approved content.
+* Do not alter original source-language content beyond changes required for language support, unless the user explicitly approves those changes.
 
-Do not assume that every HTML file is a public website page. Inspect the project and identify which files should actually have translated counterparts.
+## 5. Language switcher
 
-4. Translation requirements
+Add an accessible language switcher to every corresponding page in the source language and every target language. It must:
 
-Translate all user-facing Hungarian content into natural, professional English.
+* Offer the source language and every configured target language, clearly labeled with language name and code.
+* Appear as a Bootstrap dropdown beside social icons, inside the existing social-icons container when that layout exists. If no such container exists, place it in a suitable, consistent navigation area without redesigning the site.
+* Match the existing visual design and work on desktop and mobile.
+* Work with keyboard navigation and assistive technologies; provide accessible names and indicate the current language.
+* Use ordinary links for navigation. A small amount of JavaScript is permitted to preserve the current page section; do not add a language-switching framework unless the existing architecture requires one.
+* Link each language option to the corresponding page in that language, not always to a homepage.
+* Use a clearly defined, valid same-language fallback only when a corresponding translated page does not exist. Do not create broken links.
 
-Requirements:
+Preserve the visitor's current page and, for single-page sites, the section currently in view when changing language. Determine the section from the visible page state, not only from `window.location.hash`, because scrolling may not update the hash. Navigate to the equivalent translated URL with the matching element ID as a URL fragment, when that ID exists (for example, `/contact.html#contact` ↔ `/en/contact.html#contact`). If a counterpart or matching section does not exist, use the documented fallback.
 
-* Preserve the original meaning and intent.
-* Use appropriate terminology for a professional web developer portfolio.
-* Preserve the HTML structure, element hierarchy, classes, IDs, data attributes, and JavaScript hooks wherever possible.
-* Do not translate technical identifiers, CSS class names, JavaScript variable names, function names, file paths, or API keys unless a specific change is necessary and explicitly justified.
-* Preserve all functional attributes, event handlers, form names, input types, and validation logic.
-* Translate accessibility-related text where appropriate, including aria-label, aria-description, image alt text, and other user-facing accessibility attributes.
-* Translate document titles, meta descriptions, and other relevant SEO content.
-* Set the document language to lang="en" on English pages and preserve lang="hu" on Hungarian pages.
-* Ensure that special characters and UTF-8 text encoding work correctly.
-* Do not remove content simply because it is difficult to translate.
-* If a translation is ambiguous, flag it for review rather than inventing a meaning.
+The dropdown should display the current language and list all configured languages. Keep it beside social icons in their existing container when possible, not among the main section-navigation links.
 
-5. Language switcher
+## 6. URL and asset handling
 
-Add a language switcher to every corresponding Hungarian and English page.
-
-The language switcher should:
-
-* Clearly identify the available languages as Hungarian (HU) and English (EN).
-* Use recognizable language icons or flag icons where appropriate.
-* Fit naturally into the existing Bootstrap navigation.
-* Match the current design and remain responsive on mobile and desktop.
-* Include accessible labels and meaningful link text.
-* Work without requiring a JavaScript-based language-switching framework.
-
-When a visitor clicks the language switcher, navigate to the equivalent page in the other language.
-
-Examples:
-
-* /index.html ↔ /en/index.html
-* /portfolio.html ↔ /en/portfolio.html
-* /contact.html ↔ /en/contact.html
-
-Use the actual page mappings found in the project.
-
-If a corresponding translated page does not exist, use a clearly defined fallback, such as the homepage in the selected language. Do not generate broken links.
-
-Do not implement the language switcher by simply sending every visitor to the other language’s homepage.
-
-6. URL and asset handling
-
-Because English pages are located in a subdirectory, carefully verify all relative paths.
-
-Check:
+For every language version, carefully verify:
 
 * CSS imports
 * JavaScript imports
-* Images
-* Fonts
-* Internal navigation
-* Links to downloadable files
+* Images and fonts
+* Internal navigation and links between related pages
+* Downloadable files
 * Form actions
-* Links to external resources
-* Links between related pages
+* External resources
+* Language-switcher destinations and section fragments
 
-Prefer root-relative asset paths where appropriate, provided they work with the actual hosting and deployment setup.
+Choose relative or root-relative paths based on the actual hosting and deployment setup. Do not blindly rewrite all paths. Confirm that shared assets resolve correctly from each language directory.
 
-Do not blindly replace all relative paths. Determine which path strategy is appropriate for the existing project.
+## 7. SEO and accessibility
 
-7. SEO and accessibility
+Prepare the site for multilingual indexing where appropriate:
 
-Prepare the website for multilingual search engine indexing.
+* Use distinct URLs for each language.
+* Add reciprocal `hreflang` annotations between corresponding pages when their URLs are known and stable.
+* Use the configured BCP 47 tags; do not add region codes unless they are justified by the user's language-variant selection.
+* Preserve valid canonical URLs and avoid duplicate or contradictory metadata.
+* Do not invent a production domain. If the production base URL is unknown, identify the SEO settings that require it and ask for it before adding absolute URL metadata.
+* Keep language switching keyboard-accessible and understandable to assistive technologies.
 
-Where appropriate:
+## 8. Preserve existing functionality
 
-* Use distinct URLs for Hungarian and English pages.
-* Add reciprocal hreflang annotations to corresponding pages.
-* Include the appropriate language and region codes only when justified.
-* Preserve valid canonical URLs, if canonical links are used.
-* Avoid creating duplicate or contradictory metadata.
-* Ensure the language switcher works with a keyboard and assistive technologies.
+Every version must preserve the existing responsive layout, Bootstrap components, JavaScript interactions, forms and validation, navigation, modals, offcanvas elements, tooltips, images, downloads, and other identified behavior.
 
-Do not invent a production domain. If the deployment domain is unknown, identify which SEO settings require a domain-specific configuration.
+Do not redesign the website or refactor unrelated code. Make only changes necessary for multilingual support and fix issues introduced by those changes.
 
-8. Preserve existing functionality
+## 9. Validation and testing
 
-The Hungarian website must continue to work as it did before the changes.
+After implementation, verify:
 
-The English version must preserve:
+1. Every intended public source-language page has a counterpart in every configured target language.
+2. Internal navigation and all language-switcher links lead to valid destinations.
+3. Language switching works in every direction and preserves the corresponding page.
+4. For single-page websites, language switching preserves the section currently in view, including when the URL hash was not updated by scrolling.
+5. The dropdown is positioned as specified and works with keyboard navigation on desktop and mobile.
+6. Asset paths resolve from the source directory and every target-language directory.
+7. Target pages do not contain unintended untranslated source-language content.
+8. HTML is well formed and IDs are unique; matching page sections retain compatible IDs.
+9. The original source-language content has not been unintentionally changed.
+10. Existing JavaScript and interactive behavior are preserved.
+11. Domain-dependent SEO and any checks that could not be performed automatically are clearly reported.
 
-* Responsive layout
-* Bootstrap components
-* JavaScript interactions
-* Forms and validation
-* Navigation behavior
-* Modals and offcanvas components
-* Tooltips
-* Images and downloadable resources
-* Any other existing functionality
+Use browser testing when available. Test representative pages in every language at desktop and mobile viewport sizes. Never claim a test passed unless it was actually performed. Report tooling limitations and unverified behavior explicitly.
 
-Do not redesign the website or refactor unrelated code.
+## 10. Final report
 
-Make only changes necessary for multilingual support.
+When the work is complete, report:
 
-9. Validation and testing
-
-After implementation:
-
-1. Verify that every intended Hungarian page has a corresponding English page.
-2. Check that all internal navigation links point to valid destinations.
-3. Check that the language switcher works in both directions.
-4. Check that switching languages preserves the visitor’s current page whenever a translation exists.
-5. Check that asset paths resolve correctly from both the root directory and the /en/ directory.
-6. Identify untranslated Hungarian text remaining in the English pages.
-7. Check for malformed HTML and duplicate IDs.
-8. Verify that the original Hungarian content has not been unintentionally changed.
-9. Check that existing JavaScript functionality has been preserved.
-10. Report any checks that could not be performed automatically.
-
-If browser-based testing is available, test representative pages in both languages at desktop and mobile viewport sizes.
-
-Do not claim that a test passed unless it was actually performed.
-
-10. Final report
-
-When the work is complete, provide:
-
-* A list of created files.
-* A list of modified files.
-* A summary of the language-switching implementation.
-* Any unresolved translation questions.
-* Any known issues.
-* A summary of the validation and testing performed.
-* Any manual steps required before deployment.
+* The configured source language and all target languages.
+* Created and modified files.
+* The page and directory mapping for each language.
+* How the language switcher and current-section preservation work.
+* Unresolved translation or glossary questions.
+* Known issues and domain-specific SEO settings still needed.
+* Validation and tests performed, including anything not tested.
+* Manual steps required before deployment.
 
 Keep the implementation understandable and avoid unnecessary complexity.
 
-Important workflow rule: inspect first, propose a plan, wait for approval, then implement and validate.
+Important workflow rule: inspect first, present findings, wait for approval, then implement and validate.
