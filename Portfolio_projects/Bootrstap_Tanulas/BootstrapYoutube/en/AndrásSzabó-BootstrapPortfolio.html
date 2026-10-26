@@ -3,6 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            if (new URLSearchParams(window.location.search).has("instantLanguageSwitch")) {
+                document.documentElement.style.scrollBehavior = "auto";
+                const url = new URL(window.location.href);
+                url.searchParams.delete("instantLanguageSwitch");
+                window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+                const restoreScrollBehavior = () => {
+                    window.setTimeout(() => {
+                        document.documentElement.style.removeProperty("scroll-behavior");
+                    }, 100);
+                };
+
+                if (document.readyState === "complete") {
+                    restoreScrollBehavior();
+                } else {
+                    window.addEventListener("load", restoreScrollBehavior, { once: true });
+                }
+            }
+        </script>
         <title>András Szabó | Web Developer Portfolio</title>
         <meta
             name="description"
@@ -974,7 +993,10 @@
                         );
 
                     if (currentSection) {
-                        link.href = `${link.href.split("#")[0]}#${encodeURIComponent(currentSection.id)}`;
+                        const destination = new URL(link.href);
+                        destination.hash = currentSection.id;
+                        destination.searchParams.set("instantLanguageSwitch", "");
+                        link.href = destination.href;
                     }
                 });
             });

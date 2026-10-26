@@ -101,7 +101,7 @@ Add an accessible language switcher to every corresponding page in the source la
 * Link each language option to the corresponding page in that language, not always to a homepage.
 * Use a clearly defined, valid same-language fallback only when a corresponding translated page does not exist. Do not create broken links.
 
-Preserve the visitor's current page and, for single-page sites, the section currently in view when changing language. Determine the section from the visible page state, not only from `window.location.hash`, because scrolling may not update the hash. Navigate to the equivalent translated URL with the matching element ID as a URL fragment, when that ID exists (for example, `/contact.html#contact` ↔ `/en/contact.html#contact`). If a counterpart or matching section does not exist, use the documented fallback.
+Preserve the visitor's current page and, for single-page sites, the section currently in view when changing language. Determine the section from the visible page state, not only from `window.location.hash`, because scrolling may not update the hash. Navigate to the equivalent translated URL with the matching element ID as a URL fragment, when that ID exists (for example, `/contact.html#contact` ↔ `/en/contact.html#contact`). Make this language-switch navigation instantaneous: the destination must jump to the matching fragment without smooth-scroll animation, even if the site or browser normally uses smooth scrolling. Restrict this behavior to the language-switch navigation so ordinary scrolling behavior remains unchanged.
 
 The dropdown should display the current language and list all configured languages. Keep it beside social icons in their existing container when possible, not among the main section-navigation links.
 
@@ -144,7 +144,7 @@ After implementation, verify:
 1. Every intended public source-language page has a counterpart in every configured target language.
 2. Internal navigation and all language-switcher links lead to valid destinations.
 3. Language switching works in every direction and preserves the corresponding page.
-4. For single-page websites, language switching preserves the section currently in view, including when the URL hash was not updated by scrolling.
+4. For single-page websites, language switching preserves the section currently in view, including when the URL hash was not updated by scrolling, and reaches it without a smooth-scroll animation.
 5. The dropdown is positioned as specified and works with keyboard navigation on desktop and mobile.
 6. Asset paths resolve from the source directory and every target-language directory.
 7. Target pages do not contain unintended untranslated source-language content.
