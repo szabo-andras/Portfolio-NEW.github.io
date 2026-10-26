@@ -1,0 +1,184 @@
+Task: Convert My Existing Website into a Multilingual Website
+
+1. Project context
+
+I have an existing website built with HTML, CSS, Bootstrap, and JavaScript.
+
+The website is currently written in Hungarian. I want to keep the Hungarian version as the original version and create a complete English version of the entire website.
+
+I want to use AI to automate the creation of additional language versions of my websites in the future. Therefore, the solution should be reliable, maintainable, and reusable across projects.
+
+2. First step: Inspect and analyze the project
+
+Before modifying any files:
+
+1. Inspect the entire project directory and identify all relevant HTML files, CSS files, JavaScript files, images, fonts, and other assets.
+2. Identify the website’s current page structure and internal navigation.
+3. Determine how Bootstrap and other external dependencies are loaded.
+4. Identify forms, buttons, interactive components, tooltips, modals, offcanvas elements, and other functionality that must continue working.
+5. Identify all Hungarian text that needs to be translated, including navigation labels, headings, paragraphs, buttons, form labels, placeholders, validation messages, tooltips, accessibility attributes, page titles, meta descriptions, and relevant JavaScript-generated content.
+6. Identify any existing language-related functionality.
+7. Check for existing Git changes before making any modifications. Do not discard or overwrite my existing work.
+
+Do not modify any files during this initial inspection.
+
+Present a concise report describing the current structure, the proposed changes, potential risks, and any questions that must be resolved before implementation.
+
+Wait for my approval before proceeding.
+
+3. Language architecture
+
+After approval, create an English version of every relevant Hungarian HTML page.
+
+Use this directory structure unless the existing project architecture provides a compelling reason to choose another structure:
+
+* Keep the existing Hungarian website in its current location.
+* Create an /en/ directory containing the corresponding English HTML pages.
+* Reuse existing CSS, JavaScript, images, fonts, and other assets wherever possible.
+* Avoid unnecessary duplication of shared resources.
+* Preserve the existing website’s design, responsive behavior, and functionality.
+
+For example:
+
+* /index.html should have its English counterpart at /en/index.html.
+* /portfolio.html should have its English counterpart at /en/portfolio.html.
+* /contact.html should have its English counterpart at /en/contact.html.
+
+Adapt these examples to the actual filenames and page structure found in the project.
+
+Do not assume that every HTML file is a public website page. Inspect the project and identify which files should actually have translated counterparts.
+
+4. Translation requirements
+
+Translate all user-facing Hungarian content into natural, professional English.
+
+Requirements:
+
+* Preserve the original meaning and intent.
+* Use appropriate terminology for a professional web developer portfolio.
+* Preserve the HTML structure, element hierarchy, classes, IDs, data attributes, and JavaScript hooks wherever possible.
+* Do not translate technical identifiers, CSS class names, JavaScript variable names, function names, file paths, or API keys unless a specific change is necessary and explicitly justified.
+* Preserve all functional attributes, event handlers, form names, input types, and validation logic.
+* Translate accessibility-related text where appropriate, including aria-label, aria-description, image alt text, and other user-facing accessibility attributes.
+* Translate document titles, meta descriptions, and other relevant SEO content.
+* Set the document language to lang="en" on English pages and preserve lang="hu" on Hungarian pages.
+* Ensure that special characters and UTF-8 text encoding work correctly.
+* Do not remove content simply because it is difficult to translate.
+* If a translation is ambiguous, flag it for review rather than inventing a meaning.
+
+5. Language switcher
+
+Add a language switcher to every corresponding Hungarian and English page.
+
+The language switcher should:
+
+* Clearly identify the available languages as Hungarian (HU) and English (EN).
+* Use recognizable language icons or flag icons where appropriate.
+* Fit naturally into the existing Bootstrap navigation.
+* Match the current design and remain responsive on mobile and desktop.
+* Include accessible labels and meaningful link text.
+* Work without requiring a JavaScript-based language-switching framework.
+
+When a visitor clicks the language switcher, navigate to the equivalent page in the other language.
+
+Examples:
+
+* /index.html ↔ /en/index.html
+* /portfolio.html ↔ /en/portfolio.html
+* /contact.html ↔ /en/contact.html
+
+Use the actual page mappings found in the project.
+
+If a corresponding translated page does not exist, use a clearly defined fallback, such as the homepage in the selected language. Do not generate broken links.
+
+Do not implement the language switcher by simply sending every visitor to the other language’s homepage.
+
+6. URL and asset handling
+
+Because English pages are located in a subdirectory, carefully verify all relative paths.
+
+Check:
+
+* CSS imports
+* JavaScript imports
+* Images
+* Fonts
+* Internal navigation
+* Links to downloadable files
+* Form actions
+* Links to external resources
+* Links between related pages
+
+Prefer root-relative asset paths where appropriate, provided they work with the actual hosting and deployment setup.
+
+Do not blindly replace all relative paths. Determine which path strategy is appropriate for the existing project.
+
+7. SEO and accessibility
+
+Prepare the website for multilingual search engine indexing.
+
+Where appropriate:
+
+* Use distinct URLs for Hungarian and English pages.
+* Add reciprocal hreflang annotations to corresponding pages.
+* Include the appropriate language and region codes only when justified.
+* Preserve valid canonical URLs, if canonical links are used.
+* Avoid creating duplicate or contradictory metadata.
+* Ensure the language switcher works with a keyboard and assistive technologies.
+
+Do not invent a production domain. If the deployment domain is unknown, identify which SEO settings require a domain-specific configuration.
+
+8. Preserve existing functionality
+
+The Hungarian website must continue to work as it did before the changes.
+
+The English version must preserve:
+
+* Responsive layout
+* Bootstrap components
+* JavaScript interactions
+* Forms and validation
+* Navigation behavior
+* Modals and offcanvas components
+* Tooltips
+* Images and downloadable resources
+* Any other existing functionality
+
+Do not redesign the website or refactor unrelated code.
+
+Make only changes necessary for multilingual support.
+
+9. Validation and testing
+
+After implementation:
+
+1. Verify that every intended Hungarian page has a corresponding English page.
+2. Check that all internal navigation links point to valid destinations.
+3. Check that the language switcher works in both directions.
+4. Check that switching languages preserves the visitor’s current page whenever a translation exists.
+5. Check that asset paths resolve correctly from both the root directory and the /en/ directory.
+6. Identify untranslated Hungarian text remaining in the English pages.
+7. Check for malformed HTML and duplicate IDs.
+8. Verify that the original Hungarian content has not been unintentionally changed.
+9. Check that existing JavaScript functionality has been preserved.
+10. Report any checks that could not be performed automatically.
+
+If browser-based testing is available, test representative pages in both languages at desktop and mobile viewport sizes.
+
+Do not claim that a test passed unless it was actually performed.
+
+10. Final report
+
+When the work is complete, provide:
+
+* A list of created files.
+* A list of modified files.
+* A summary of the language-switching implementation.
+* Any unresolved translation questions.
+* Any known issues.
+* A summary of the validation and testing performed.
+* Any manual steps required before deployment.
+
+Keep the implementation understandable and avoid unnecessary complexity.
+
+Important workflow rule: inspect first, propose a plan, wait for approval, then implement and validate.
