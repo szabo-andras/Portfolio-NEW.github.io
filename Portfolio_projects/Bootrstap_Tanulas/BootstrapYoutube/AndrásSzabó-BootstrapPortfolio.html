@@ -136,7 +136,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <!-- Toggler menuitems -->
                 <div class="navbar-nav ms-lg-auto">
-                    <ul class="nav nav-pills">
+                    <ul class="nav nav-pills flex-column flex-lg-row">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="About" href="#intro">Kezdőlap</a>
                         </li>
@@ -1028,6 +1028,32 @@
             syncStickyOffsets();
             new ResizeObserver(syncStickyOffsets).observe(navbar);
 
+            const navbarCollapse = document.getElementById("navbar");
+            const navbarCollapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
+                toggle: false,
+            });
+
+            document.querySelectorAll('#navbar .nav-link[href^="#"]').forEach((link) => {
+                link.addEventListener("click", (event) => {
+                    const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+
+                    if (!target || !navbarCollapse.classList.contains("show")) {
+                        return;
+                    }
+
+                    event.preventDefault();
+                    navbarCollapse.addEventListener(
+                        "hidden.bs.collapse",
+                        () => {
+                            window.history.pushState(null, "", link.hash);
+                            target.scrollIntoView({ behavior: "instant", block: "start" });
+                        },
+                        { once: true },
+                    );
+                    navbarCollapseInstance.hide();
+                });
+            });
+
             document.querySelectorAll("[data-language-link]").forEach((link) => {
                 link.addEventListener("click", () => {
                     const navbarBottom = navbar.getBoundingClientRect().bottom;
@@ -1071,7 +1097,7 @@
                     this.setAttribute("aria-current", "true");
                     this.closest(".project-selector").classList.add("project-selected");
 
-                    document.querySelector(".dropdown-toggle").textContent = this.textContent;
+                    this.closest(".project-selector").querySelector(".dropdown-toggle").textContent = this.textContent;
                 });
             });
 

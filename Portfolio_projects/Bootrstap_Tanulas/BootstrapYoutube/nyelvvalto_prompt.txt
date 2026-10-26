@@ -105,6 +105,12 @@ Preserve the visitor's current page and, for single-page sites, the section curr
 
 The dropdown should display the current language and list all configured languages. Keep it beside social icons in their existing container when possible, not among the main section-navigation links.
 
+On mobile, when a visitor activates an in-page section link inside the expanded hamburger navigation, close the Bootstrap collapse menu first. Start scrolling to the target section only after the collapse has finished closing. Preserve the URL fragment and account for any sticky-navigation offset. Keep desktop navigation behavior unchanged.
+
+Implement this sequence using Bootstrap's collapse lifecycle: intercept section-link navigation only when the mobile menu is expanded, prevent the browser's immediate fragment jump, register a one-time `hidden.bs.collapse` handler, close the collapse, then update the URL fragment and scroll to the target after the menu is fully hidden. Do not start the scroll before the collapse transition completes.
+
+When a page has multiple dropdowns or controls that share generic classes (such as `.dropdown-toggle`), scope DOM queries and event updates to the relevant component's container. Never update a control by selecting the first matching generic element in the document. For example, selecting a portfolio project must update only the project selector button, not the language-switcher button.
+
 ## 6. URL and asset handling
 
 For every language version, carefully verify:
@@ -145,13 +151,15 @@ After implementation, verify:
 2. Internal navigation and all language-switcher links lead to valid destinations.
 3. Language switching works in every direction and preserves the corresponding page.
 4. For single-page websites, language switching preserves the section currently in view, including when the URL hash was not updated by scrolling, and reaches it without a smooth-scroll animation.
-5. The dropdown is positioned as specified and works with keyboard navigation on desktop and mobile.
-6. Asset paths resolve from the source directory and every target-language directory.
-7. Target pages do not contain unintended untranslated source-language content.
-8. HTML is well formed and IDs are unique; matching page sections retain compatible IDs.
-9. The original source-language content has not been unintentionally changed.
-10. Existing JavaScript and interactive behavior are preserved.
-11. Domain-dependent SEO and any checks that could not be performed automatically are clearly reported.
+5. On mobile, a hamburger-menu section link closes the menu before scrolling; the target section is reached afterward, and desktop navigation remains unchanged.
+6. Selecting an item in any component dropdown updates only that component's own control; verify that other dropdown labels, including the language selector, remain unchanged.
+7. The language dropdown is positioned as specified and works with keyboard navigation on desktop and mobile.
+8. Asset paths resolve from the source directory and every target-language directory.
+9. Target pages do not contain unintended untranslated source-language content.
+10. HTML is well formed and IDs are unique; matching page sections retain compatible IDs.
+11. The original source-language content has not been unintentionally changed.
+12. Existing JavaScript and interactive behavior are preserved.
+13. Domain-dependent SEO and any checks that could not be performed automatically are clearly reported.
 
 Use browser testing when available. Test representative pages in every language at desktop and mobile viewport sizes. Never claim a test passed unless it was actually performed. Report tooling limitations and unverified behavior explicitly.
 
