@@ -66,627 +66,669 @@
             }
         </style>
     </head>
-
-    <body data-bs-spy="scroll" data-bs-target="#navbar">
+    <body>
         <!-- Navbar -->
-        <nav class="ps-3 d-flex navbar navbar-expand-lg navbar-dark bg-dark justify-content-between sticky-top">
-            <!-- Brand -->
-            <div class="">
-                <a class="navbar-brand fw-bold" href="#"> <span>András Szabó - WebDeveloper</span></a>
-            </div>
-            <!-- Social Icons -->
-            <div class="social-icons d-flex gap-2 mx-auto">
-                <a href="#LinkedIn" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a
-                    href="https://github.com/szabo-andras/szabo-andras.github.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub"
-                    class="social-icon"
-                    aria-label="GitHub"
-                    ><i class="bi bi-github"></i
-                ></a>
-                <div class="dropdown">
-                    <button
-                        class="btn btn-outline-light btn-sm dropdown-toggle"
-                        type="button"
-                        id="languageDropdown"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        aria-label="Nyelvválasztás: magyar">
-                        HU
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                        <li>
-                            <a
-                                class="dropdown-item active"
-                                href="./AndrásSzabó-BootstrapPortfolio.html#intro"
-                                lang="hu"
-                                hreflang="hu"
-                                aria-current="page"
-                                data-language-link="hu"
-                                >Magyar (HU)</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="./en/AndrásSzabó-BootstrapPortfolio.html#intro"
-                                lang="en"
-                                hreflang="en"
-                                data-language-link="en"
-                                >English (EN)</a
-                            >
-                        </li>
-                    </ul>
+        <header class="bg-dark sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+                <a class="navbar-brand fw-bold" href="#"> <span>Szabó András - Webfejlesztő</span></a>
+                <div class="social-icons d-flex gap-2">
+                    <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
+                        ><i class="bi bi-linkedin"></i
+                    ></a>
+                    <a
+                        href="https://github.com/szabo-andras/szabo-andras.github.io"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="GitHub"
+                        class="social-icon"
+                        aria-label="GitHub"
+                        ><i class="bi bi-github"></i>
+                    </a>
                 </div>
-            </div>
-            <!-- Toggler -->
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar"
-                aria-controls="navbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar">
-                <!-- Toggler menuitems -->
-                <div class="navbar-nav ms-lg-auto">
-                    <ul class="nav nav-pills flex-column flex-lg-row">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="About" href="#intro">Kezdőlap</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="Tapasztalat" href="#experience">Tapasztalat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="CV" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="Reviews" href="#reviews">Vélemények</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="Contact" href="#contact">Kapcsolat</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- main image & intro text -->
-        <section id="intro" class="d-flex flex-column justify-content-center my-4 bg-light">
-            <div class="container-md">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-4 text-center d-none d-md-block">
-                        <img
-                            src="./Assets/Andras_Szabo-CV_pic_no_bckgr.png"
-                            alt="András Profil Picture"
-                            class="img-fluid" />
+                <div class="d-flex align-items-center ms-auto ms-lg-3">
+                    <div class="dropdown me-2">
+                        <button
+                            class="btn btn-outline-light btn-sm dropdown-toggle"
+                            type="button"
+                            id="languageDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="Nyelvválasztás: magyar">
+                            HU
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li>
+                                <a
+                                    class="dropdown-item active"
+                                    href="./AndrásSzabó-BootstrapPortfolio.html#intro"
+                                    lang="hu"
+                                    hreflang="hu"
+                                    aria-current="page"
+                                    data-language-link="hu"
+                                    >Magyar (HU)</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="./en/AndrásSzabó-BootstrapPortfolio.html#intro"
+                                    lang="en"
+                                    hreflang="en"
+                                    data-language-link="en"
+                                    >English (EN)</a
+                                >
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-md-8 text-center text-md-end">
-                        <h1 class="section-heading">
-                            <span class="display-6">Szabó András - Webfejlesztő</span>
-                        </h1>
-                        <h2 class="display-5 text-muted">HTML CSS Bootstrap</h2>
-                        <p class="lead my-4 text-muted">
-                            Készíthetek neked
-                            <a
-                                class="text-danger"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#weboldalArticle"
-                                aria-controls="weboldalArticle">
-                                Weboldalt
-                            </a>
-                            , vagy
-                            <a
-                                class="text-danger"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#webalkalmazasArticle"
-                                aria-controls="webalkalmazasArticle">
-                                webalkalmazást
-                            </a>
+                    <!-- Hamburger gomb -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbar"
+                        aria-controls="navbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Navigációs menüpontok -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav nav-pills flex-column flex-lg-row ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#intro">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Tapasztalat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">Vélemények</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Kapcsolat</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- main image & intro text -->
+        <main data-bs-spy="scroll" data-bs-target="#navbar">
+            <section id="intro" class="d-flex flex-column justify-content-center bg-light">
+                <div class="container-md">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-4 text-center d-none d-md-block">
+                            <img
+                                src="./Assets/Andras_Szabo-CV_pic_no_bckgr.png"
+                                alt="András Profil Picture"
+                                class="img-fluid" />
+                        </div>
+                        <div class="col-md-8 text-center text-md-end">
+                            <h1 class="section-heading">
+                                <span class="display-6">Szabó András - Webfejlesztő</span>
+                            </h1>
+                            <h2 class="display-5 text-muted">HTML CSS Bootstrap</h2>
+                            <p class="lead my-4 text-muted">
+                                Készíthetek neked
+                                <a
+                                    class="text-danger"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#weboldalArticle"
+                                    aria-controls="weboldalArticle">
+                                    Weboldalt
+                                </a>
+                                , vagy
+                                <a
+                                    class="text-danger"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#webalkalmazasArticle"
+                                    aria-controls="webalkalmazasArticle">
+                                    webalkalmazást
+                                </a>
+                            </p>
+
+                            <p class="d-inline-block">Ha már tudod, mit szeretnél:</p>
+                            <a href="#contact" class="btn btn-danger btn-lg d-inline-block">Kapcsolat</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Rólam  -->
+            <section id="experience" class="bg-dark">
+                <div class="container shadow-sm py-md-3 py-1">
+                    <div id="experience-heading" class="section-heading text-center text-primary sticky shadow">
+                        <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
+                            A történetem röviden
+                        </h2>
+                    </div>
+                    <div class="row p-4">
+                        <p>
+                            Pályafutásom során <strong>Magyarországon</strong>,<strong> Erdélyben</strong>,<strong>
+                                Romániában</strong
+                            >
+                            és<strong> Dániában</strong> szereztem tapasztalatot az értékesítés, az üzleti folyamatok és
+                            a szállodaipar területén. Ezek a munkák megtanítottak az önálló munkavégzésre, a gyors
+                            alkalmazkodásra és arra, hogy felismerjem a gyakorlati problémákat, amelyekre egyszerűbb,
+                            hatékonyabb megoldásokat lehet találni.
                         </p>
 
-                        <p class="d-inline-block">Ha már tudod, mit szeretnél:</p>
-                        <a href="#contact" class="btn btn-danger btn-lg d-inline-block" type="button">Kapcsolat</a>
+                        <p>
+                            Mindig is érdekelt, hogyan lehet a logikát és a technológiát a mindennapi élet és a
+                            vállalkozások működésének javítására használni.
+                        </p>
+
+                        <p>
+                            Ezek a tapasztalatok megerősítették bennem, hogy szeretek rendszerekben gondolkodni,
+                            problémákat elemezni és működő megoldásokat létrehozni.
+                        </p>
+                        <p>
+                            Jelenleg a webfejlesztési tudásomat építem, elsősorban gyakorlati projekteken keresztül.
+                            Célom, hogy üzleti szemléletemet és problémamegoldó képességemet technikai készségekkel
+                            ötvözve olyan digitális megoldásokat fejlesszek, amelyek valódi értéket teremtenek.
+                        </p>
+                        <p>
+                            Nyitott vagyok a csapatmunkára, az izgalmas projektekre és a folyamatos tanulásra, miközben
+                            hosszú távon saját alkalmazásokat és digitális termékeket is szeretnék létrehozni.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Rólam  -->
-        <section id="experience" class="my-4 bg-dark">
-            <div class="container shadow-sm py-md-3 py-1">
-                <div id="experience-heading" class="section-heading text-center text-primary sticky shadow">
-                    <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
-                        A történetem röviden
-                    </h2>
-                </div>
-                <div class="row p-4">
-                    <p>
-                        Pályafutásom során <strong>Magyarországon</strong>,<strong> Erdélyben</strong>,<strong>
-                            Romániában</strong
-                        >
-                        és<strong> Dániában</strong> szereztem tapasztalatot az értékesítés, az üzleti folyamatok és a
-                        szállodaipar területén. Ezek a munkák megtanítottak az önálló munkavégzésre, agyors
-                        alkalmazkodásra és arra, hogy felismerjem a gyakorlati problémákat, amelyekre egyszerűbb,
-                        hatékonyabb megoldásokat lehet találni.
-                    </p>
+            </section>
 
-                    <p>
-                        Mindig is érdekelt, hogyan lehet a logikát és a technológiát a mindennapi élet és a
-                        vállalkozások működésének javítására használni.
-                    </p>
+            <!-- Portfolio szakasz -->
+            <section id="portfolio" class="bg-dark">
+                <div class="container shadow-sm py-md-3 py-1">
+                    <div class="section-heading text-center text-primary sticky shadow">
+                        <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">Portfólió projektek</h2>
+                    </div>
+                    <h3 class="h5">Néhány jelentős projektem, amit még a webfejlesztés tanulása előtt készítettem:</h3>
 
-                    <p>
-                        Ezek a tapasztalatok megerősítették bennem, hogy szeretek rendszerekben gondolkodni, problémákat
-                        elemezni és működő megoldásokat létrehozni.
-                    </p>
-                    <p>
-                        Jelenleg a webfejlesztési tudásomat építem, elsősorban gyakorlati projekteken keresztül. Célom,
-                        hogy üzleti szemléletemet és problémamegoldó képességemet technikai készségekkel ötvözve olyan
-                        digitális megoldásokat fejlesszek, amelyek valódi értéket teremtenek.
-                    </p>
-                    <p>
-                        Nyitott vagyok a csapatmunkára, az izgalmas projektekre és a folyamatos tanulásra, miközben
-                        hosszú távon saját alkalmazásokat és digitális termékeket is szeretnék létrehozni.
-                    </p>
-                </div>
-            </div>
-        </section>
+                    <div class="container px-4 project-selector">
+                        <!-- Dropdown: md méret alatt -->
+                        <div class="dropdown d-md-none my-3">
+                            <button
+                                class="btn btn-outline-primary dropdown-toggle w-100"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Válassz ki egy projektet
+                            </button>
 
-        <!-- Portfolio szakasz -->
-        <section id="portfolio" class="my-4 bg-dark">
-            <div class="container shadow-sm py-md-3 py-1">
-                <div class="section-heading text-center text-primary sticky shadow">
-                    <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">Portfólió projektek</h2>
-                </div>
-                <h3 class="h5">Néhány jelentős projektem, amit még a webfejlesztés tanulása előtt készítettem:</h3>
-
-                <div class="container px-4 project-selector">
-                    <!-- Dropdown: md méret alatt -->
-                    <div class="dropdown d-md-none my-3">
-                        <button
-                            class="btn btn-outline-primary dropdown-toggle w-100"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Válassz ki egy projektet
-                        </button>
-
-                        <ul class="dropdown-menu w-100">
-                            <li>
-                                <button class="dropdown-item" type="button" data-bs-target="#Google_Sheets_Travel">
+                            <ul class="dropdown-menu w-100">
+                                <li>
+                                    <button class="dropdown-item" type="button" data-bs-target="#Google_Sheets_Travel">
+                                        Utazásszervező
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button" data-bs-target="#Hydrovital-Excel">
+                                        Értékesítési adatbázis
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        class="dropdown-item"
+                                        type="button"
+                                        data-bs-target="#Rudolph_Employee_Database">
+                                        HR adatbázis
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Tabs -->
+                        <ul class="nav nav-tabs mt-3 d-none d-md-flex" id="projectTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link active border"
+                                    id="travel-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#Google_Sheets_Travel"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="Utazásszervező"
+                                    aria-selected="true">
                                     Utazásszervező
                                 </button>
                             </li>
-                            <li>
-                                <button class="dropdown-item" type="button" data-bs-target="#Hydrovital-Excel">
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link border"
+                                    id="hydrovital-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#Hydrovital-Excel"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="Hydrovital-adatbázis"
+                                    aria-selected="false">
                                     Értékesítési adatbázis
                                 </button>
                             </li>
-                            <li>
-                                <button class="dropdown-item" type="button" data-bs-target="#Rudolph_Employee_Database">
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link border"
+                                    id="Rudolph-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#Rudolph_Employee_Database"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="HR-adatbázis"
+                                    aria-selected="false">
                                     HR adatbázis
                                 </button>
                             </li>
                         </ul>
-                    </div>
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs mt-3 d-none d-md-flex" id="projectTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button
-                                class="nav-link active border"
-                                id="travel-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#Google_Sheets_Travel"
-                                type="button"
-                                role="tab"
-                                aria-controls="Utazásszervező"
-                                aria-selected="true">
-                                Utazásszervező
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button
-                                class="nav-link border"
-                                id="hydrovital-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#Hydrovital-Excel"
-                                type="button"
-                                role="tab"
-                                aria-controls="Hydrovital-adatbázis"
-                                aria-selected="false">
-                                Értékesítési adatbázis
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button
-                                class="nav-link border"
-                                id="Rudolph-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#Rudolph_Employee_Database"
-                                type="button"
-                                role="tab"
-                                aria-controls="HR-adatbázis"
-                                aria-selected="false">
-                                HR adatbázis
-                            </button>
-                        </li>
-                    </ul>
-                    <!-- Tab-ok tartalma -->
-                    <div class="tab-content border shadow p-3" id="projectTabContents">
-                        <!-- Utazástervező tab tartalma -->
-                        <div
-                            class="tab-pane fade show active"
-                            id="Google_Sheets_Travel"
-                            role="tabpanel"
-                            aria-labelledby="travel-tab"
-                            tabindex="0">
-                            <h3 class="h5">Google Sheets-alapú utazástervezés és költségkövetés automatizálás</h3>
-                            <p>
-                                Legutóbbi saját projektem egy három hónapos, saját szervezésű utazásunkhoz kialakított,
-                                <strong>Google Sheets</strong>-alapú utazástervezési és költségkövető rendszer volt. A
-                                célom az volt, hogy egyetlen rendszerben kezelhessem a több országot és várost érintő
-                                utazás szervezési és pénzügyi feladatait.
-                            </p>
+                        <!-- Tab-ok tartalma -->
+                        <div class="tab-content border shadow p-3" id="projectTabContents">
+                            <!-- Utazástervező tab tartalma -->
+                            <div
+                                class="tab-pane fade show active"
+                                id="Google_Sheets_Travel"
+                                role="tabpanel"
+                                aria-labelledby="travel-tab"
+                                tabindex="0">
+                                <h3 class="h5">Google Sheets-alapú utazástervezés és költségkövetés automatizálás</h3>
+                                <p>
+                                    Legutóbbi saját projektem egy három hónapos, saját szervezésű utazásunkhoz
+                                    kialakított,
+                                    <strong>Google Sheets</strong>-alapú utazástervezési és költségkövető rendszer volt.
+                                    A célom az volt, hogy egyetlen rendszerben kezelhessem a több országot és várost
+                                    érintő utazás szervezési és pénzügyi feladatait.
+                                </p>
 
-                            <div>
-                                <h4 class="h6">A költségkövetéshez elsősorban az alábbi eszközöket használtam:</h4>
-                                <ul>
-                                    <li><strong>Google Űrlapok</strong></li>
-                                    <li><strong>képletek</strong></li>
-                                    <li><strong>automatikus árfolyamváltás</strong>,</li>
-                                    <li><strong>legördülő listák</strong></li>
-                                    <li><strong>összesítések</strong></li>
-                                </ul>
-                                Így a különböző pénznemekben felmerülő kiadásokat rögzíthettem, követhettem a napi
-                                költségvetést, és megkönnyíthettem az utólagos elszámolást.
+                                <div>
+                                    <h4 class="h6">A költségkövetéshez elsősorban az alábbi eszközöket használtam:</h4>
+                                    <ul>
+                                        <li><strong>Google Űrlapok</strong></li>
+                                        <li><strong>képletek</strong></li>
+                                        <li><strong>automatikus árfolyamváltás</strong>,</li>
+                                        <li><strong>legördülő listák</strong></li>
+                                        <li><strong>összesítések</strong></li>
+                                    </ul>
+                                    Így a különböző pénznemekben felmerülő kiadásokat rögzíthettem, követhettem a napi
+                                    költségvetést, és megkönnyíthettem az utólagos elszámolást.
+                                </div>
+
+                                <p>
+                                    A rendszer működését Google Apps Script segítségével is bővítettem, ChatGPT
+                                    támogatásával. Az automatizmusok lehetővé tették, hogy az űrlapon rögzített kiadások
+                                    a megfelelő városhoz tartozó munkalapra kerüljenek, valamint hogy az útvonalterv
+                                    alapján létrejöjjenek az egyes városok napi programjainak és szállásadatainak
+                                    kezelésére szolgáló munkalapok. Ezeket egy korábban manuálisan kialakított munkalap
+                                    struktúrájára építettem, majd a létrejött lapokat szükség szerint kézzel
+                                    pontosítottam.
+                                </p>
+
+                                <p>
+                                    A projekt során a saját gyakorlati igényeimből indultam ki, meghatároztam a rendszer
+                                    kívánt működését, és AI segítségével olyan automatizált megoldást alakítottam ki,
+                                    amely csökkentette az ismétlődő manuális feladatokat. A tapasztalat megerősítette az
+                                    érdeklődésemet a technológiai megoldások, a folyamatok automatizálása és a saját
+                                    igényekre szabott digitális eszközök fejlesztése iránt.
+                                </p>
                             </div>
-
-                            <p>
-                                A rendszer működését Google Apps Script segítségével is bővítettem, ChatGPT
-                                támogatásával. Az automatizmusok lehetővé tették, hogy az űrlapon rögzített kiadások a
-                                megfelelő városhoz tartozó munkalapra kerüljenek, valamint hogy az útvonalterv alapján
-                                létrejöjjenek az egyes városok napi programjainak és szállásadatainak kezelésére
-                                szolgáló munkalapok. Ezeket egy korábban manuálisan kialakított munkalap struktúrájára
-                                építettem, majd a létrejött lapokat szükség szerint kézzel pontosítottam.
-                            </p>
-
-                            <p>
-                                A projekt során a saját gyakorlati igényeimből indultam ki, meghatároztam a rendszer
-                                kívánt működését, és AI segítségével olyan automatizált megoldást alakítottam ki, amely
-                                csökkentette az ismétlődő manuális feladatokat. A tapasztalat megerősítette az
-                                érdeklődésemet a technológiai megoldások, a folyamatok automatizálása és a saját
-                                igényekre szabott digitális eszközök fejlesztése iránt.
-                            </p>
-                        </div>
-                        <!-- Értékesítési adatbázis tab tartalma -->
-                        <div
-                            class="tab-pane fade show active"
-                            id="Hydrovital-Excel"
-                            role="tabpanel"
-                            aria-labelledby="Hydrovital-adatbázis"
-                            tabindex="0">
-                            <h3 class="h5">Értékesítési nyomonkövető és Ügyfél adatbázis - Ms Excel, Ms Access</h3>
-                            <p>
-                                Az értékesítési munkám támogatására saját Excel-alapú nyilvántartási rendszert
-                                alakítottam ki, amely egy helyen tette lehetővé az értékesítési szerződések, az
-                                ügyféladatok és a bevételek nyomon követését.
-                            </p>
-                            <p>
-                                A rendszer segítségével strukturáltan kezelhettem az értékesítési tevékenységhez
-                                kapcsolódó információkat, könnyebben áttekinthettem az ügyfelekkel és a szerződésekkel
-                                kapcsolatos adatokat, valamint követhettem a bevételek alakulását.
-                            </p>
-                            <p>
-                                A megoldás kialakítása során a saját munkafolyamataim igényeiből indultam ki, és az
-                                Excel lehetőségeit felhasználva olyan gyakorlati eszközt hoztam létre, amely támogatta a
-                                napi munkavégzést és az üzleti információk rendszerezését.
-                            </p>
-                        </div>
-                        <div
-                            class="tab-pane fade"
-                            id="Rudolph_Employee_Database"
-                            role="tabpanel"
-                            aria-labelledby="HR-adatbázis"
-                            tabindex="0">
-                            <h3 class="h5">Rudolph Logistik Kft - Munkavállalói adatbázis - Ms Access</h3>
-                            <p>
-                                Már 2007-ben is foglalkoztatott, hogyan lehet a technológia segítségével hatékonyabbá
-                                tenni a munkafolyamatokat.
-                            </p>
-                            <p>
-                                A győri Rudolph Logistik Kft-nél az évek során megtelt Excel fájl egyes munkafüzeteibe
-                                már nem lehetett új oszlopokat beszúrni, viszont a bevezetésre kerülő Cafeteria rendszer
-                                miatt erre rendkívüli szükség lett volna.
-                            </p>
-                            <p>
-                                A probléma abban állt, hogy az egy helyen történő adatkezelés helyett 2 Excel fájlban
-                                kellett folyamatosan naprakészen tartani a munkavállalói adatbázist, ami a magas
-                                fluktuáció miatt rendszeres adateltérést okozott.
-                            </p>
-                            <p>
-                                A meglévő Excel-fájl alapján egy űrlapokkal támogatott Microsoft Access-adatbázist
-                                hoztam létre, amely mintegy 1100 munkavállaló HR-adatait kezelte, és a lekérdezések
-                                segítségével olyan kimutatásokat hoztam létre, amiket korábban manuális szűrésekkel
-                                oldottak meg minden hónap végén több óra munkával.
-                            </p>
-                            <p>
-                                A rendszer többek között a bérek, munkakörök, tanulmányok, képzések és
-                                cafeteria-juttatások nyilvántartását tette lehetővé. Ez a projekt korai példája volt
-                                annak, hogyan alakíthatók át a meglévő adatok egy strukturáltabb, könnyebben kezelhető
-                                rendszerré.
-                            </p>
+                            <!-- Értékesítési adatbázis tab tartalma -->
+                            <div
+                                class="tab-pane fade show"
+                                id="Hydrovital-Excel"
+                                role="tabpanel"
+                                aria-labelledby="hydrovital-tab"
+                                tabindex="0">
+                                <h3 class="h5">Értékesítési nyomonkövető és Ügyfél adatbázis - Ms Excel, Ms Access</h3>
+                                <p>
+                                    Az értékesítési munkám támogatására saját Excel-alapú nyilvántartási rendszert
+                                    alakítottam ki, amely egy helyen tette lehetővé az értékesítési szerződések, az
+                                    ügyféladatok és a bevételek nyomon követését.
+                                </p>
+                                <p>
+                                    A rendszer segítségével strukturáltan kezelhettem az értékesítési tevékenységhez
+                                    kapcsolódó információkat, könnyebben áttekinthettem az ügyfelekkel és a
+                                    szerződésekkel kapcsolatos adatokat, valamint követhettem a bevételek alakulását.
+                                </p>
+                                <p>
+                                    A megoldás kialakítása során a saját munkafolyamataim igényeiből indultam ki, és az
+                                    Excel lehetőségeit felhasználva olyan gyakorlati eszközt hoztam létre, amely
+                                    támogatta a napi munkavégzést és az üzleti információk rendszerezését.
+                                </p>
+                            </div>
+                            <div
+                                class="tab-pane fade"
+                                id="Rudolph_Employee_Database"
+                                role="tabpanel"
+                                aria-labelledby="HR-adatbázis"
+                                tabindex="0">
+                                <h3 class="h5">Rudolph Logistik Kft - Munkavállalói adatbázis - Ms Access</h3>
+                                <p>
+                                    Már 2007-ben is foglalkoztatott, hogyan lehet a technológia segítségével
+                                    hatékonyabbá tenni a munkafolyamatokat.
+                                </p>
+                                <p>
+                                    A győri Rudolph Logistik Kft-nél az évek során megtelt Excel fájl egyes
+                                    munkafüzeteibe már nem lehetett új oszlopokat beszúrni, viszont a bevezetésre kerülő
+                                    Cafeteria rendszer miatt erre rendkívüli szükség lett volna.
+                                </p>
+                                <p>
+                                    A probléma abban állt, hogy az egy helyen történő adatkezelés helyett 2 Excel
+                                    fájlban kellett folyamatosan naprakészen tartani a munkavállalói adatbázist, ami a
+                                    magas fluktuáció miatt rendszeres adateltérést okozott.
+                                </p>
+                                <p>
+                                    A meglévő Excel-fájl alapján egy űrlapokkal támogatott Microsoft Access-adatbázist
+                                    hoztam létre, amely mintegy 1100 munkavállaló HR-adatait kezelte, és a lekérdezések
+                                    segítségével olyan kimutatásokat hoztam létre, amiket korábban manuális szűrésekkel
+                                    oldottak meg minden hónap végén több óra munkával.
+                                </p>
+                                <p>
+                                    A rendszer többek között a bérek, munkakörök, tanulmányok, képzések és
+                                    cafeteria-juttatások nyilvántartását tette lehetővé. Ez a projekt korai példája volt
+                                    annak, hogyan alakíthatók át a meglévő adatok egy strukturáltabb, könnyebben
+                                    kezelhető rendszerré.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Vélemények  -->
-        <section id="reviews" class="my-4 bg-light">
-            <div class="container shadow-sm py-md-3 py-1">
-                <div id="reviews-heading" class="section-heading text-center text-primary sticky shadow">
-                    <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
-                        <i class="bi bi-stars"></i>Ilyennek látnak mások<i class="bi bi-stars"></i>
-                    </h2>
+            <!-- Vélemények  -->
+            <section id="reviews" class="bg-light">
+                <div class="container shadow-sm py-md-3 py-1">
+                    <div id="reviews-heading" class="section-heading text-center text-primary sticky shadow">
+                        <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
+                            <i class="bi bi-stars"></i>Ilyennek látnak mások<i class="bi bi-stars"></i>
+                        </h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-2">
+                        <div class="card p-2 border-1 text-primary">
+                            <div class="card-header text-center">
+                                <img
+                                    src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
+                                    alt="Kolléga fotó"
+                                    class="w-75 p-4" />
+                                <h2 class="h4">Florencia Menendez Brizuela</h2>
+                                <h3 class="fs-5 h5">Crowne Plaza Copenhagen Towers</h3>
+                                <h4 class="text-secondary fs-4">Recepció Felügyelő</h4>
+                            </div>
+                            <div class="card-body text-muted">
+                                <p>
+                                    Örömömre szolgált, hogy együtt dolgozhattam Andrással; kiemelném erős
+                                    elkötelezettségét és felelősségérzetét minden általa vállalt feladat kapcsán.
+                                    Szorgalmas, megbízható, felelősségteljes, és mindig kész arra, hogy az elvárásokon
+                                    felül is tegyen a csapat céljainak elérése érdekében.
+                                </p>
+                                <a
+                                    href="https://www.linkedin.com/in/andras83sz/details/recommendations/?detailScreenTabIndex=0"
+                                    target="_blank">
+                                    Vélemény olvasása a LinkedIn-en
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card p-2 border-1 text-primary">
+                            <div class="card-header text-center">
+                                <a href="https://www.linkedin.com/in/thomas-goertz-80240186/">
+                                    <img
+                                        src="./Assets/Kollegak/Thomas-Goertz-portrait-img.JPG"
+                                        alt="Thomas Goertz profilkép"
+                                        class="w-75 p-4" />
+                                </a>
+                                <h2 class="h4">Thomas Goertz</h2>
+                                <h3 class="fs-5 h5">Crowne Plaza Copenhagen Towers</h3>
+                                <h4 class="text-secondary fs-4">Műszaki Felügyelő</h4>
+                            </div>
+                            <div class="card-body text-muted">
+                                <p>
+                                    András rendkívül figyelmes ember, aki kiváló érzékkel veszi észre a részleteket, és
+                                    jól átlátja az üzleti folyamatokat. Bármelyik munkahely szerencsésnek mondhatja
+                                    magát, hogy ő a csapat tagja.
+                                </p>
+                                <a
+                                    href="https://www.linkedin.com/in/andras83sz/details/recommendations/?detailScreenTabIndex=0"
+                                    target="_blank">
+                                    Vélemény olvasása a LinkedIn-en
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card p-2 border-1 text-primary">
+                            <div class="card-header text-center">
+                                <a href="https://www.linkedin.com/in/mihaela-elena-radu-87b92a178/" target="_blank">
+                                    <img
+                                        src="./Assets/Kollegak/Michaela-Elena-Radu-profil-img.png"
+                                        alt="Michaela-Elena-Radu portré kép"
+                                        class="w-75 p-4" />
+                                </a>
+                                <h2 class="h4">Mihaela Elena Radu</h2>
+                                <h3 class="fs-5 h5">Comfort Hotel Vesterbro</h3>
+                                <h4 class="text-secondary fs-4">Takarítási vezető</h4>
+                            </div>
+                            <div class="card-body text-muted">
+                                <p>
+                                    András jó hozzáállást tanúsít feladataival kapcsolatban, és mindig nyitott a
+                                    fejlődésre. Munkateljesítménye nagyon jó szintre emelkedett, emellett csatlakozott a
+                                    szobaellenőrzők (room controllers) csapatához. Feladatait mindig ellátta, és jó
+                                    minőségű munkát végzett.
+                                </p>
+                                <a
+                                    href="https://www.linkedin.com/in/andras83sz/details/recommendations/?detailScreenTabIndex=0"
+                                    target="_blank">
+                                    Vélemény olvasása a LinkedIn-en
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3 p-2">
-                    <div class="card p-2 border-1 text-primary">
-                        <div class="card-header text-center">
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
-                                alt="Kolléga fotó"
-                                class="w-75 p-4" />
-                            <h2>Kolléga neve</h2>
-                            <h3 class="text-secondary fs-5">munkahely</h3>
-                        </div>
-                        <div class="card-body text-muted">
-                            <p>
-                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
-                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
-                                saepe voluptas omnis?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card p-2 border-1 text-primary">
-                        <div class="card-header text-center">
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
-                                alt="Kolléga fotó"
-                                class="w-75 p-4" />
-                            <h2>Kolléga neve</h2>
-                            <h3 class="text-secondary fs-5">munkahely</h3>
-                        </div>
-                        <div class="card-body text-muted">
-                            <p>
-                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
-                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
-                                saepe voluptas omnis?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card p-2 border-1 text-primary">
-                        <div class="card-header text-center">
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
-                                alt="Kolléga fotó"
-                                class="w-75 p-4" />
-                            <h2>Kolléga neve</h2>
-                            <h3 class="text-secondary fs-5">munkahely</h3>
-                        </div>
-                        <div class="card-body text-muted">
-                            <p>
-                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
-                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
-                                saepe voluptas omnis?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card p-2 border-1 text-primary">
-                        <div class="card-header text-center">
-                            <img
-                                src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
-                                alt="Kolléga fotó"
-                                class="w-75 p-4" />
-                            <h2>Kolléga neve</h2>
-                            <h3 class="text-secondary fs-5">munkahely</h3>
-                        </div>
-                        <div class="card-body text-muted">
-                            <p>
-                                Hic voluptatum unde ab nobis a dicta voluptates temporibus quisquam nisi quam qui at,
-                                suscipit id ea, eius animi officiis, inventore quos esse libero dolore veniam. Minus
-                                saepe voluptas omnis?
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Kapcsolat Űrlap -->
-        <section id="contact" class="min-vh-100 my-4 bg-dark">
-            <div class="container shadow-sm py-md-3 py-1">
-                <div id="contact-heading" class="section-heading text-center text-primary sticky shadow">
-                    <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
-                        Írd le az elképzeléseidet:
-                    </h2>
-                </div>
-                <div class="row mx-auto pb-3 col-md-9">
-                    <form class="row g-1 p-3 needs-validation" novalidate>
-                        <fieldset class="row border rounded p-3 mb-4">
-                            <legend>Néhány infó rólad:</legend>
+            <!-- Kapcsolat Űrlap -->
+            <section id="contact" class="min-vh-100 bg-dark">
+                <div class="container shadow-sm py-md-3 py-1">
+                    <div id="contact-heading" class="section-heading text-center text-primary sticky shadow">
+                        <h2 class="justify-content-around py-xs-1 py-3 py-md-5 w-100 fw-bold d-flex">
+                            Írd le az elképzeléseidet:
+                        </h2>
+                    </div>
+                    <div class="row mx-auto pb-3 col-md-9">
+                        <form class="row g-1 p-3 needs-validation" novalidate>
+                            <fieldset class="row border rounded p-3 mb-4">
+                                <legend>Néhány infó rólad:</legend>
 
-                            <div class="col-lg-6">
-                                <!-- Vezetéknév Input -->
-                                <div class="col-12">
-                                    <label for="vezeteknev" class="form-label">Vezetéknév:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">
-                                            <i class="bi bi-person-circle"> </i>
-                                        </span>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="vezeteknev"
-                                            placeholder="Vezetéknév"
-                                            required />
-                                        <div class="valid-feedback">Looks good!</div>
-                                        <!-- Vezetéknév tooltip -->
-                                        <span class="input-group-text">
-                                            <span class="tt" data-bs-placement="top" title="Családi neved...">
-                                                <i class="bi bi-question-circle text-muted"></i>
+                                <div class="col-lg-6">
+                                    <!-- Vezetéknév Input -->
+                                    <div class="col-12">
+                                        <label for="last-name" class="form-label">Vezetéknév:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-person-circle"> </i>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Keresztnév Input -->
-                                <div class="col-12">
-                                    <label for="keresztnev" class="form-label">Keresztnév:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
-
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="keresztnev"
-                                            placeholder="Keresztnév"
-                                            required />
-                                        <div class="valid-feedback">Looks good!</div>
-                                        <!-- Keresztnév tooltip -->
-                                        <span class="input-group-text">
-                                            <span
-                                                class="tt"
-                                                data-bs-placement="right"
-                                                title="Keresztneved, ahogyan a barátaid szólítanak...">
-                                                <i class="bi bi-question-circle text-muted"></i>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="last-name"
+                                                placeholder="Vezetéknév"
+                                                required />
+                                            <div class="valid-feedback">Looks good!</div>
+                                            <!-- Vezetéknév tooltip -->
+                                            <span class="input-group-text">
+                                                <span class="tt" data-bs-placement="top" title="Családi neved...">
+                                                    <i class="bi bi-question-circle text-muted"></i>
+                                                </span>
                                             </span>
-                                        </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <!-- e-mail Input -->
-                                <div class="col-12">
-                                    <label for="email" class="form-label">E-mail:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                        <input
-                                            type="email"
-                                            class="form-control"
-                                            id="email"
-                                            aria-describedby="inputGroupPrepend"
-                                            required
-                                            placeholder="username@domain.com" />
-                                        <div class="invalid-feedback">Kérjük adjon meg egy e-mail címet!</div>
-                                        <!-- email tooltip -->
-                                        <span class="input-group-text">
-                                            <span
-                                                class="tt"
-                                                data-bs-placement="top"
-                                                title="Adj meg egy olyan e-mail címet, ahova válaszolhatok neked..."
-                                                ><i class="text-muted bi bi-question-circle"></i
-                                            ></span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Telefonszám Input -->
-                                <div class="col-12">
-                                    <label for="telefonszám" class="form-label">Telefonszám:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="inputGroupTelefonszam">
-                                            <i class="bi bi-telephone-fill"></i>
-                                        </span>
+                                    <!-- Keresztnév Input -->
+                                    <div class="col-12">
+                                        <label for="first-name" class="form-label">Keresztnév:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
 
-                                        <input type="tel" class="form-control" id="telefonszám" required />
-                                        <div class="invalid-feedback">Kérem, adjon meg helyes telefonszámot!</div>
-                                        <!-- telefonszám tooltip -->
-                                        <span class="input-group-text">
-                                            <span
-                                                class="tt"
-                                                data-bs-placement="right"
-                                                title="Amin elérlek, hogy hallhassam a hangod a távolból is...">
-                                                <i class="bi bi-question-circle text-muted"></i>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="first-name"
+                                                placeholder="Keresztnév"
+                                                required />
+                                            <div class="valid-feedback">Looks good!</div>
+                                            <!-- Keresztnév tooltip -->
+                                            <span class="input-group-text">
+                                                <span
+                                                    class="tt"
+                                                    data-bs-placement="right"
+                                                    title="Keresztneved, ahogyan a barátaid szólítanak...">
+                                                    <i class="bi bi-question-circle text-muted"></i>
+                                                </span>
                                             </span>
-                                        </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="customer-country" class="form-label">Ország</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-globe2"></i></span>
-                                    <select class="form-select" id="customer-country" required>
-                                        <option selected disabled value="">Válassz...</option>
-                                    </select>
+                                <div class="col-lg-6">
+                                    <!-- e-mail Input -->
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">E-mail:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                id="email"
+                                                aria-describedby="inputGroupPrepend"
+                                                required
+                                                placeholder="username@domain.com" />
+                                            <div class="invalid-feedback">Kérjük adjon meg egy e-mail címet!</div>
+                                            <!-- email tooltip -->
+                                            <span class="input-group-text">
+                                                <span
+                                                    class="tt"
+                                                    data-bs-placement="top"
+                                                    title="Adj meg egy olyan e-mail címet, ahova válaszolhatok neked..."
+                                                    ><i class="text-muted bi bi-question-circle"></i
+                                                ></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Telefonszám Input -->
+                                    <div class="col-12">
+                                        <label for="phone-number" class="form-label">Telefonszám:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="inputGroupTelefonszam">
+                                                <i class="bi bi-telephone-fill"></i>
+                                            </span>
 
-                                    <div class="invalid-feedback">Kérjük, válasszon egy országot!</div>
+                                            <input type="tel" class="form-control" id="phone-number" required />
+                                            <div class="invalid-feedback">Kérem, adjon meg helyes telefonszámot!</div>
+                                            <!-- telefonszám tooltip -->
+                                            <span class="input-group-text">
+                                                <span
+                                                    class="tt"
+                                                    data-bs-placement="right"
+                                                    title="Amin elérlek, hogy hallhassam a hangod a távolból is...">
+                                                    <i class="bi bi-question-circle text-muted"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="row border rounded p-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="customer-country" class="form-label">Ország</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-globe2"></i></span>
+                                        <select class="form-select" id="customer-country" required>
+                                            <option selected disabled value="">Válassz...</option>
+                                        </select>
+
+                                        <div class="invalid-feedback">Kérjük, válasszon egy országot!</div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="row border rounded p-3 mb-4">
+                                <div class="col-12">
+                                    <fieldset class="row border rounded p-3 mb-4">
+                                        <legend>Cégként, vagy magánszemélyként érdeklődsz?</legend>
+
+                                        <div>
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="Cég?"
+                                                id="company-chkbox" />
+                                            <label for="company-chkbox">Cég</label>
+                                        </div>
+                                        <div>
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="Cég?"
+                                                id="individual-person-chkbox" />
+                                            <label for="individual-person-chkbox">Magánszemély</label>
+                                        </div>
+
+                                        <div class="form-floating mb-4 mt-5">
+                                            <textarea
+                                                class="form-control"
+                                                id="customer-contact-message"
+                                                name="Üzenet"
+                                                required
+                                                style="height: 140px"></textarea>
+                                            <label for="customer-contact-message">Írd ide az üzenetedet:</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </fieldset>
                             <div class="col-12">
-                                <fieldset class="row border rounded p-3 mb-4">
-                                    <legend>Cégként, vagy magánszemélyként érdeklődsz?</legend>
-
-                                    <div>
-                                        <input class="form-check-input" type="radio" name="Cég?" id="ceg-chkbox" />
-                                        <label for="ceg-chkbox">Cég</label>
-                                    </div>
-                                    <div>
-                                        <input
-                                            class="form-check-input"
-                                            type="radio"
-                                            name="Cég?"
-                                            id="maganszemely-chkbox" />
-                                        <label for="maganszemely-chkbox">Magánszemély</label>
-                                    </div>
-
-                                    <div class="form-floating mb-4 mt-5">
-                                        <textarea
-                                            class="form-control"
-                                            id="uzenet"
-                                            name="Üzenet"
-                                            required
-                                            style="height: 140px"></textarea>
-                                        <label for="uzenet">Írd ide az üzenetedet:</label>
-                                    </div>
-                                </fieldset>
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="invalidCheck"
+                                        required />
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Elfogadom az általános szerződési feltételeket
+                                    </label>
+                                    <div class="invalid-feedback">A beküldés előtt el kell fogadnia.</div>
+                                </div>
                             </div>
-                        </fieldset>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-                                <label class="form-check-label" for="invalidCheck">
-                                    Agree to terms and conditions
-                                </label>
-                                <div class="invalid-feedback">You must agree before submitting.</div>
-                            </div>
-                        </div>
 
-                        <div class="mb-4 text-center">
-                            <button class="btn btn-primary" type="submit">Submit form</button>
-                        </div>
-                    </form>
+                            <div class="mb-4 text-center">
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="containter justify-content-between d-flex">
+                <p class="text-center text-muted">Szabó András</p>
+                <p class="text-center text-muted">&copy; 2026</p>
+                <div class="text-center social-icons d-flex gap-1">
+                    <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
+                        ><i class="bi bi-linkedin"></i
+                    ></a>
+                    <a
+                        href="https://github.com/szabo-andras/szabo-andras.github.io"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="GitHub"
+                        class="social-icon"
+                        aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Footer -->
-
+        </footer>
         <!-- Offcanvas -->
         <!-- Oldalról beúszó "weboldalArticle" cikk -->
         <div
             class="offcanvas offcanvas-start bg-light dark-light shadow"
             tabindex="-1"
             id="weboldalArticle"
+            role="dialog"
             aria-labelledby="weboldalArticleLabel"
             data-bs-backdrop="false"
             style="--bs-offcanvas-width: min(600px, 95vw)">
-            <!-- Fejléc -->
+            <!-- Offcanvas Fejléc -->
             <div class="offcanvas-header bg-dark text-white">
                 <h2 class="offcanvas-title fs-5" id="weboldalArticleLabel">Weboldal vagy webalkalmazás?</h2>
                 <button
@@ -1058,14 +1100,15 @@
                 link.addEventListener("click", () => {
                     const navbarBottom = navbar.getBoundingClientRect().bottom;
                     const sections = [...document.querySelectorAll("section[id]")];
+                    const viewportCenter = navbarBottom + (window.innerHeight - navbarBottom) / 2;
                     const currentSection =
                         sections.find((section) => {
                             const bounds = section.getBoundingClientRect();
-                            return bounds.top <= navbarBottom && bounds.bottom > navbarBottom;
+                            return bounds.top <= viewportCenter && bounds.bottom > viewportCenter;
                         }) ??
                         sections.reduce((nearest, section) =>
-                            Math.abs(section.getBoundingClientRect().top - navbarBottom) <
-                            Math.abs(nearest.getBoundingClientRect().top - navbarBottom)
+                            Math.abs(section.getBoundingClientRect().top - viewportCenter) <
+                            Math.abs(nearest.getBoundingClientRect().top - viewportCenter)
                                 ? section
                                 : nearest,
                         );
