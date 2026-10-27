@@ -74,10 +74,7 @@
                 <a class="navbar-brand fw-bold" href="#"> <span>András Szabó – Web Developer</span></a>
 
                 <div class="social-icons d-flex gap-2 me-lg-3">
-                    <a
-                        href="https://www.linkedin.com/in/andras83sz/"
-                        class="social-icon"
-                        aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
                         ><i class="bi bi-linkedin"></i
                     ></a>
                     <a
@@ -195,7 +192,7 @@
                             </p>
 
                             <p class="d-inline-block">Already know what you need?</p>
-                            <a href="#contact" class="btn btn-danger btn-lg d-inline-block" type="button">Contact</a>
+                            <a href="#contact" class="btn btn-danger btn-lg d-inline-block">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -629,6 +626,11 @@
                                         <span class="input-group-text"><i class="bi bi-globe2"></i></span>
                                         <select class="form-select" id="customer-country" required>
                                             <option selected disabled value="">Select...</option>
+                                            <select class="form-select" id="customer-country" required>
+                                                <option selected disabled value="">Válassz...</option>
+                                                <option value="Hungary">Hungary</option>
+                                                <option value="Denmark">Denmark</option>
+                                            </select>
                                         </select>
 
                                         <div class="invalid-feedback">Please select a country!</div>
@@ -664,7 +666,7 @@
                                                 name="Üzenet"
                                                 required
                                                 style="height: 140px"></textarea>
-                                            <label for="uzenet">Your message:</label>
+                                            <label for="customer-contact-message">Your message:</label>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -696,12 +698,9 @@
         <footer>
             <div class="container d-flex">
                 <div class="text-muted">András Szabó</div>
-                <div class="text-muted">&copy 2026</div>
+                <div class="text-muted">&copy; 2026</div>
                 <div class="social-icons d-flex gap-2 mx-auto end">
-                    <a
-                        href="https://www.linkedin.com/in/andras83sz/"
-                        class="social-icon"
-                        aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
                         ><i class="bi bi-linkedin"></i
                     ></a>
                     <a
@@ -722,6 +721,7 @@
             class="offcanvas offcanvas-start bg-light dark-light shadow"
             tabindex="-1"
             id="weboldalArticle"
+            role="dialog"
             aria-labelledby="weboldalArticleLabel"
             data-bs-backdrop="false"
             style="--bs-offcanvas-width: min(600px, 95vw)">

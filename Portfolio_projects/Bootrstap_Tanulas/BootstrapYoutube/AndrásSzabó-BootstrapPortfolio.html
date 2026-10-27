@@ -70,7 +70,9 @@
         <!-- Navbar -->
         <header class="bg-dark sticky-top">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+                <!-- Brand -->
                 <a class="navbar-brand fw-bold" href="#"> <span>Szabó András - Webfejlesztő</span></a>
+                <!-- Social ikonok -->
                 <div class="social-icons d-flex gap-2">
                     <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
                         ><i class="bi bi-linkedin"></i
@@ -85,6 +87,7 @@
                         ><i class="bi bi-github"></i>
                     </a>
                 </div>
+                <!-- Nyelvválasztó -->
                 <div class="d-flex align-items-center ms-auto ms-lg-3">
                     <div class="dropdown me-2">
                         <button
@@ -145,6 +148,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#portfolio">Portfolio</a>
                         </li>
+                        <li><a href="#plans" class="nav-link">Tervek</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="#reviews">Vélemények</a>
                         </li>
@@ -241,194 +245,267 @@
             <!-- Portfolio szakasz -->
             <section id="portfolio" class="bg-dark">
                 <div class="container shadow-sm py-md-3 py-1">
-                    <div class="section-heading text-center text-primary sticky shadow">
-                        <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">Portfólió projektek</h2>
-                    </div>
-                    <h3 class="h5">Néhány jelentős projektem, amit még a webfejlesztés tanulása előtt készítettem:</h3>
+                    <!-- Webfejlesztés előtti projektek -->
+                    <section class="eloelet">
+                        <div class="section-heading text-center text-primary sticky shadow">
+                            <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">
+                                Portfólió projektek
+                            </h2>
+                        </div>
 
-                    <div class="container px-4 project-selector">
-                        <!-- Dropdown: md méret alatt -->
-                        <div class="dropdown d-md-none my-3">
-                            <button
-                                class="btn btn-outline-primary dropdown-toggle w-100"
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Válassz ki egy projektet
-                            </button>
+                        <h3 class="h5">
+                            Néhány jelentős projektem, amit még a webfejlesztés tanulása előtt készítettem:
+                        </h3>
 
-                            <ul class="dropdown-menu w-100">
-                                <li>
-                                    <button class="dropdown-item" type="button" data-bs-target="#Google_Sheets_Travel">
+                        <div class="container px-4 project-selector">
+                            <!-- Dropdown: md méret alatt -->
+                            <div class="dropdown d-md-none my-3">
+                                <button
+                                    class="btn btn-outline-primary dropdown-toggle w-100"
+                                    type="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Válassz ki egy projektet
+                                </button>
+
+                                <ul class="dropdown-menu w-100">
+                                    <li>
+                                        <button
+                                            class="dropdown-item"
+                                            type="button"
+                                            data-bs-target="#Google_Sheets_Travel">
+                                            Utazásszervező
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button" data-bs-target="#Hydrovital-Excel">
+                                            Értékesítési adatbázis
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="dropdown-item"
+                                            type="button"
+                                            data-bs-target="#Rudolph_Employee_Database">
+                                            HR adatbázis
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Tabs -->
+                            <ul class="nav nav-tabs mt-3 d-none d-md-flex" id="projectTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button
+                                        class="nav-link active border"
+                                        id="travel-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Google_Sheets_Travel"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="Utazásszervező"
+                                        aria-selected="true">
                                         Utazásszervező
                                     </button>
                                 </li>
-                                <li>
-                                    <button class="dropdown-item" type="button" data-bs-target="#Hydrovital-Excel">
+                                <li class="nav-item" role="presentation">
+                                    <button
+                                        class="nav-link border"
+                                        id="hydrovital-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Hydrovital-Excel"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="Hydrovital-adatbázis"
+                                        aria-selected="false">
                                         Értékesítési adatbázis
                                     </button>
                                 </li>
-                                <li>
+                                <li class="nav-item" role="presentation">
                                     <button
-                                        class="dropdown-item"
+                                        class="nav-link border"
+                                        id="Rudolph-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#Rudolph_Employee_Database"
                                         type="button"
-                                        data-bs-target="#Rudolph_Employee_Database">
+                                        role="tab"
+                                        aria-controls="HR-adatbázis"
+                                        aria-selected="false">
                                         HR adatbázis
                                     </button>
                                 </li>
                             </ul>
-                        </div>
-                        <!-- Tabs -->
-                        <ul class="nav nav-tabs mt-3 d-none d-md-flex" id="projectTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button
-                                    class="nav-link active border"
-                                    id="travel-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#Google_Sheets_Travel"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="Utazásszervező"
-                                    aria-selected="true">
-                                    Utazásszervező
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button
-                                    class="nav-link border"
-                                    id="hydrovital-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#Hydrovital-Excel"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="Hydrovital-adatbázis"
-                                    aria-selected="false">
-                                    Értékesítési adatbázis
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button
-                                    class="nav-link border"
-                                    id="Rudolph-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#Rudolph_Employee_Database"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="HR-adatbázis"
-                                    aria-selected="false">
-                                    HR adatbázis
-                                </button>
-                            </li>
-                        </ul>
-                        <!-- Tab-ok tartalma -->
-                        <div class="tab-content border shadow p-3" id="projectTabContents">
-                            <!-- Utazástervező tab tartalma -->
-                            <div
-                                class="tab-pane fade show active"
-                                id="Google_Sheets_Travel"
-                                role="tabpanel"
-                                aria-labelledby="travel-tab"
-                                tabindex="0">
-                                <h3 class="h5">Google Sheets-alapú utazástervezés és költségkövetés automatizálás</h3>
-                                <p>
-                                    Legutóbbi saját projektem egy három hónapos, saját szervezésű utazásunkhoz
-                                    kialakított,
-                                    <strong>Google Sheets</strong>-alapú utazástervezési és költségkövető rendszer volt.
-                                    A célom az volt, hogy egyetlen rendszerben kezelhessem a több országot és várost
-                                    érintő utazás szervezési és pénzügyi feladatait.
-                                </p>
+                            <!-- Tab-ok tartalma -->
+                            <div class="tab-content border shadow p-3" id="projectTabContents">
+                                <!-- Utazástervező tab tartalma -->
+                                <div
+                                    class="tab-pane fade show active"
+                                    id="Google_Sheets_Travel"
+                                    role="tabpanel"
+                                    aria-labelledby="travel-tab"
+                                    tabindex="0">
+                                    <h3 class="h5">
+                                        Google Sheets-alapú utazástervezés és költségkövetés automatizálás
+                                    </h3>
+                                    <p>
+                                        Legutóbbi saját projektem egy három hónapos, saját szervezésű utazásunkhoz
+                                        kialakított,
+                                        <strong>Google Sheets</strong>-alapú utazástervezési és költségkövető rendszer
+                                        volt. A célom az volt, hogy egyetlen rendszerben kezelhessem a több országot és
+                                        várost érintő utazás szervezési és pénzügyi feladatait.
+                                    </p>
 
-                                <div>
-                                    <h4 class="h6">A költségkövetéshez elsősorban az alábbi eszközöket használtam:</h4>
-                                    <ul>
-                                        <li><strong>Google Űrlapok</strong></li>
-                                        <li><strong>képletek</strong></li>
-                                        <li><strong>automatikus árfolyamváltás</strong>,</li>
-                                        <li><strong>legördülő listák</strong></li>
-                                        <li><strong>összesítések</strong></li>
-                                    </ul>
-                                    Így a különböző pénznemekben felmerülő kiadásokat rögzíthettem, követhettem a napi
-                                    költségvetést, és megkönnyíthettem az utólagos elszámolást.
+                                    <div>
+                                        <h4 class="h6">
+                                            A költségkövetéshez elsősorban az alábbi eszközöket használtam:
+                                        </h4>
+                                        <ul>
+                                            <li><strong>Google Űrlapok</strong></li>
+                                            <li><strong>képletek</strong></li>
+                                            <li><strong>automatikus árfolyamváltás</strong>,</li>
+                                            <li><strong>legördülő listák</strong></li>
+                                            <li><strong>összesítések</strong></li>
+                                        </ul>
+                                        Így a különböző pénznemekben felmerülő kiadásokat rögzíthettem, követhettem a
+                                        napi költségvetést, és megkönnyíthettem az utólagos elszámolást.
+                                    </div>
+
+                                    <p>
+                                        A rendszer működését Google Apps Script segítségével is bővítettem, ChatGPT
+                                        támogatásával. Az automatizmusok lehetővé tették, hogy az űrlapon rögzített
+                                        kiadások a megfelelő városhoz tartozó munkalapra kerüljenek, valamint hogy az
+                                        útvonalterv alapján létrejöjjenek az egyes városok napi programjainak és
+                                        szállásadatainak kezelésére szolgáló munkalapok. Ezeket egy korábban manuálisan
+                                        kialakított munkalap struktúrájára építettem, majd a létrejött lapokat szükség
+                                        szerint kézzel pontosítottam.
+                                    </p>
+
+                                    <p>
+                                        A projekt során a saját gyakorlati igényeimből indultam ki, meghatároztam a
+                                        rendszer kívánt működését, és AI segítségével olyan automatizált megoldást
+                                        alakítottam ki, amely csökkentette az ismétlődő manuális feladatokat. A
+                                        tapasztalat megerősítette az érdeklődésemet a technológiai megoldások, a
+                                        folyamatok automatizálása és a saját igényekre szabott digitális eszközök
+                                        fejlesztése iránt.
+                                    </p>
                                 </div>
-
-                                <p>
-                                    A rendszer működését Google Apps Script segítségével is bővítettem, ChatGPT
-                                    támogatásával. Az automatizmusok lehetővé tették, hogy az űrlapon rögzített kiadások
-                                    a megfelelő városhoz tartozó munkalapra kerüljenek, valamint hogy az útvonalterv
-                                    alapján létrejöjjenek az egyes városok napi programjainak és szállásadatainak
-                                    kezelésére szolgáló munkalapok. Ezeket egy korábban manuálisan kialakított munkalap
-                                    struktúrájára építettem, majd a létrejött lapokat szükség szerint kézzel
-                                    pontosítottam.
-                                </p>
-
-                                <p>
-                                    A projekt során a saját gyakorlati igényeimből indultam ki, meghatároztam a rendszer
-                                    kívánt működését, és AI segítségével olyan automatizált megoldást alakítottam ki,
-                                    amely csökkentette az ismétlődő manuális feladatokat. A tapasztalat megerősítette az
-                                    érdeklődésemet a technológiai megoldások, a folyamatok automatizálása és a saját
-                                    igényekre szabott digitális eszközök fejlesztése iránt.
-                                </p>
-                            </div>
-                            <!-- Értékesítési adatbázis tab tartalma -->
-                            <div
-                                class="tab-pane fade show"
-                                id="Hydrovital-Excel"
-                                role="tabpanel"
-                                aria-labelledby="hydrovital-tab"
-                                tabindex="0">
-                                <h3 class="h5">Értékesítési nyomonkövető és Ügyfél adatbázis - Ms Excel, Ms Access</h3>
-                                <p>
-                                    Az értékesítési munkám támogatására saját Excel-alapú nyilvántartási rendszert
-                                    alakítottam ki, amely egy helyen tette lehetővé az értékesítési szerződések, az
-                                    ügyféladatok és a bevételek nyomon követését.
-                                </p>
-                                <p>
-                                    A rendszer segítségével strukturáltan kezelhettem az értékesítési tevékenységhez
-                                    kapcsolódó információkat, könnyebben áttekinthettem az ügyfelekkel és a
-                                    szerződésekkel kapcsolatos adatokat, valamint követhettem a bevételek alakulását.
-                                </p>
-                                <p>
-                                    A megoldás kialakítása során a saját munkafolyamataim igényeiből indultam ki, és az
-                                    Excel lehetőségeit felhasználva olyan gyakorlati eszközt hoztam létre, amely
-                                    támogatta a napi munkavégzést és az üzleti információk rendszerezését.
-                                </p>
-                            </div>
-                            <div
-                                class="tab-pane fade"
-                                id="Rudolph_Employee_Database"
-                                role="tabpanel"
-                                aria-labelledby="HR-adatbázis"
-                                tabindex="0">
-                                <h3 class="h5">Rudolph Logistik Kft - Munkavállalói adatbázis - Ms Access</h3>
-                                <p>
-                                    Már 2007-ben is foglalkoztatott, hogyan lehet a technológia segítségével
-                                    hatékonyabbá tenni a munkafolyamatokat.
-                                </p>
-                                <p>
-                                    A győri Rudolph Logistik Kft-nél az évek során megtelt Excel fájl egyes
-                                    munkafüzeteibe már nem lehetett új oszlopokat beszúrni, viszont a bevezetésre kerülő
-                                    Cafeteria rendszer miatt erre rendkívüli szükség lett volna.
-                                </p>
-                                <p>
-                                    A probléma abban állt, hogy az egy helyen történő adatkezelés helyett 2 Excel
-                                    fájlban kellett folyamatosan naprakészen tartani a munkavállalói adatbázist, ami a
-                                    magas fluktuáció miatt rendszeres adateltérést okozott.
-                                </p>
-                                <p>
-                                    A meglévő Excel-fájl alapján egy űrlapokkal támogatott Microsoft Access-adatbázist
-                                    hoztam létre, amely mintegy 1100 munkavállaló HR-adatait kezelte, és a lekérdezések
-                                    segítségével olyan kimutatásokat hoztam létre, amiket korábban manuális szűrésekkel
-                                    oldottak meg minden hónap végén több óra munkával.
-                                </p>
-                                <p>
-                                    A rendszer többek között a bérek, munkakörök, tanulmányok, képzések és
-                                    cafeteria-juttatások nyilvántartását tette lehetővé. Ez a projekt korai példája volt
-                                    annak, hogyan alakíthatók át a meglévő adatok egy strukturáltabb, könnyebben
-                                    kezelhető rendszerré.
-                                </p>
+                                <!-- Értékesítési adatbázis tab tartalma -->
+                                <div
+                                    class="tab-pane fade show"
+                                    id="Hydrovital-Excel"
+                                    role="tabpanel"
+                                    aria-labelledby="hydrovital-tab"
+                                    tabindex="0">
+                                    <h3 class="h5">
+                                        Értékesítési nyomonkövető és Ügyfél adatbázis - Ms Excel, Ms Access
+                                    </h3>
+                                    <p>
+                                        Az értékesítési munkám támogatására saját Excel-alapú nyilvántartási rendszert
+                                        alakítottam ki, amely egy helyen tette lehetővé az értékesítési szerződések, az
+                                        ügyféladatok és a bevételek nyomon követését.
+                                    </p>
+                                    <p>
+                                        A rendszer segítségével strukturáltan kezelhettem az értékesítési tevékenységhez
+                                        kapcsolódó információkat, könnyebben áttekinthettem az ügyfelekkel és a
+                                        szerződésekkel kapcsolatos adatokat, valamint követhettem a bevételek
+                                        alakulását.
+                                    </p>
+                                    <p>
+                                        A megoldás kialakítása során a saját munkafolyamataim igényeiből indultam ki, és
+                                        az Excel lehetőségeit felhasználva olyan gyakorlati eszközt hoztam létre, amely
+                                        támogatta a napi munkavégzést és az üzleti információk rendszerezését.
+                                    </p>
+                                </div>
+                                <div
+                                    class="tab-pane fade"
+                                    id="Rudolph_Employee_Database"
+                                    role="tabpanel"
+                                    aria-labelledby="HR-adatbázis"
+                                    tabindex="0">
+                                    <h3 class="h5">Rudolph Logistik Kft - Munkavállalói adatbázis - Ms Access</h3>
+                                    <p>
+                                        Már 2007-ben is foglalkoztatott, hogyan lehet a technológia segítségével
+                                        hatékonyabbá tenni a munkafolyamatokat.
+                                    </p>
+                                    <p>
+                                        A győri Rudolph Logistik Kft-nél az évek során megtelt Excel fájl egyes
+                                        munkafüzeteibe már nem lehetett új oszlopokat beszúrni, viszont a bevezetésre
+                                        kerülő Cafeteria rendszer miatt erre rendkívüli szükség lett volna.
+                                    </p>
+                                    <p>
+                                        A probléma abban állt, hogy az egy helyen történő adatkezelés helyett 2 Excel
+                                        fájlban kellett folyamatosan naprakészen tartani a munkavállalói adatbázist, ami
+                                        a magas fluktuáció miatt rendszeres adateltérést okozott.
+                                    </p>
+                                    <p>
+                                        A meglévő Excel-fájl alapján egy űrlapokkal támogatott Microsoft
+                                        Access-adatbázist hoztam létre, amely mintegy 1100 munkavállaló HR-adatait
+                                        kezelte, és a lekérdezések segítségével olyan kimutatásokat hoztam létre, amiket
+                                        korábban manuális szűrésekkel oldottak meg minden hónap végén több óra munkával.
+                                    </p>
+                                    <p>
+                                        A rendszer többek között a bérek, munkakörök, tanulmányok, képzések és
+                                        cafeteria-juttatások nyilvántartását tette lehetővé. Ez a projekt korai példája
+                                        volt annak, hogyan alakíthatók át a meglévő adatok egy strukturáltabb,
+                                        könnyebben kezelhető rendszerré.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+                    <section id="plans">
+                        <div class="section-heading text-center text-primary sticky shadow">
+                            <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">
+                                Tervezett projektek
+                            </h2>
+                            <div id="carouselPlansControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card" id="első_projekt">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Special title treatment</h5>
+                                                <p class="card-text">
+                                                    With supporting text below as a natural lead-in to additional
+                                                    content.
+                                                </p>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card" id="masodik_projekt">
+                                            <div class="card-body">
+                                                <h5 class="card-title">HaHA title treatment</h5>
+                                                <p class="card-text">
+                                                    With supporting text below as a natural lead-in to additional
+                                                    content.
+                                                </p>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="..." class="d-block w-100" alt="..." />
+                                    </div>
+                                </div>
+                                <button
+                                    class="carousel-control-prev"
+                                    type="button"
+                                    data-bs-target="#carouselExampleControls"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button
+                                    class="carousel-control-next"
+                                    type="button"
+                                    data-bs-target="#carouselExampleControls"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </section>
 
@@ -634,6 +711,8 @@
                                         <span class="input-group-text"><i class="bi bi-globe2"></i></span>
                                         <select class="form-select" id="customer-country" required>
                                             <option selected disabled value="">Válassz...</option>
+                                            <option value="Hungary">Magyarország</option>
+                                            <option value="Denmark">Dánia</option>
                                         </select>
 
                                         <div class="invalid-feedback">Kérjük, válasszon egy országot!</div>
