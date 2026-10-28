@@ -35,8 +35,72 @@ strong {
     }
 }
 
-// hello
-
-
 // import bootstrap 
-@import '../node_modules/bootstrap/scss/bootstrap'
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+// Saját szabályok
+body {
+    background-color: rgb(222, 220, 220);
+    gap: 0;
+}
+
+section[id] {
+    min-height: 100vh;
+    scroll-margin-top: var(--navbar-height, 56px);
+}
+
+section[id]>div>.section-heading {
+    position: sticky;
+    top: var(--navbar-height, 56px);
+    z-index: 1000;
+}
+
+.section-heading+.row {
+    margin-top: 0;
+}
+
+#projectTabs .nav-link {
+    color: #000;
+}
+
+#projectTabs .nav-link.active {
+    color: #fff;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+#intro {
+    min-height: calc(100vh - var(--header-height, 56px));
+    min-height: calc(100dvh - var(--header-height, 56px));
+}
+
+#intro>.container-md {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro .row {
+    flex: 1;
+    align-items: stretch;
+}
+
+#intro-coulmn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#AndrasProfilImage {
+    background-image: url("../Assets/irodai-hatter.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-self: center;
+    width: 20rem;
+
+    border-radius: 1rem;
+    align-self: center;
+}
