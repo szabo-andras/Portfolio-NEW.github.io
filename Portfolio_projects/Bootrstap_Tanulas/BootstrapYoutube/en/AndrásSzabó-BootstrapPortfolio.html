@@ -719,19 +719,80 @@
                 </div>
             </div>
         </footer>
-        <!-- Offcanvas  Header-->
-        <!-- Oldalról beúszó "weboldalArticle" cikk -->
+        <!-- Website offcanvas -->
         <div
-            class="offcanvas offcanvas-start bg-light dark-light shadow"
+            class="offcanvas offcanvas-start bg-light shadow"
             tabindex="-1"
             id="weboldalArticle"
             role="dialog"
             aria-labelledby="weboldalArticleLabel"
-            data-bs-backdrop="false"
             style="--bs-offcanvas-width: min(600px, 95vw)">
-            <!-- Fejléc -->
             <div class="offcanvas-header bg-dark text-white">
-                <h2 class="offcanvas-title fs-5" id="weboldalArticleLabel">Website or web application?</h2>
+                <h2 class="offcanvas-title fs-5" id="weboldalArticleLabel">Building a website</h2>
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="lead">
+                    A website primarily shares information and presents a person, business, service, or project.
+                </p>
+                <h3 class="h4 mt-4">What is it used for?</h3>
+                <ul>
+                    <li>Introducing a person or explaining services.</li>
+                    <li>Showcasing work and projects.</li>
+                    <li>Providing a way to get in touch.</li>
+                    <li>Publishing news, articles, and other useful information.</li>
+                </ul>
+                <div class="card bg-white border-0 mb-3">
+                    <div class="card-body">
+                        <h3 class="h6">Example: a portfolio website</h3>
+                        <p class="mb-0">
+                            Visitors explore your work and experience, then contact you. The site helps share
+                            information and build trust.
+                        </p>
+                    </div>
+                </div>
+                <h3 class="h4 mt-4">What is it made of?</h3>
+                <ul>
+                    <li><strong>HTML:</strong> the page content and structure.</li>
+                    <li><strong>CSS:</strong> the layout and visual presentation.</li>
+                    <li><strong>JavaScript:</strong> interactive features such as menus and forms.</li>
+                </ul>
+                <p>
+                    A simple static website does not necessarily need a backend or database. The browser displays the
+                    content from HTML, CSS, and JavaScript files.
+                </p>
+                <h3 class="h4 mt-4">How can you get started?</h3>
+                <ol>
+                    <li>Learn the basics of semantic HTML.</li>
+                    <li>Practice CSS, responsive layouts, and Bootstrap.</li>
+                    <li>Build navigation, an introduction, and a way to get in touch.</li>
+                    <li>Add interactive features with JavaScript.</li>
+                </ol>
+                <div class="d-grid mt-4">
+                    <button
+                        type="button"
+                        class="btn btn-primary js-switch-offcanvas"
+                        data-target="#webalkalmazasArticle">
+                        Continue to the web application section
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web application offcanvas -->
+        <div
+            class="offcanvas offcanvas-start bg-light shadow"
+            tabindex="-1"
+            id="webalkalmazasArticle"
+            role="dialog"
+            aria-labelledby="webalkalmazasArticleLabel"
+            style="--bs-offcanvas-width: min(600px, 95vw)">
+            <div class="offcanvas-header bg-dark text-white">
+                <h2 class="offcanvas-title fs-5" id="webalkalmazasArticleLabel">Building a web application</h2>
                 <button
                     type="button"
                     class="btn-close btn-close-white"
@@ -739,56 +800,10 @@
                     aria-label="Close"></button>
             </div>
 
-            <!-- Görgethető tartalom -->
             <div class="offcanvas-body">
                 <p class="lead">
-                    The key difference between a website and a web application is what visitors use it to do.
+                    A web application lets users complete tasks, manage data, and interact with a system.
                 </p>
-
-                <ul>
-                    <li>
-                        <strong>Website:</strong> primarily shares information, presents something, or helps visitors
-                        find what they are looking for.
-                    </li>
-                    <li>
-                        <strong>Web application:</strong> allows users to perform actions, manage data, and interact
-                        with the system.
-                    </li>
-                </ul>
-
-                <p>
-                    The two categories are not mutually exclusive. A website can be interactive, and a web application
-                    can also include informational pages.
-                </p>
-
-                <hr />
-
-                <h3 class="h4 mt-4">1. Website</h3>
-
-                <p>A traditional website might be a business website or a web developer’s portfolio.</p>
-
-                <p>Typical features:</p>
-
-                <ul>
-                    <li>An introduction and information about services.</li>
-                    <li>Showcasing work and projects.</li>
-                    <li>A way to get in touch.</li>
-                    <li>Publishing articles and other information.</li>
-                </ul>
-
-                <div class="card bg-light border-0 mb-3">
-                    <div class="card-body">
-                        <h4 class="h6">Example: your portfolio</h4>
-                        <p class="mb-0">
-                            A visitor opens your site, explores your work, reads your introduction, and then contacts
-                            you. The site’s primary purpose is to share information and build trust.
-                        </p>
-                    </div>
-                </div>
-
-                <h3 class="h4 mt-4">2. Web application</h3>
-
-                <p>A web application enables users to complete a task.</p>
 
                 <p>Typical features:</p>
 
@@ -817,86 +832,7 @@
 
                 <hr />
 
-                <h3 class="h4 mt-4">3. What is the technical difference?</h3>
-
-                <p>
-                    The programming language you use does not determine whether you are building a website or a web
-                    application. Both can be built with HTML, CSS, and JavaScript.
-                </p>
-
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped align-middle">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">Aspect</th>
-                                <th scope="col">Website</th>
-                                <th scope="col">Web application</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Primary purpose</th>
-                                <td>Sharing information</td>
-                                <td>Completing tasks</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">HTML and CSS</th>
-                                <td>Content and presentation</td>
-                                <td>Interface and presentation</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">JavaScript</th>
-                                <td>Interactive elements</td>
-                                <td>Interactions and data processing</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Backend</th>
-                                <td>Not necessarily required</td>
-                                <td>Often required</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Database</th>
-                                <td>Not necessarily required</td>
-                                <td>Often required</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sign-in</th>
-                                <td>Usually not required</td>
-                                <td>Common</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="small text-muted">
-                    These are typical differences, not strict rules. A website can use a database, and a simple web
-                    application can work without a backend.
-                </p>
-
-                <hr />
-
-                <h3 class="h4 mt-4">4. How is a website structured?</h3>
-
-                <p>
-                    For a simple static website, the browser receives the HTML, CSS, and possibly JavaScript files, then
-                    displays the content.
-                </p>
-
-                <div class="card mb-3">
-                    <div class="card-body text-center">
-                        <div class="border rounded p-3 mb-2">
-                            <strong>Browser</strong>
-                        </div>
-                        <div aria-hidden="true" class="fs-3">↓</div>
-                        <div class="border rounded p-3 mb-2 bg-light">HTML + CSS + JavaScript</div>
-                        <div aria-hidden="true" class="fs-3">↓</div>
-                        <div class="border rounded p-3">The website is displayed</div>
-                    </div>
-                </div>
-
-                <p>A database or custom backend is not necessarily needed for this.</p>
-
-                <h3 class="h4 mt-4">5. How might a web application be structured?</h3>
+                <h3 class="h4 mt-4">How might a web application be structured?</h3>
 
                 <div class="card mb-3">
                     <div class="card-body text-center">
@@ -942,7 +878,7 @@
 
                 <hr />
 
-                <h3 class="h4 mt-4">6. What role does JavaScript play?</h3>
+                <h3 class="h4 mt-4">What role does JavaScript play?</h3>
 
                 <div class="table-responsive">
                     <table class="table table-bordered align-middle">
@@ -1001,18 +937,9 @@
 
                 <hr />
 
-                <h3 class="h4 mt-4">7. How to structure your learning</h3>
+                <h3 class="h4 mt-4">How can you get started?</h3>
 
-                <h4 class="h5 mt-3">Step 1: Build a website</h4>
-                <ul>
-                    <li>Semantic HTML.</li>
-                    <li>CSS, Flexbox, and Grid.</li>
-                    <li>Responsive design.</li>
-                    <li>Bootstrap.</li>
-                    <li>Accessible navigation and forms.</li>
-                </ul>
-
-                <h4 class="h5 mt-3">Step 2: Add JavaScript interactivity</h4>
+                <h4 class="h5 mt-3">Step 1: Add JavaScript interactivity</h4>
                 <ul>
                     <li>Event handling.</li>
                     <li>Manipulating the DOM.</li>
@@ -1021,7 +948,7 @@
                     <li>Storing data in the browser.</li>
                 </ul>
 
-                <h4 class="h5 mt-3">Step 3: Build a fuller web application</h4>
+                <h4 class="h5 mt-3">Step 2: Build a fuller web application</h4>
                 <ul>
                     <li>Using APIs.</li>
                     <li>How a backend works.</li>
@@ -1047,8 +974,13 @@
                     </p>
                 </div>
 
-                <!-- Alsó bezárógomb -->
                 <div class="d-grid mt-4">
+                    <button
+                        type="button"
+                        class="btn btn-primary js-switch-offcanvas mb-2"
+                        data-target="#weboldalArticle">
+                        Continue to the website section
+                    </button>
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">
                         Close article
                     </button>
@@ -1059,6 +991,30 @@
 
         <!-- az alábbi kód a dropdown működéséhez és a tartalom megjelenítéséhez kell -->
         <script>
+            document.querySelectorAll(".js-switch-offcanvas").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const targetSelector = button.dataset.target;
+                    const target = targetSelector ? document.querySelector(targetSelector) : null;
+
+                    if (!(target instanceof HTMLElement)) {
+                        throw new Error(`Offcanvas target not found: ${targetSelector}`);
+                    }
+
+                    const current = document.querySelector(".offcanvas.show");
+                    if (current instanceof HTMLElement && current !== target) {
+                        current.addEventListener(
+                            "hidden.bs.offcanvas",
+                            () => bootstrap.Offcanvas.getOrCreateInstance(target).show(),
+                            { once: true },
+                        );
+                        bootstrap.Offcanvas.getOrCreateInstance(current).hide();
+                        return;
+                    }
+
+                    bootstrap.Offcanvas.getOrCreateInstance(target).show();
+                });
+            });
+
             const navbar = document.querySelector(".navbar");
 
             const syncStickyOffsets = () => {
