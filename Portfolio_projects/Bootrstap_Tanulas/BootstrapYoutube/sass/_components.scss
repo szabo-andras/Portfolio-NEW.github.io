@@ -1,0 +1,48 @@
+@use "variables" as vars;
+
+#AndrasProfilImage {
+    display: flex;
+    align-self: center;
+    width: 60%;
+    // aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: rgba(27, 26, 26, 0.446) 4px solid;
+    // box-shadow: 0px 0px 3px 2px vars.$primary;
+    background-color: rgba(255, 255, 255, 0.446);
+    // align-self: center;
+    background-image: url(../Assets/irodai-hatter.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: vars.$shadow;
+}
+
+.container-md{
+    background-color: vars.$intro-items-background-color;
+    
+}
+
+.container-md * {
+    color: vars.$intro-items-text-color;
+    
+}
+
+.intro-gombok-container {
+    padding: 2rem 0;
+    justify-content: space-evenly;
+}
+
+#projectTabs .nav-link {
+    color: #000;
+}
+
+#projectTabs .nav-link.active {
+    color: #fff;
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.carousel-projekt-img {
+    width:20%;
+}

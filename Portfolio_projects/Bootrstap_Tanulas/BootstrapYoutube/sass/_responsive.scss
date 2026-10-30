@@ -1,0 +1,43 @@
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1100;
+        padding: 0.5rem 1rem;
+        background-color: inherit;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .project-selector:not(.project-selected) .tab-content {
+        display: none;
+    }
+}
+
+@media (min-width:768px){
+    #AndrasProfilImage {
+            width: 100%;
+        }
+}
+
+@media (min-width: 992px) {
+    #navbar .nav-link {
+        white-space: nowrap;
+        padding-inline: 0.35rem;
+        font-size: 0.8rem;   
+    }    
+    
+    .intro-gombok-container {
+        justify-content: end;
+    }
+}
+
+@media (min-width: 1040px) {
+    #navbar .nav-link {
+        font-size: 0.95rem;
+
+    }
+}

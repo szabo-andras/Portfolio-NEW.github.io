@@ -1,0 +1,22 @@
+// custom variables 
+$primary: #f8a81f;
+$danger: #ee6352ff;
+$secondary: #f79d84ff;
+$warning: #69585fff;
+$info: #52dee5ff;
+
+$intro-items-background-color:  rgba(51, 51, 56, 0.727);
+$intro-items-text-color: #ffffff;
+
+$shadow: 2px 2px 5px #000;
+$btn-shadow: 2px 2px 5px  black, 2px 2px 5px  rgba(255, 255, 255, 0.453) inset;
+
+.text-shadow {
+    text-shadow: $shadow;
+}
+
+.intro-btn {
+    box-shadow:$btn-shadow;
+    outline:0;
+    border:0;
+}

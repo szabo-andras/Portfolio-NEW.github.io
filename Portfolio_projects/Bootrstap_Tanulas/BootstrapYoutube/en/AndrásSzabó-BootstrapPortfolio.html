@@ -3,77 +3,31 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script>
-            if (new URLSearchParams(window.location.search).has("instantLanguageSwitch")) {
-                document.documentElement.style.scrollBehavior = "auto";
-                const url = new URL(window.location.href);
-                url.searchParams.delete("instantLanguageSwitch");
-                window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
-                const restoreScrollBehavior = () => {
-                    window.setTimeout(() => {
-                        document.documentElement.style.removeProperty("scroll-behavior");
-                    }, 100);
-                };
-
-                if (document.readyState === "complete") {
-                    restoreScrollBehavior();
-                } else {
-                    window.addEventListener("load", restoreScrollBehavior, { once: true });
-                }
-            }
-        </script>
+        <script src="../js/instant-language-switch.js"></script>
         <title>András Szabó | Web Developer Portfolio</title>
         <meta
             name="description"
             content="Explore András Szabó’s web development portfolio, including professional experience, selected projects, and contact details." />
-        <link
+        <!-- <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
-            crossorigin="anonymous" />
+            crossorigin="anonymous" /> -->
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
         <link rel="stylesheet" href="../css/main.min.css" />
-        <style>
-            body {
-                background-color: rgb(222, 220, 220);
-                gap: 0;
-            }
-
-            section[id] {
-                min-height: 100vh;
-                scroll-margin-top: var(--navbar-height, 56px);
-            }
-
-            section[id] > div > .section-heading {
-                position: sticky;
-                top: var(--navbar-height, 56px);
-                z-index: 1000;
-            }
-
-            .section-heading + .row {
-                margin-top: 0;
-            }
-
-            #projectTabs .nav-link {
-                color: #000;
-            }
-
-            #projectTabs .nav-link.active {
-                color: #fff;
-                background-color: var(--bs-primary);
-                border-color: var(--bs-primary);
-            }
-        </style>
+        <style></style>
     </head>
 
-    <body data-bs-spy="scroll" data-bs-target="#navbar">
+    <body>
         <!-- Navbar -->
         <header class="bg-dark sticky-top">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+                <!-- Brand -->
                 <a class="navbar-brand fw-bold" href="#"> <span>András Szabó – Web Developer</span></a>
 
-                <div class="social-icons d-flex gap-2 me-lg-3">
+                <!-- Social icons -->
+                <div class="social-icons d-flex gap-2">
                     <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
                         ><i class="bi bi-linkedin"></i
                     ></a>
@@ -86,8 +40,12 @@
                         aria-label="GitHub"
                         ><i class="bi bi-github"></i
                     ></a>
+                    <a href="mailto:andras.szabo.work@icloud.com" target="_blank">
+                        <i class="bi bi-envelope-at-fill"></i>
+                    </a>
                 </div>
 
+                <!-- Language selector -->
                 <div class="d-flex align-items-center ms-auto ms-lg-3">
                     <div class="dropdown me-2">
                         <button
@@ -123,6 +81,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- Hamburger button -->
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -135,6 +94,7 @@
                     </button>
                 </div>
 
+                <!-- Navigation links -->
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav nav-pills flex-column flex-lg-row ms-lg-auto">
                         <li class="nav-item">
@@ -144,7 +104,13 @@
                             <a class="nav-link" href="#experience">Experience</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#plans" class="nav-link">Plans</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#reviews">Testimonials</a>
@@ -157,47 +123,53 @@
             </nav>
         </header>
         <!-- main image & intro text -->
-        <main>
-            <section id="intro" class="d-flex flex-column justify-content-center bg-light">
+        <main data-bs-spy="scroll" data-bs-target="#navbar">
+            <section id="intro" class="d-flex flex-column bg-light">
                 <div class="container-md">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-4 text-center d-none d-md-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
                             <img
+                                id="AndrasProfilImage"
                                 src="../Assets/Andras_Szabo-CV_pic_no_bckgr.png"
                                 alt="Portrait of András Szabó"
-                                class="img-fluid" />
+                                class="img-fluid profile-image" />
                         </div>
-                        <div class="col-md-8 text-center text-md-end">
-                            <h1 class="section-heading">
-                                <span class="display-6">András Szabó – Web Developer</span>
-                            </h1>
-                            <h2 class="display-5 text-muted">HTML CSS Bootstrap</h2>
-                            <p class="lead my-4 text-muted">
-                                I can build you a
-                                <a
-                                    class="text-danger"
-                                    data-bs-toggle="offcanvas"
-                                    data-bs-target="#weboldalArticle"
-                                    aria-controls="weboldalArticle">
-                                    website
-                                </a>
-                                , or a
-                                <a
-                                    class="text-danger"
-                                    data-bs-toggle="offcanvas"
-                                    data-bs-target="#webalkalmazasArticle"
-                                    aria-controls="webalkalmazasArticle">
-                                    web application
-                                </a>
-                            </p>
-
-                            <p class="d-inline-block">Already know what you need?</p>
-                            <a href="#contact" class="btn btn-danger btn-lg d-inline-block">Contact</a>
+                        <div class="col-md-6 text-center text-md-end" id="intro-coulmn">
+                            <div>
+                                <h1 class="mb-5">
+                                    <span class="display-6">András Szabó – Web Developer</span>
+                                </h1>
+                                <h2 class="text-muted my-4">HTML · CSS · Bootstrap 5 · JavaScript · Git/GitHub</h2>
+                            </div>
+                            <div>
+                                <p class="lead my-4 text-muted">
+                                    I can build you a
+                                    <a
+                                        class="text-danger"
+                                        data-bs-toggle="offcanvas"
+                                        data-bs-target="#weboldalArticle"
+                                        aria-controls="weboldalArticle">
+                                        website
+                                    </a>
+                                    , or a
+                                    <a
+                                        class="text-danger"
+                                        data-bs-toggle="offcanvas"
+                                        data-bs-target="#webalkalmazasArticle"
+                                        aria-controls="webalkalmazasArticle">
+                                        web application
+                                    </a>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="d-inline-block">Already know what you need?</p>
+                                <a href="#contact" class="btn btn-danger btn-lg d-inline-block">Contact</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Rólam  -->
+            <!-- About me -->
             <section id="experience" class="bg-dark">
                 <div class="container shadow-sm py-md-3 py-1">
                     <div id="experience-heading" class="section-heading text-center text-primary sticky shadow">
@@ -207,12 +179,10 @@
                     </div>
                     <div class="row p-4">
                         <p>
-                            My career has taken me to <strong>Hungary</strong>,<strong> Transylvania</strong>,<strong>
-                                Romania</strong
-                            >
-                            and<strong> Denmark</strong>, where I gained experience in sales, business operations, and
-                            hospitality. These roles taught me to work independently, adapt quickly, and identify
-                            practical problems that can be solved more simply and effectively.
+                            My career has taken me to <strong>Hungary</strong>, <strong>Transylvania</strong>,
+                            <strong>Romania</strong>, and <strong>Denmark</strong>, where I gained experience in sales,
+                            business operations, and hospitality. My work often involved tasks that required
+                            structured thinking, problem-solving, and improving existing processes.
                         </p>
 
                         <p>
@@ -221,32 +191,118 @@
                         </p>
 
                         <p>
-                            These experiences confirmed that I enjoy thinking in systems, analyzing problems, and
-                            creating practical solutions.
+                            In previous roles, I built databases and record-keeping systems to make information easier
+                            to manage and understand. These experiences still shape my approach to development: I first
+                            work to understand the problem, then look for a solution that is practical to use.
                         </p>
                         <p>
-                            I am currently building my web development skills, primarily through hands-on projects. My
-                            goal is to combine my business perspective and problem-solving abilities with technical
-                            skills to create digital solutions that deliver real value.
+                            <strong>I am currently building my web development skills</strong>, primarily through
+                            hands-on projects. I have worked with HTML, CSS, JavaScript, and Bootstrap 5, and have also
+                            incorporated Git and GitHub into my development workflow.
                         </p>
                         <p>
-                            I am open to teamwork, exciting projects, and continuous learning, while also aiming to
-                            create my own applications and digital products in the long term.
+                            My goal is to combine my business perspective and problem-solving abilities with technical
+                            skills to create web solutions that not only work, but also meet real user needs.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Portfolio szakasz -->
+            <section id="skills" class="bg-light">
+                <div class="container shadow-sm py-md-3 py-1">
+                    <div class="section-heading text-center text-primary sticky shadow">
+                        <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">Skills</h2>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 p-2">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">Frontend</h3>
+                                    <p class="card-text mb-0">
+                                        I use HTML5 and CSS3 to build page structure, visual styles, and responsive
+                                        layouts.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">JavaScript</h3>
+                                    <p class="card-text mb-0">
+                                        I have used AI assistance to implement some portfolio interactions; I am still
+                                        learning to write JavaScript code independently.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">CSS framework</h3>
+                                    <p class="card-text mb-0">
+                                        I have used Bootstrap 5 to build responsive navigation, cards, carousels,
+                                        offcanvas panels, and forms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">Version control</h3>
+                                    <p class="card-text mb-0">
+                                        I use Git and GitHub to track source-code changes and manage remote project
+                                        repositories.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">Development environment</h3>
+                                    <p class="card-text mb-0">I use VS Code to edit and organize my web projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title">Data management experience</h3>
+                                    <p class="card-text mb-0">
+                                        I have used Excel, Access, and Google Sheets to build tracking systems,
+                                        databases, and automated workflows.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mx-2 mb-3">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Next learning goals</h3>
+                            <p class="card-text mb-0">
+                                JavaScript fundamentals — my goal is to write and extend independently the
+                                interactions I have implemented with AI assistance so far. After that, I plan to learn
+                                Python, React, and Node.js.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio section -->
             <section id="portfolio" class="bg-dark">
                 <div class="container shadow-sm py-md-3 py-1">
+                    <!-- Projects from before learning web development -->
+                    <section class="eloelet">
                     <div class="section-heading text-center text-primary sticky shadow">
                         <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">Portfolio Projects</h2>
                     </div>
                     <h3 class="h5">Some of the major projects I built before I began learning web development:</h3>
 
                     <div class="container px-4 project-selector">
-                        <!-- Dropdown: md méret alatt -->
+                        <!-- Dropdown below the md breakpoint -->
                         <div class="dropdown d-md-none my-3">
                             <button
                                 class="btn btn-outline-primary dropdown-toggle w-100"
@@ -287,7 +343,7 @@
                                     data-bs-target="#Google_Sheets_Travel"
                                     type="button"
                                     role="tab"
-                                    aria-controls="Utazásszervező"
+                                    aria-controls="Google_Sheets_Travel"
                                     aria-selected="true">
                                     Travel Planner
                                 </button>
@@ -300,7 +356,7 @@
                                     data-bs-target="#Hydrovital-Excel"
                                     type="button"
                                     role="tab"
-                                    aria-controls="hydrovital-tab"
+                                    aria-controls="Hydrovital-Excel"
                                     aria-selected="false">
                                     Sales Database
                                 </button>
@@ -313,15 +369,15 @@
                                     data-bs-target="#Rudolph_Employee_Database"
                                     type="button"
                                     role="tab"
-                                    aria-controls="HR-adatbázis"
+                                    aria-controls="Rudolph_Employee_Database"
                                     aria-selected="false">
                                     HR Database
                                 </button>
                             </li>
                         </ul>
-                        <!-- Tab-ok tartalma -->
+                        <!-- Tab content -->
                         <div class="tab-content border shadow p-3" id="projectTabContents">
-                            <!-- Utazástervező tab tartalma -->
+                            <!-- Travel planner tab content -->
                             <div
                                 class="tab-pane fade show active"
                                 id="Google_Sheets_Travel"
@@ -330,11 +386,10 @@
                                 tabindex="0">
                                 <h3 class="h5">Google Sheets-Based Travel Planning and Expense Tracking Automation</h3>
                                 <p>
-                                    My latest personal project was a travel planning and expense tracking system built
-                                    for a three-month trip that we organized ourselves. It was based on
-                                    <strong>Google Sheets</strong>-based travel planning and expense tracking system. My
-                                    goal was to manage the planning and financial tasks for a trip spanning multiple
-                                    countries and cities in one place.
+                                    My latest personal project was a <strong>Google Sheets</strong>-based travel
+                                    planning and expense tracking system for a three-month trip that we organized
+                                    ourselves. My goal was to manage the planning and financial tasks for a trip
+                                    spanning multiple countries and cities in one place.
                                 </p>
 
                                 <div>
@@ -366,12 +421,12 @@
                                     digital tools tailored to specific needs.
                                 </p>
                             </div>
-                            <!-- Értékesítési adatbázis tab tartalma -->
+                            <!-- Sales database tab content -->
                             <div
                                 class="tab-pane fade show"
                                 id="Hydrovital-Excel"
                                 role="tabpanel"
-                                aria-labelledby="Hydrovital-adatbázis"
+                                aria-labelledby="hydrovital-tab"
                                 tabindex="0">
                                 <h3 class="h5">Sales Tracker and Customer Database – MS Excel, MS Access</h3>
                                 <p>
@@ -391,7 +446,7 @@
                                 class="tab-pane fade"
                                 id="Rudolph_Employee_Database"
                                 role="tabpanel"
-                                aria-labelledby="HR-adatbázis"
+                                aria-labelledby="Rudolph-tab"
                                 tabindex="0">
                                 <h3 class="h5">Rudolph Logistik Kft. – Employee Database – MS Access</h3>
                                 <p>
@@ -422,10 +477,80 @@
                             </div>
                         </div>
                     </div>
+                    </section>
+
+            <section id="plans">
+                    <div class="section-heading text-center text-primary sticky shadow">
+                        <h2 class="justify-content-around py-3 py-md-5 w-100 fw-bold d-flex">
+                            Planned Projects
+                        </h2>
+                    </div>
+                    <!-- Carousel for planned and completed projects -->
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleDark"
+                                    data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true"
+                                    aria-label="Slide 1"></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleDark"
+                                    data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button
+                                    type="button"
+                                    data-bs-target="#carouselExampleDark"
+                                    data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img src="..." class="d-block w-100" alt="..." />
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="..." class="d-block w-100" alt="..." />
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="..." class="d-block w-100" alt="..." />
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carouselExampleDark"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#carouselExampleDark"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+            </section>
                 </div>
             </section>
 
-            <!-- Vélemények  -->
+            <!-- Testimonials -->
             <section id="reviews" class="bg-light">
                 <div class="container shadow-sm py-md-3 py-1">
                     <div id="reviews-heading" class="section-heading text-center text-primary sticky shadow">
@@ -440,9 +565,9 @@
                                     src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png"
                                     alt="Colleague portrait"
                                     class="w-75 p-4" />
-                                <h2 class="h4">Florencia Menendez Brizuela</h2>
-                                <h3 class="fs-5 h5">Crowne Plaza Copenhagen Towers</h3>
-                                <h4 class="text-secondary fs-4">Front Desk Supervisor</h4>
+                                <h3 class="h4">Florencia Menendez Brizuela</h3>
+                                <p class="text-secondary fs-4">Front Desk Supervisor</p>
+                                <p class="fs-5 h5">Crowne Plaza Copenhagen Towers</p>
                             </div>
                             <div class="card-body text-muted">
                                 <p>
@@ -466,14 +591,14 @@
                                         alt="Thomas Goertz profile picture"
                                         class="w-75 p-4" />
                                 </a>
-                                <h2 class="h4">Thomas Goertz</h2>
-                                <h3 class="fs-5 h5">Crowne Plaza Copenhagen Towers</h3>
-                                <h4 class="text-secondary fs-4">Technical Supervisor</h4>
+                                <h3 class="h4">Thomas Goertz</h3>
+                                <p class="text-secondary fs-4">Technical Supervisor</p>
+                                <p class="fs-5 h5">Crowne Plaza Copenhagen Towers</p>
                             </div>
                             <div class="card-body text-muted">
                                 <p>
-                                    András is a very mindful person with a great eye on details and understanding of the
-                                    business. Any Place is Lucky to have him.
+                                    András is a very considerate person with a keen eye for detail and a strong
+                                    understanding of business processes. Any workplace would be lucky to have him.
                                 </p>
                                 <a
                                     href="https://www.linkedin.com/in/andras83sz/details/recommendations/?detailScreenTabIndex=0"
@@ -484,19 +609,21 @@
                         </div>
                         <div class="card p-2 border-1 text-primary">
                             <div class="card-header text-center">
-                                <img
-                                    src="../Assets/Kollegak/Michaela-Elena-Radu-profil-img.png"
-                                    alt="Michaela-Elena-Radu profile picture"
-                                    class="w-75 p-4" />
-                                <h2 class="h4">Mihaela Elena Radu</h2>
-                                <h3 class="fs-5 h5">Comfort Hotel Vesterbro</h3>
-                                <h4 class="text-secondary fs-4">Housekeeping Manager</h4>
+                                <a href="https://www.linkedin.com/in/mihaela-elena-radu-87b92a178/" target="_blank">
+                                    <img
+                                        src="../Assets/Kollegak/Michaela-Elena-Radu-profil-img.png"
+                                        alt="Michaela-Elena-Radu profile picture"
+                                        class="w-75 p-4" />
+                                </a>
+                                <h3 class="h4">Mihaela Elena Radu</h3>
+                                <p class="text-secondary fs-4">Housekeeping Manager</p>
+                                <p class="fs-5 h5">Comfort Hotel Vesterbro</p>
                             </div>
                             <div class="card-body text-muted">
                                 <p>
-                                    András has been showing good attitude towards his duties,he has always willing to
-                                    improve.His performance at work has become very good and he joined a team of room
-                                    controllers.He always managed his tasks,delivered good quality.
+                                    András has shown a positive attitude towards his duties and has always been willing
+                                    to improve. His performance became very good, and he joined the room controllers'
+                                    team. He consistently completed his tasks and delivered high-quality work.
                                 </p>
                                 <a
                                     href="https://www.linkedin.com/in/andras83sz/details/recommendations/?detailScreenTabIndex=0"
@@ -509,7 +636,7 @@
                 </div>
             </section>
 
-            <!-- Kapcsolat Űrlap -->
+            <!-- Contact form -->
             <section id="contact" class="min-vh-100 bg-dark">
                 <div class="container shadow-sm py-md-3 py-1">
                     <div id="contact-heading" class="section-heading text-center text-primary sticky shadow">
@@ -527,7 +654,7 @@
                                 <legend>A few details about you:</legend>
 
                                 <div class="col-lg-6">
-                                    <!-- Vezetéknév Input -->
+                                    <!-- Last name input -->
                                     <div class="col-12">
                                         <label for="last-name" class="form-label">Last name:</label>
                                         <div class="input-group">
@@ -539,9 +666,10 @@
                                                 class="form-control"
                                                 id="last-name"
                                                 placeholder="Last name"
+                                                name="last-name"
                                                 required />
                                             <div class="valid-feedback">Looks good!</div>
-                                            <!-- Vezetéknév tooltip -->
+                                            <!-- Last name tooltip -->
                                             <span class="input-group-text">
                                                 <span
                                                     class="tt"
@@ -552,7 +680,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <!-- Keresztnév Input -->
+                                    <!-- First name input -->
                                     <div class="col-12">
                                         <label for="first-name" class="form-label">First name:</label>
                                         <div class="input-group">
@@ -563,9 +691,10 @@
                                                 class="form-control"
                                                 id="first-name"
                                                 placeholder="First name"
+                                                name="first-name"
                                                 required />
                                             <div class="valid-feedback">Looks good!</div>
-                                            <!-- Keresztnév tooltip -->
+                                            <!-- First name tooltip -->
                                             <span class="input-group-text">
                                                 <span
                                                     class="tt"
@@ -589,6 +718,7 @@
                                                 id="email"
                                                 aria-describedby="inputGroupPrepend"
                                                 required
+                                                name="email"
                                                 placeholder="username@domain.com" />
                                             <div class="invalid-feedback">Please enter an email address!</div>
                                             <!-- email tooltip -->
@@ -602,7 +732,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <!-- Telefonszám Input -->
+                                    <!-- Phone number input -->
                                     <div class="col-12">
                                         <label for="phone-number" class="form-label">Phone number:</label>
                                         <div class="input-group">
@@ -610,9 +740,14 @@
                                                 <i class="bi bi-telephone-fill"></i>
                                             </span>
 
-                                            <input type="tel" class="form-control" id="phone-number" required />
+                                            <input
+                                                type="tel"
+                                                class="form-control"
+                                                id="phone-number"
+                                                name="phone-number"
+                                                required />
                                             <div class="invalid-feedback">Please enter a valid phone number!</div>
-                                            <!-- telefonszám tooltip -->
+                                            <!-- Phone number tooltip -->
                                             <span class="input-group-text">
                                                 <span
                                                     class="tt"
@@ -628,13 +763,10 @@
                                     <label for="customer-country" class="form-label">Country</label>
                                     <div class="input-group">
                                         <span class="input-group-text"><i class="bi bi-globe2"></i></span>
-                                        <select class="form-select" id="customer-country" required>
+                                        <select class="form-select" id="customer-country" name="Country" required>
                                             <option selected disabled value="">Select...</option>
-                                            <select class="form-select" id="customer-country" required>
-                                                <option selected disabled value="">Válassz...</option>
-                                                <option value="Hungary">Hungary</option>
-                                                <option value="Denmark">Denmark</option>
-                                            </select>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Denmark">Denmark</option>
                                         </select>
 
                                         <div class="invalid-feedback">Please select a country!</div>
@@ -650,16 +782,18 @@
                                             <input
                                                 class="form-check-input"
                                                 type="radio"
-                                                name="Cég?"
-                                                id="company-chkbox" />
+                                                name="IsCompany"
+                                                id="company-chkbox"
+                                                value="Company" />
                                             <label for="company-chkbox">Company</label>
                                         </div>
                                         <div>
                                             <input
                                                 class="form-check-input"
                                                 type="radio"
-                                                name="Cég?"
-                                                id="individual-person-chkbox" />
+                                                name="IsCompany"
+                                                id="individual-person-chkbox"
+                                                value="Individual-person" />
                                             <label for="individual-person-chkbox">Individual</label>
                                         </div>
 
@@ -667,7 +801,7 @@
                                             <textarea
                                                 class="form-control"
                                                 id="customer-contact-message"
-                                                name="Üzenet"
+                                                name="Message"
                                                 required
                                                 style="height: 140px"></textarea>
                                             <label for="customer-contact-message">Your message:</label>
@@ -682,6 +816,7 @@
                                         type="checkbox"
                                         value=""
                                         id="invalidCheck"
+                                        name="TermsAndConditions"
                                         required />
                                     <label class="form-check-label" for="invalidCheck">
                                         Agree to terms and conditions
@@ -699,25 +834,8 @@
             </section>
         </main>
         <!-- Footer -->
-        <footer>
-            <div class="container d-flex">
-                <div class="text-muted">András Szabó</div>
-                <div class="text-muted">&copy; 2026</div>
-                <div class="social-icons d-flex gap-2 mx-auto end">
-                    <a href="https://www.linkedin.com/in/andras83sz/" class="social-icon" aria-label="LinkedIn"
-                        ><i class="bi bi-linkedin"></i
-                    ></a>
-                    <a
-                        href="https://github.com/szabo-andras/szabo-andras.github.io"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="GitHub"
-                        class="social-icon"
-                        aria-label="GitHub">
-                        <i class="bi bi-github"></i>
-                    </a>
-                </div>
-            </div>
+        <footer class="justify-content-center align-items-center d-flex">
+            <p class="text-center text-muted">2026 &copy; András Szabó</p>
         </footer>
         <!-- Website offcanvas -->
         <div
@@ -766,19 +884,32 @@
                     A simple static website does not necessarily need a backend or database. The browser displays the
                     content from HTML, CSS, and JavaScript files.
                 </p>
-                <h3 class="h4 mt-4">How can you get started?</h3>
+                <h3 class="h4 mt-4">How do we get started?</h3>
                 <ol>
-                    <li>Learn the basics of semantic HTML.</li>
-                    <li>Practice CSS, responsive layouts, and Bootstrap.</li>
-                    <li>Build navigation, an introduction, and a way to get in touch.</li>
-                    <li>Add interactive features with JavaScript.</li>
+                    <li>We build the foundations of the website with semantic HTML.</li>
+                    <li>We use CSS and/or Bootstrap to create a responsive layout.</li>
+                    <li>We add navigation, an introduction, and a way to get in touch.</li>
+                    <li>
+                        <p>We add JavaScript interactions, for example, to let visitors:</p>
+                        <ul>
+                            <li>open and close the mobile navigation menu;</li>
+                            <li>expand answers to frequently asked questions;</li>
+                            <li>view gallery images at a larger size;</li>
+                            <li>search or filter projects by category;</li>
+                            <li>get feedback when a form is completed and submitted;</li>
+                            <li>switch between light and dark themes.</li>
+                        </ul>
+                    </li>
                 </ol>
                 <div class="d-grid mt-4">
                     <button
                         type="button"
-                        class="btn btn-primary js-switch-offcanvas"
+                        class="btn btn-primary js-switch-offcanvas mb-2"
                         data-target="#webalkalmazasArticle">
                         Continue to the web application section
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">
+                        Close article
                     </button>
                 </div>
             </div>
@@ -879,47 +1010,6 @@
 
                 <hr />
 
-                <h3 class="h4 mt-4">What role does JavaScript play?</h3>
-
-                <div class="table-responsive">
-                    <table class="table table-bordered align-middle">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">Technology</th>
-                                <th scope="col">Role</th>
-                                <th scope="col">Example</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">HTML</th>
-                                <td>Structure</td>
-                                <td>Shopping list items</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">CSS</th>
-                                <td>Presentation</td>
-                                <td>The list’s layout and colors</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">JavaScript</th>
-                                <td>Behavior</td>
-                                <td>Adding a new item</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Backend</th>
-                                <td>Server-side processing</td>
-                                <td>Checking permissions</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Database</th>
-                                <td>Persistent data storage</td>
-                                <td>Saving the shopping list</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
                 <p>
                     With JavaScript, for example, you can let users add items to a list or check off items they have
                     purchased. That is enough to create a simple, working web application.
@@ -937,44 +1027,6 @@
                 </div>
 
                 <hr />
-
-                <h3 class="h4 mt-4">How can you get started?</h3>
-
-                <h4 class="h5 mt-3">Step 1: Add JavaScript interactivity</h4>
-                <ul>
-                    <li>Event handling.</li>
-                    <li>Manipulating the DOM.</li>
-                    <li>Processing form data.</li>
-                    <li>Working with arrays and objects.</li>
-                    <li>Storing data in the browser.</li>
-                </ul>
-
-                <h4 class="h5 mt-3">Step 2: Build a fuller web application</h4>
-                <ul>
-                    <li>Using APIs.</li>
-                    <li>How a backend works.</li>
-                    <li>Database management.</li>
-                    <li>User authentication and permissions.</li>
-                    <li>Sharing data between users.</li>
-                </ul>
-
-                <p>
-                    You do not need to learn everything at once. Build on each step and gradually increase the
-                    complexity of your projects.
-                </p>
-
-                <div class="alert alert-success mt-4">
-                    <h3 class="h5">Quick check</h3>
-                    <p>
-                        Imagine building a weather page that shows the current temperature in Copenhagen, the forecast
-                        for the next few hours, and precipitation levels. The data comes from a weather API.
-                    </p>
-                    <p class="mb-0">
-                        <strong>Would you consider this a website or a web application?</strong>
-                        Consider whether the page only displays information or also lets users perform actions.
-                    </p>
-                </div>
-
                 <div class="d-grid mt-4">
                     <button
                         type="button"
@@ -990,135 +1042,6 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- az alábbi kód a dropdown működéséhez és a tartalom megjelenítéséhez kell -->
-        <script>
-            document.querySelectorAll(".js-switch-offcanvas").forEach((button) => {
-                button.addEventListener("click", () => {
-                    const targetSelector = button.dataset.target;
-                    const target = targetSelector ? document.querySelector(targetSelector) : null;
-
-                    if (!(target instanceof HTMLElement)) {
-                        throw new Error(`Offcanvas target not found: ${targetSelector}`);
-                    }
-
-                    const current = document.querySelector(".offcanvas.show");
-                    if (current instanceof HTMLElement && current !== target) {
-                        current.addEventListener(
-                            "hidden.bs.offcanvas",
-                            () => bootstrap.Offcanvas.getOrCreateInstance(target).show(),
-                            { once: true },
-                        );
-                        bootstrap.Offcanvas.getOrCreateInstance(current).hide();
-                        return;
-                    }
-
-                    bootstrap.Offcanvas.getOrCreateInstance(target).show();
-                });
-            });
-
-            const navbar = document.querySelector(".navbar");
-
-            const syncStickyOffsets = () => {
-                document.documentElement.style.setProperty("--navbar-height", `${navbar.offsetHeight}px`);
-            };
-
-            syncStickyOffsets();
-            new ResizeObserver(syncStickyOffsets).observe(navbar);
-
-            const navbarCollapse = document.getElementById("navbar");
-            const navbarCollapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
-                toggle: false,
-            });
-
-            document.querySelectorAll('#navbar .nav-link[href^="#"]').forEach((link) => {
-                link.addEventListener("click", (event) => {
-                    const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
-
-                    if (!target || !navbarCollapse.classList.contains("show")) {
-                        return;
-                    }
-
-                    event.preventDefault();
-                    navbarCollapse.addEventListener(
-                        "hidden.bs.collapse",
-                        () => {
-                            window.history.pushState(null, "", link.hash);
-                            target.scrollIntoView({ behavior: "instant", block: "start" });
-                        },
-                        { once: true },
-                    );
-                    navbarCollapseInstance.hide();
-                });
-            });
-
-            document.querySelectorAll("[data-language-link]").forEach((link) => {
-                link.addEventListener("click", () => {
-                    const navbarBottom = navbar.getBoundingClientRect().bottom;
-                    const sections = [...document.querySelectorAll("section[id]")];
-                    const viewportCenter = navbarBottom + (window.innerHeight - navbarBottom) / 2;
-                    const currentSection =
-                        sections.find((section) => {
-                            const bounds = section.getBoundingClientRect();
-                            return bounds.top <= viewportCenter && bounds.bottom > viewportCenter;
-                        }) ??
-                        sections.reduce((nearest, section) =>
-                            Math.abs(section.getBoundingClientRect().top - viewportCenter) <
-                            Math.abs(nearest.getBoundingClientRect().top - viewportCenter)
-                                ? section
-                                : nearest,
-                        );
-
-                    if (currentSection) {
-                        const destination = new URL(link.href);
-                        destination.hash = currentSection.id;
-                        destination.searchParams.set("instantLanguageSwitch", "");
-                        link.href = destination.href;
-                    }
-                });
-            });
-
-            document.querySelectorAll(".dropdown-item[data-bs-target]").forEach((item) => {
-                item.addEventListener("click", function () {
-                    const target = this.getAttribute("data-bs-target");
-                    const tabButton = document.querySelector(`#projectTabs [data-bs-target="${target}"]`);
-
-                    if (tabButton) {
-                        bootstrap.Tab.getOrCreateInstance(tabButton).show();
-                    }
-
-                    document.querySelectorAll(".dropdown-item[data-bs-target]").forEach((dropdownItem) => {
-                        dropdownItem.classList.remove("active");
-                        dropdownItem.removeAttribute("aria-current");
-                    });
-
-                    this.classList.add("active");
-                    this.setAttribute("aria-current", "true");
-                    this.closest(".project-selector").classList.add("project-selected");
-
-                    this.closest(".project-selector").querySelector(".dropdown-toggle").textContent = this.textContent;
-                });
-            });
-
-            // Ez a szakasz felelős a bootstrap űrlap validálásért, és az általam megadott
-            // validációs szövegek megjelenítéséért
-            document.querySelectorAll(".needs-validation").forEach((form) => {
-                form.addEventListener("submit", (event) => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-
-                    form.classList.add("was-validated");
-                });
-            });
-        </script>
-
-        <script>
-            //  Ez a kód a tooltip megjelenítését teszi lehetővé:
-            const tooltips = document.querySelectorAll(".tt");
-            tooltips.forEach((t) => {
-                new bootstrap.Tooltip(t);
-            });
-        </script>
+        <script type="module" src="../js/main.js"></script>
     </body>
 </html>

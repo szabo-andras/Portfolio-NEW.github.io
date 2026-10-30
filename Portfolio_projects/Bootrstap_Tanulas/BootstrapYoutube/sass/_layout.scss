@@ -1,0 +1,14 @@
+@use "variables" as vars;
+
+.container,
+form {
+    background-color: white;
+}
+
+#intro {
+    background-image: url(../Assets/Gemini_Generated_Image_49bam649bam649ba.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
