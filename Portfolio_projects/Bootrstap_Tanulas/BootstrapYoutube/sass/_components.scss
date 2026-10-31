@@ -18,12 +18,13 @@
     box-shadow: vars.$shadow;
 }
 
-.container-md{
+.container-md, 
+.container-fluid {
     background-color: vars.$intro-items-background-color;
     
 }
 
-.container-md * {
+.container-md *, .container-fluid * {
     color: vars.$intro-items-text-color;
     
 }
